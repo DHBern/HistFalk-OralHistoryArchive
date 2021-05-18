@@ -15,7 +15,7 @@ Please reference [requirements](https://jekyllrb.com/docs/installation/#requirem
 You may download jetbrains [WebStorm](https://www.jetbrains.com/de-de/webstorm/) as IDE  for an optimal workspace. 
 The [.idea](.idea) directory is used for the Webstorm project.
 
-## Insatllation
+## Installation
 Follow [Quickstart](https://jekyllrb.com/docs/). 
 <br/> 
 If you get the following this error when installing the jekyll and bundler gems using
