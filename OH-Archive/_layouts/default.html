@@ -1,0 +1,81 @@
+<!-- default Layout is used for index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+    <title>{{ site.title }}</title>
+    <link href="/assets/css/styles.css" rel="stylesheet">
+    <meta content="Jekyll v4.2.0" name="generator"/>
+    <meta content="OH-Archive" property="og:title"/>
+    <meta content="en_US" property="og:locale"/>
+    <meta content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          name="description"/>
+    <link href="/" rel="canonical"/>
+    <meta content="/" property="og:url"/>
+    <meta content="OH-Archive" property="og:site_name"/>
+    <script type="application/ld+json">
+        {
+            "@type": "WebSite",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "headline": "OH-Archive",
+            "name": "OH-Archive",
+            "url": "/",
+            "@context": "https://schema.org"
+        }</script>
+    <!-- End Jekyll SEO tag -->
+    <link href="/feed.xml" rel="alternate" title="OH-Archive" type="application/atom+xml"/>
+</head>
+
+
+<body>
+<!-- Topbar with links-->
+<div class="container newTopbar">
+    <div class="d-flex justify-content-start flex-wrap">
+        <!-- ToDo Implement Pill navigation -->
+        <div style="padding:20px; float: right;">
+            <button class="btn btn-theme" onclick="location.href ='https://www.dh.unibe.ch/';" type="button">Follow
+            </button>
+            <button class="btn btn-theme" onclick="location.href ='https://www.dh.unibe.ch/';" type="button">Donate
+            </button>
+            <button class="btn btn-theme" onclick="location.href ='https://www.dh.unibe.ch/';" type="button">Contact
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!-- Logo and header styling -->
+    <div class="site-header">
+        <img alt="logo" class="logo" src="../assets/images/frame.png"/>
+        <h1>Welcome to {{ site.title}}</h1>
+        <h2>{{site.subtitle}}</h2>
+    </div>
+
+    <main aria-label="Content" class="page-content">
+        <div class="content">
+            <h4>
+                {{site.description}}
+            </h4>
+            <!-- start content from index.html-->
+            <div class="content">
+                {{content}}
+            </div>
+        </div>
+
+
+        <!-- Learn more PopUp Card-->
+        <footer>
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+            <div class="card-footer text-center">
+                <!-- ToDo implement PopUp menu-->
+                <button class="btn btn-theme" type="button">Learn more</button>
+            </div>
+        </footer>
+    </main>
+</div>
+</body>
+
+</html>

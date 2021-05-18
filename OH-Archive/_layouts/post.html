@@ -1,0 +1,63 @@
+<!--This is the post layout-->
+<!doctype html>
+<html lang="en">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link href="/assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<!-- Topbar with links-->
+<div class="container newTopbar">
+    <div class="d-flex justify-content-start flex-wrap">
+        <!-- ToDo Implement Pill navigation -->
+        <div style="padding:20px; float: right;">
+            <button class="btn btn-theme" onclick="location.href ='https://www.dh.unibe.ch/';" type="button">Follow
+            </button>
+            <button class="btn btn-theme" onclick="location.href ='https://www.dh.unibe.ch/';" type="button">Donate
+            </button>
+            <button class="btn btn-theme" onclick="location.href ='https://www.dh.unibe.ch/';" type="button">Contact
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="post-header">
+    <a href="/">
+        <img alt="logo" src="../../../../assets/images/frame.png"/>
+    </a>
+    <h2>{{page.author | upcase }}</h2>
+    <h2>{{page.date | date_to_string: "ordinal", "US" }}</h2>
+    <h1>{{ page.title }}</h1>
+</div>
+
+<div class="wrapper">
+    <main aria-label="Content" class="page-content">
+        <!-- Start of Markup Content-->
+        <!--ToDo Implement player for Mp3 -->
+        <section>
+            {{ content }}
+        </section>
+
+        <!-- Displays other posts-->
+        <ul>
+            {% for post in site.posts %}
+            <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <!-- Learn more PopUp Card-->
+        <footer>
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+            <div class="card-footer text-center">
+                <!-- ToDo implement PopUp menu-->
+                <button class="btn btn-theme" type="button">Learn more</button>
+            </div>
+        </footer>
+    </main>
+</div>
+</body>
+</html>
