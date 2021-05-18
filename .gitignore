@@ -4,4 +4,6 @@ OH-Archive/.jekyll-cache
 .jekyll-metadata
 vendor
 .git
-.idea
+.idea/workspace.xml
+.idea/modules.xml
+.idea/HistFalk-OralHistoryArchive.iml

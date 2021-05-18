@@ -12,7 +12,7 @@ Jekyll requires the following:
 
 Please reference [requirements](https://jekyllrb.com/docs/installation/#requirements) for more detailed instructions.
 
-
+For an optimal workspace please use jetbrains [WebStorm](https://www.jetbrains.com/de-de/webstorm/) as IDE.
 ##Insatllation
 Follow [Quickstart](https://jekyllrb.com/docs/). 
 <br/> 
