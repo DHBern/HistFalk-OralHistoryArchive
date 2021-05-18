@@ -1,4 +1,4 @@
-#DH-Oral history archive
+# DH-Oral history archive
 DH-Oral history archive is a project in cooperation with [Francesca Falk](https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html). 
 We are building a website for the publication of oral history recordings (sound and/or video).
 This website is generated using Jekyll and inspired by [MailTape](https://www.mailta.pe/).
