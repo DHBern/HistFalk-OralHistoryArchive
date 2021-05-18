@@ -3,13 +3,15 @@ DH-Oral history archive is a project in cooperation with [Francesca Falk](https:
 We are building a website for the publication of oral history recordings (sound and/or video).
 This website is generated using Jekyll and inspired by [MailTape](https://www.mailta.pe/).
 
+
 ## Prerequisites 
 Jekyll requires the following:
 * Ruby version 2.4.0 or higher
 * RubyGems
 * GCC and Make
 
-Please refrence [requirements](https://jekyllrb.com/docs/installation/#requirements) for more detailed instructions.
+Please reference [requirements](https://jekyllrb.com/docs/installation/#requirements) for more detailed instructions.
+
 
 ##Insatllation
 Follow [Quickstart](https://jekyllrb.com/docs/). 
@@ -37,9 +39,11 @@ If you successfully installed jekyll you can run OH-Archive.
 
 ##Usage
 1. Change into directory: `$ cd OH-Archive`
-3. Build the site and make it available on a local server: `$ bundle exec jekyll serve`
-4. Browse to http://localhost:4000 (if localhost is not working for you try the link displayed under Server address 
+2. Build the site and make it available on a local server: `$ bundle exec jekyll serve`
+3. Browse to http://localhost:4000 (if localhost is not working for you try the link displayed under Server address 
 in your terminal)
+We recommend using Mozilla Firefox for the best experience of this website. Other browsers may work as well. Note that 
+this website isn't optimized for mobile view yet.
 ##Project structure
 ```
 ...
