@@ -12,8 +12,10 @@ Jekyll requires the following:
 
 Please reference [requirements](https://jekyllrb.com/docs/installation/#requirements) for more detailed instructions.
 
-For an optimal workspace please use jetbrains [WebStorm](https://www.jetbrains.com/de-de/webstorm/) as IDE.
-##Insatllation
+You may download jetbrains [WebStorm](https://www.jetbrains.com/de-de/webstorm/) as IDE  for an optimal workspace. 
+The [.idea](.idea) directory is used for the Webstorm project.
+
+## Insatllation
 Follow [Quickstart](https://jekyllrb.com/docs/). 
 <br/> 
 If you get the following this error when installing the jekyll and bundler gems using
@@ -37,14 +39,14 @@ $ echo "chruby ruby-2.7.2" >> ~/.zshrc
 For futher information please consult [this Guide](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/?utm_source=stackoverflow).
 If you successfully installed jekyll you can run OH-Archive.
 
-##Usage
+## Usage
 1. Change into directory: `$ cd OH-Archive`
 2. Build the site and make it available on a local server: `$ bundle exec jekyll serve`
 3. Browse to http://localhost:4000 (if localhost is not working for you try the link displayed under Server address 
 in your terminal)
 We recommend using Mozilla Firefox for the best experience of this website. Other browsers may work as well. Note that 
 this website isn't optimized for mobile view yet.
-##Project structure
+## Project structure
 ```
 ...
 ├── _layouts
