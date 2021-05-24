@@ -11,8 +11,8 @@ Documentation for OH-archive website.
 ...
 ```
 
-##Requirements
-###Layout Requirements
+## Requirements
+### Layout Requirements
 * For the layout the inspiration please reference [MailTape](https://www.mailta.pe/).
 * Homepage:
     * Buttons on the top right linking to different Websites
@@ -23,7 +23,7 @@ Documentation for OH-archive website.
         * Each Button links to a new page
         * Conditional color pattern for buttons
     * "Learn more" Button on the bottom
-        *Pop Up menu
+        *[Pop Up menu](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible)
     * map showing origins of the different archive entries
 * Archive entry page where the mp3 can be played
     * possibly cover picture under archive entry title, filler picture at the moment
@@ -32,24 +32,38 @@ Documentation for OH-archive website.
     * no login, no comment function, no suggestions
 * General styling:
     * Fonts, colors
-###Data Requirements
+### Data Requirements
 * TopBar Button links
 * Title, Logo and Description
 * Button description
     *Is it the title of the mp3 or the name of the narrator?
 * Everything Omeka
-    * The data sets can be found in the „oral-history“ Collection
-    * User account for OMEKA interface:
+    * [_root_/api](http://omeka.unibe.ch/s/api)
+    * The data sets can be found in the „oral-history“ Collection with the set_id: 3527
+    * The following GET query provides the required data on the items for the total contributions for OH-Archive. The endpoint api/items 
+    is queried with the parameters per_page and item_set_id. As a response the server sends a JSON with all items.
+    
+         http://omeka.unibe.ch/api/items?per_page=999999&item_set_id=3527
+                                                                
+    *  [Backend](http://omeka.unibe.ch/admin)
 ```   
-  User: Mailadresse
-  Passwort: un1be2021
+      User: Mailadresse
+      Passwort: 12345678
 ```
-* Images   
-###TO DOs
-* Set up GitHub repository -> private repository or repository in DH
-* Everything Omeka
+* Images
+### TO DOs
+* script.js get attribute such as title and implement them in default.html
+* Fix Access-Control-Allow-Origin
 * Pill navigation Topbar
 * PopUp menu footer
 * Finish Conditional Buttons using category tags
 * Code Clean Up (it smells :P)
  
+ ## Issues 
+ * When accessing http://omeka.unibe.ch/api/items?per_page=999999&item_set_id=3527 you will get an CORS header 
+ ['Access-Control-Allow-Origin' missing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin) 
+ error. 
+    * For now this is solved using a [local proxy](https://www.npmjs.com/package/local-cors-proxy). Start local proxy 
+ by following the steps in the [README](../README.md). 
+    * This is only a temporary fix, later origin of the requesting site must be added to the set of domains permitted 
+ access (Access-Control-Allow-Origin header's value must be added).

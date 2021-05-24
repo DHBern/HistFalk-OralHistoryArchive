@@ -20,7 +20,7 @@ Die API hat den Endpunkt _root_/api (https://www.corona-memory.ch/api).
 Folgende Ressourcen bietet Omeka an:
 
 | Resource | Beschreibung |
-| - | - |
+| ----------| ----------------- |
 | users | Benutzer, die sich einloggen können. |
 | vocabularies | RDF vocabularies, die in Omeka importiert wurden |
 | resource_classes | RDF classes, die zu den vocabularies gehören |

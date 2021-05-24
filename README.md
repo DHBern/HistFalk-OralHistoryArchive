@@ -5,15 +5,17 @@ This website is generated using Jekyll and inspired by [MailTape](https://www.ma
 
 
 ## Prerequisites 
-Jekyll requires the following:
-* Ruby version 2.4.0 or higher
-* RubyGems
-* GCC and Make
-
+* Jekyll requires the following:
+    * Ruby version 2.4.0 or higher
+    * RubyGems
+    * GCC and Make
 Please reference [requirements](https://jekyllrb.com/docs/installation/#requirements) for more detailed instructions.
 
-You may download jetbrains [WebStorm](https://www.jetbrains.com/de-de/webstorm/) as IDE  for an optimal workspace. 
+* You may download jetbrains [WebStorm](https://www.jetbrains.com/de-de/webstorm/) as IDE  for an optimal workspace. 
 The [.idea](.idea) directory is used for the Webstorm project.
+
+* To use OmekaAPI you must currently install a local proxy ([see Access-Control-Allow-Origin' missing error](doc/DocumentationOAH)):
+`$ npm install -g local-cors-proxy`
 
 ## Installation
 Follow [Quickstart](https://jekyllrb.com/docs/). 
@@ -42,10 +44,15 @@ If you successfully installed jekyll you can run OH-Archive.
 ## Usage
 1. Change into directory: `$ cd OH-Archive`
 2. Build the site and make it available on a local server: `$ bundle exec jekyll serve`
-3. Browse to http://localhost:4000 (if localhost is not working for you try the link displayed under Server address 
+3. To start local proxy
+`$ lcp --proxyUrl http://omekaunibe.ch/api/items?per_page=999999&item_set_id=3527`
+4. Browse to http://localhost:4000 (if localhost is not working for you try the link displayed under Server address 
 in your terminal)
+
 We recommend using Mozilla Firefox for the best experience of this website. Other browsers may work as well. Note that 
 this website isn't optimized for mobile view yet.
+
+
 ## Project structure
 ```
 ...
