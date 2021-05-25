@@ -62,8 +62,5 @@ Documentation for OH-archive website.
  ## Issues 
  * When accessing http://omeka.unibe.ch/api/items?per_page=999999&item_set_id=3527 you will get an CORS header 
  ['Access-Control-Allow-Origin' missing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin) 
- error. 
-    * For now this is solved using a [local proxy](https://www.npmjs.com/package/local-cors-proxy). Start local proxy 
- by following the steps in the [README](../README.md). 
-    * This is only a temporary fix, later origin of the requesting site must be added to the set of domains permitted 
- access (Access-Control-Allow-Origin header's value must be added).
+ error. Origin of the requesting site must be added to the set of domains permitted access (Access-Control-Allow-Origin 
+ header's value must be added). -> Jonas
