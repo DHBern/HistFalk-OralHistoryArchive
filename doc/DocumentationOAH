@@ -1,6 +1,6 @@
 # Documentation: DH-Oral history archive
 Documentation for OH-archive website. 
-##Website structure
+## Website structure
 ```
 ...
 ├── Homepage(index.html)
