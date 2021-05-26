@@ -52,15 +52,21 @@ Documentation for OH-archive website.
 ```
 * Images
 ### TO DOs
-* script.js get attribute such as title and implement them in default.html
-* Fix Access-Control-Allow-Origin
-* Pill navigation Topbar
-* PopUp menu footer
-* Finish Conditional Buttons using category tags
-* Code Clean Up (it smells :P)
+-[ ] script.js get attribute such as title and implement them in default.html
+-[ ] Fix Access-Control-Allow-Origin
+-[ ] Pill navigation Topbar
+-[ ] PopUp menu footer
+-[ ] Finish Conditional Buttons using category tags
+-[ ] Code Clean Up (it smells :P)
+
  
  ## Issues 
  * When accessing http://omeka.unibe.ch/api/items?per_page=999999&item_set_id=3527 you will get an CORS header 
  ['Access-Control-Allow-Origin' missing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin) 
  error. Origin of the requesting site must be added to the set of domains permitted access (Access-Control-Allow-Origin 
- header's value must be added). -> Jonas
+ header's value must be added).
+    * Solved for now by using corona memory as Root:
+    
+        https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
+        
+        
