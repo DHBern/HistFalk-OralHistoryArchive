@@ -35,22 +35,39 @@ Documentation for OH-archive website.
 ### Data Requirements
 * TopBar Button links
 * Title, Logo and Description
-* Button description
-    *Is it the title of the mp3 or the name of the narrator?
-* Everything Omeka
-    * [_root_/api](http://omeka.unibe.ch/s/api)
-    * The data sets can be found in the „oral-history“ Collection with the set_id: 3527
-    * The following GET query provides the required data on the items for the total contributions for OH-Archive. The endpoint api/items 
-    is queried with the parameters per_page and item_set_id. As a response the server sends a JSON with all items.
+* Button description -> "Interview with XY"
+* Images        
+### Omeka
+* [_root_/api](https://www.corona-memory.ch/api/)
+* The data sets can be found in the „oral-history“ Collection with the set_id: 3527
+* The following GET query provides the required data on the items for the total contributions for OH-Archive. The endpoint api/items 
+is queried with the parameters per_page and item_set_id. 
     
-         http://omeka.unibe.ch/api/items?per_page=999999&item_set_id=3527
-                                                                
-    *  [Backend](http://omeka.unibe.ch/admin)
+    https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
+    
+* As a response the server sends a JSON with all items. Please reference [this table](JSON_Response_table.xlsx) for more information on how 
+to query the JSON content.
+The following table shows how the content of the JSON is organized in [script.js](../OH-Archive/assets/js/script.js)
+
+
+
+| Value/Collection Name   | Content                                                        | 
+| ------------------------| -------------------------------------------------------------- |
+| id                      | String of item id                                              |
+| is_public               | Boolean, true if it is public                                  |
+| entry_info              | String Array with the following content [title, created, lastModified, description, language] |
+| pers_info               | String Array with the following content  [firstName, familyName, birthday]|
+| geo_info                |String Array with the following content  [hasGeoLocation, locatedIn, isSubjectOf] |
+
+
+
+                                                               
+*  [Backend](http://omeka.unibe.ch/admin)
 ```   
       User: Mailadresse
       Passwort: 12345678
 ```
-* Images
+
 ### TO DOs
 -[ ] script.js get attribute such as title and implement them in default.html
 -[ ] Fix Access-Control-Allow-Origin
@@ -68,5 +85,5 @@ Documentation for OH-archive website.
     * Solved for now by using corona memory as Root:
     
         https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
-        
+* geo_info is not correct in every entry see script.js        
         
