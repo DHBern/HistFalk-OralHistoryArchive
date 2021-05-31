@@ -53,11 +53,9 @@ The following table shows how the content of the JSON is organized in [script.js
 
 | Value/Collection Name   | Content                                                        | 
 | ------------------------| -------------------------------------------------------------- |
-| id                      | String of item id                                              |
-| is_public               | Boolean, true if it is public                                  |
-| entry_info              | String Array with the following content [title, created, lastModified, description, language] |
+| entry_info              | Array with the following content [id, is_public, title, created, lastModified, description, language] |
 | pers_info               | String Array with the following content  [firstName, familyName, birthday]|
-| geo_info                |String Array with the following content  [hasGeoLocation, locatedIn, isSubjectOf] |
+| geo_info                | String Array with the following content  [hasGeoLocation, locatedIn, isSubjectOf] |
 
 
 
@@ -70,6 +68,7 @@ The following table shows how the content of the JSON is organized in [script.js
 
 ### TO DOs
 -[ ] script.js get attribute such as title and implement them in default.html
+--> Partly done using [this Tutorial] (https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/)
 -[ ] Fix Access-Control-Allow-Origin
 -[ ] Pill navigation Topbar
 -[ ] PopUp menu footer
