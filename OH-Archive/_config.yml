@@ -33,7 +33,8 @@ description: Lorem Ipsum is simply dummy text of the printing and typesetting in
 theme: minima
 plugins:
   - jekyll-feed
-
+sass:
+  sass_dir: assets/css
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

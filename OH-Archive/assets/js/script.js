@@ -7,6 +7,7 @@ const request = new XMLHttpRequest();
 const app = document.getElementById('root');
 const container = document.createElement('div');
 container.setAttribute('class', 'container');
+container.setAttribute("style", "padding:20px")
 app.appendChild(container);
 request.open('GET', 'https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527', true);
 request.withCredentials = false;
@@ -15,10 +16,9 @@ request.onload = function () {
     var data = JSON.parse(this.response);
     if (request.status >= 200 && request.status < 400) {
         data.forEach((object) => {
-            const card = document.createElement('div');
-            card.setAttribute('class', 'card');
-            const h1 = document.createElement('h1')
-
+            const titleBtn = document.createElement('Button');
+            titleBtn.setAttribute('class', 'btn btn-primary');
+            titleBtn.setAttribute('type', 'Button');
             var obj_values = Object.values(object);
             /*
             Entry information
@@ -42,12 +42,13 @@ request.onload = function () {
             var geo_info = [Object.values(obj_values[21][0])[4],Object.values(obj_values[22][0])[4],
                 Object.values(obj_values[23][0])[4]];
 
+            const title = document.createTextNode(entry_info[2]);
+            titleBtn.appendChild(title)
+            // Append the button to the container element
+            container.appendChild(titleBtn);
 
-            h1.textContent = entry_info[2].toString();
-            // Append the cards to the container element
-            container.appendChild(card)
-            // Each card will contain an h1 and a p
-            card.appendChild(h1)
+
+
 
 
         })

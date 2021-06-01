@@ -1,3 +1,4 @@
+
 /** Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
   margin: 0;
@@ -399,6 +400,7 @@ table td {
   font-size: 24px;
 }
 
+
 /** Posts */
 .post-header {
   margin-top: 20px;
@@ -742,6 +744,19 @@ table td {
 .highlight .il {
   color: #099;
 }
+
+/* Button styling */
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: #8064A2 !important;
+  border-color: #8064A2 !important;
+}
+
+
 
 
 /*# sourceMappingURL=main.css.map */

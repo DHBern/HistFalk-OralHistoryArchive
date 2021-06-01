@@ -11,11 +11,14 @@ layout: default
 <!-- ToDo Make post.title a button, position buttons next to each other, color them conditional using the category tag-->
 {% for post in site.posts %}
 {% if post.category == 'fruit' %}
-<button class="btn btn-theme" onclick="location.href ='{{ post.url }}';" type="button">
+<button class="btn btn-primary" onclick="location.href ='{{ post.url }}';" type="button">
     {{ post.title }}
 </button>
 {% endif %}
 {% endfor %}
+
+
+
 </body>
 
 </html>

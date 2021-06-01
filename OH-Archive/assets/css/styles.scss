@@ -1,4 +1,9 @@
 ---
 ---
+@import "bootstrap/_functions.scss";
+@import "bootstrap/_variables";
+@import "bootstrap/mixins/_gradients.scss";
+@import "bootstrap/mixins/_buttons";
+@import "bootstrap/mixins/_box-shadow.scss";
+@import "../../_sass/main";
 
-@import "main";
