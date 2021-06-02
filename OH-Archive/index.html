@@ -2,26 +2,14 @@
 layout: default
 ---
 <!DOCTYPE html>
+<!-- ToDo:
+ - Content from script.js is not in same wrapper,
+(has more padding on the sides, fix in style.css) -->
 <html lang="en">
 <body>
 <!-- Content from script.js -->
 <div id="root"></div>
 <script src="assets/js/script.js"></script>
-
-<!--Posts-->
-<!-- ToDo Make post.title a button, position buttons next to each other, color them conditional using the category tag-->
-<ul class="flex-container wrap">
-    {% for post in site.posts %}
-    <li class="flex-item">
-        <button class="btn btn-primary" onclick="location.href ='{{ post.url }}';" type="button">
-            {{ post.title }}
-        </button>
-    </li>
-    {% endfor %}
-</ul>
-
-
-
 
 
 

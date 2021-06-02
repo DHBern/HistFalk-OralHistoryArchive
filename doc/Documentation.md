@@ -67,13 +67,14 @@ The following table shows how the content of the JSON is organized in [script.js
 ```
 
 ### TO DOs
--[ ] script.js get attribute such as title and implement them in default.html
+-[X] script.js get attribute such as title and implement them in default.html
 --> Partly done using [this Tutorial] (https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/)
--[ ] Fix Access-Control-Allow-Origin
+-[X] Fix Access-Control-Allow-Origin (for now)
 -[ ] Pill navigation Topbar
 -[ ] PopUp menu footer
 -[ ] Finish Conditional Buttons using category tags
 -[ ] Code Clean Up (it smells :P)
+-[ ] Comments
 
  
  ## Issues 
@@ -84,5 +85,6 @@ The following table shows how the content of the JSON is organized in [script.js
     * Solved for now by using corona memory as Root:
     
         https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
-* geo_info is not correct in every entry see script.js        
+* geo_info is not correct in every entry see script.js
+* How are dynamic posts produced, alias produce an .md from script.js, maybe new script?        
         

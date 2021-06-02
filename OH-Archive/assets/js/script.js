@@ -1,7 +1,12 @@
 /*
 ToDO:
 - Fix Geo error in objects: 3541, 3662, 3663
+- Add conditional coloring
+- Add "post" links to the buttons
+- Add comments
  */
+
+
 //Dom Elements
 const app = document.getElementById('root');
 const flexContainer = document.createElement("ul");
