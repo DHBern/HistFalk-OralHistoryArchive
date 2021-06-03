@@ -47,7 +47,7 @@ is queried with the parameters per_page and item_set_id.
     
 * As a response the server sends a JSON with all items. Please reference [this table](JSON_Response_table.xlsx) for more information on how 
 to query the JSON content.
-The following table shows how the content of the JSON is organized in [script.js](../OH-Archive/assets/js/script.js)
+The following table shows how the content of the JSON is organized in [indexScript.js](../OH-Archive/assets/js/scripts/indexScript.js)
 
 
 
@@ -67,7 +67,7 @@ The following table shows how the content of the JSON is organized in [script.js
 ```
 
 ### TO DOs
--[X] script.js get attribute such as title and implement them in default.html
+-[X] indexScript.js get attribute such as title and implement them in default.html
 --> Partly done using [this Tutorial] (https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/)
 -[X] Fix Access-Control-Allow-Origin (for now)
 -[ ] Pill navigation Topbar
@@ -85,6 +85,6 @@ The following table shows how the content of the JSON is organized in [script.js
     * Solved for now by using corona memory as Root:
     
         https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
-* geo_info is not correct in every entry see script.js
-* How are dynamic posts produced, alias produce an .md from script.js, maybe new script?        
+* geo_info is not correct in every entry see indexScript.js
+* How are dynamic posts produced, alias produce an .md from indexScript.js, maybe new script?        
         
