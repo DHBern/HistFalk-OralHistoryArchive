@@ -2,6 +2,7 @@
 HistFalk-Oral history archive is a project in cooperation with [Francesca Falk](https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html). 
 We are building a website for the publication of oral history recordings (sound and/or video).
 This website is generated using Jekyll and inspired by [MailTape](https://www.mailta.pe/).
+Jekyll is a static Site-Generator, which means all the components must be added before building the site. 
 
 
 ## Prerequisites 
@@ -10,6 +11,13 @@ This website is generated using Jekyll and inspired by [MailTape](https://www.ma
     * RubyGems
     * GCC and Make
 Please reference [requirements](https://jekyllrb.com/docs/installation/#requirements) for more detailed instructions.
+
+* You should have Node.js and NPM installed (NPM is installed automatically with latest versions of Node.js) which is
+ needed for the backend. You can verify whether you have both by running `node -v` and `npm -v in terminal 
+ or command prompt.
+    * If you don't have node.js installed please follow the instruction please [download](https://nodejs.org/en/download/)
+     the package.
+
 
 * You may download jetbrains [WebStorm](https://www.jetbrains.com/de-de/webstorm/) as IDE  for an optimal workspace. 
 The [.idea](.idea) directory is used for the Webstorm project.
@@ -39,6 +47,11 @@ For futher information please consult [this Guide](https://www.moncefbelyamani.c
 If you successfully installed jekyll you can run OH-Archive.
 
 ## Usage
+### Backend
+The backend file must be run before building the website.
+1. Change into backend directory: `$ cd OH-Archive/_posts/backend`
+2. Produce the posts from Omeka API by running `$ node generate-md-files.js`
+### Frontend
 1. Change into directory: `$ cd OH-Archive`
 2. Build the site and make it available on a local server: `$ bundle exec jekyll serve`
 3. Browse to http://localhost:4000 (if localhost is not working for you try the link displayed under Server address 

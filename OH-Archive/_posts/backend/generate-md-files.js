@@ -1,3 +1,10 @@
+/*
+Backend file. Must be run before building the Website.
+Gets data from Omeka API and parses JSON.
+Creates Entry instances general, person and geo from JSON.
+Generates post files (in markdown format and with front matter syntax) in _posts directory.
+ */
+
 var fs = require('fs');
 var request = require('request');
 const https = require('http');
@@ -12,6 +19,8 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
             data.forEach((object) => {
                 const obj_values = Object.values(object);
 
+
+                //creating Entry instances
                 const general = Entry.generalInstance(
                     BigInt(obj_values[3]),
                     obj_values[4] ,
@@ -33,16 +42,17 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                     Object.values(obj_values[23][0])[4]
                 );
 
-
+                //prepares attributes for markdown
                 var date = general.created.toString().slice(0,10);
                 var name = person.firstName.replace(/\s/g, "")+"-"+person.lastName.replace(/\s/g, "");
                 var permalink = person.firstName.replace(/\s/g, "")+
                     person.lastName.replace(/\s/g, "")
 
-
+                //function for posts markdown
                 function generateMD () {
                     var fileName = date+"-"+name+".md";
 
+                    //front matter syntax
                     var fileContents = ("---\nlayout: post\ntitle: "+general.title+"\npermalink: "+permalink+
                         "\n---");
 
@@ -55,6 +65,7 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                         console.log(outputPath + ' file generated')
                     })
                 }
+
 
                 generateMD()
 
