@@ -114,7 +114,7 @@ how the content of the JSON is organized in these instances.
 -[ ] Pill navigation Topbar
 -[ ] PopUp menu footer
 -[ ] Finish Conditional Buttons using category tags
--[ ] Add a tag to verify if there is a post 
+-[X] Add a tag to verify if there is a post 
 -> Maybe post request only set to public if backend file is run?
 -> Or use front matter tags
 -[ ] Code Clean Up (it smells :P)

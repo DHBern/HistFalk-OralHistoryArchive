@@ -46,14 +46,15 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                 var date = general.created.toString().slice(0,10);
                 var name = person.firstName.replace(/\s/g, "")+"-"+person.lastName.replace(/\s/g, "");
                 var permalink = person.firstName.replace(/\s/g, "")+
-                    person.lastName.replace(/\s/g, "")
+                    person.lastName.replace(/\s/g, "");
 
                 //function for posts markdown
                 function generateMD () {
                     var fileName = date+"-"+name+".md";
 
                     //front matter syntax
-                    var fileContents = ("---\nlayout: post\ntitle: "+general.title+"\npermalink: "+permalink+
+                    var fileContents = ("---\nlayout: post\ntitle: "+general.title+"\nprotagonist: "
+                        +person.firstName+" "+person.lastName+"\npermalink: "+permalink+
                         "\n---");
 
                     var outputPath = '../' + fileName;

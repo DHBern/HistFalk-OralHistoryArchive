@@ -51,9 +51,9 @@ request.onload = function () {
             );
 
 
-            var permalink = person.firstName+person.lastName.charAt(0).toUpperCase();
-
-
+            var permalink = person.firstName.replace(/\s/g, "")+
+                person.lastName.replace(/\s/g, "");
+/*
 
             //DOM Button
             const nameBtn = document.createElement('Button');
@@ -81,7 +81,7 @@ request.onload = function () {
             nameBtn.appendChild(name);
             flexItem.appendChild(nameBtn);
             flexContainer.appendChild(flexItem);
-
+*/
         })
     } else {
         const errorMessage = document.createElement('marquee');
