@@ -25,22 +25,9 @@ request.onload = function () {
         data.forEach((object) => {
             const obj_values = Object.values(object);
 
-
-
-            //DOM Button
-            const nameBtn = document.createElement('Button');
-            nameBtn.setAttribute('class', 'btn btn-primary');
-            nameBtn.setAttribute('type', 'Button');
-            nameBtn.addEventListener("click", function(){
-                location = " http://127.0.0.1:4000/archiveEntry"; // Navigate to new page
-            });
-
-
-            const flexItem = document.createElement("li");
-            flexItem.setAttribute("class", "flex-item");
-
-
-
+            /*
+            Entry Instances general, person and geo
+             */
 
             const general = Entry.generalInstance(
                 BigInt(obj_values[3]),
@@ -51,6 +38,7 @@ request.onload = function () {
                 Object.values(obj_values[11])[0],
                 Object.values(obj_values[12])[0],
             );
+
             const person = Entry.personInstance(
                 Object.values(obj_values[19][0])[4],
                 Object.values(obj_values[20][0])[4],
@@ -61,6 +49,28 @@ request.onload = function () {
                 Object.values(obj_values[22][0])[4],
                 Object.values(obj_values[23][0])[4]
             );
+
+
+            var permalink = person.firstName+person.lastName.charAt(0).toUpperCase();
+
+
+
+            //DOM Button
+            const nameBtn = document.createElement('Button');
+            nameBtn.setAttribute('class', 'btn btn-primary');
+            nameBtn.setAttribute('type', 'Button');
+            nameBtn.addEventListener("click", function(){
+                location = "http://127.0.0.1:4000/"+permalink;
+            });
+
+
+            const flexItem = document.createElement("li");
+            flexItem.setAttribute("class", "flex-item");
+
+
+
+
+
 
 
 
@@ -83,24 +93,6 @@ request.onload = function () {
 
 request.send();
 
-function generateMD () {
-    var fileName = faker.lorem.word() + '-' + faker.lorem.word()
-    var fileContents = `---
-title: "${faker.lorem.words()}"
-layout: Post
----
-
-${faker.lorem.sentence()}
-`;
-    var outputPath = path.join(__dirname, 'OH-Archive/_posts', `${fileName}.md`)
-
-    fs.writeFile(outputPath, fileContents, function (err) {
-        if (err) {
-            return console.log(err)
-        }
-        console.log(outputPath + ' file generated')
-    })
-}
 
 
 
