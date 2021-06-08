@@ -67,7 +67,9 @@ this website isn't optimized for mobile view yet.
 ├── _layouts
 │   └── In this directory you will find the different layouts. 
 │       For example default.html"
-├── _posts"
+├── _posts
+│   ├── Backend
+│   │ 
 │   └── Stores blog posts in markdown.
 ├── _sass
 │   └── Styling sheet for the project.

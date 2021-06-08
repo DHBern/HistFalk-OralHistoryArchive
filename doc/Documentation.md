@@ -1,16 +1,5 @@
 # Documentation: DH-Oral history archive
 Documentation for OH-archive website. 
-## Website structure
-```
-...
-├── Homepage(index.html)
-│   ├── Blogposts/Archive entry page
-|   |   └── mp3 via Omeka API
-│   ├── ...
-│   └── Blogposts/OH-Archive entry
-...
-```
-
 ## Requirements
 ### Layout Requirements
 * For the layout the inspiration please reference [MailTape](https://www.mailta.pe/).
@@ -34,12 +23,14 @@ Documentation for OH-archive website.
     * no login, no comment function, no suggestions
 * General styling:
     * Fonts, colors
+* Mobile fähig
 ### Data Requirements
 * TopBar Button links
+* Condition for conditional Buttons
 * Website: Header, Title, Logo and Description 
-* Images  
+* Images for example Logo, Background etc. 
 * General styling:
-    * Fonts, colors theme    
+    * Fonts, color theme    
 ### Omeka
 * [_root_/api](https://www.corona-memory.ch/api/)
 * The data sets can be found in the „oral-history“ Collection with the set_id: 3527
@@ -109,7 +100,7 @@ how the content of the JSON is organized in these instances.
 ```
 
 ### TO DOs
--[X] indexScript.js get attribute such as title and implement them in default.html
+-[X] postScript.js get attribute such as title and implement them in default.html
 -[X] Fix Access-Control-Allow-Origin (for now)
 -[ ] Pill navigation Topbar
 -[ ] PopUp menu footer
@@ -119,7 +110,12 @@ how the content of the JSON is organized in these instances.
 -> Or use front matter tags
 -[ ] Code Clean Up (it smells :P)
 -[ ] Comments
+-[ ] Documentation
 -[ ] Add seperate Entry Class file
+-[ ] Finish JSON table on how to acces Audio entry
+-[ ] Add audio from API
+-[ ] General styling
+
 
  
  ## Issues 
@@ -130,6 +126,7 @@ how the content of the JSON is organized in these instances.
     * Solved for now by using corona memory as Root:
     
         https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
-* geo_info is not correct in every entry see indexScript.js
+* geo_info is not correct in every entry see postScript.js
+* Is a Backend script okay? -> cronjob
      
         

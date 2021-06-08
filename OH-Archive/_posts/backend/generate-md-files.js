@@ -55,7 +55,7 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                     //front matter syntax
                     var fileContents = ("---\nlayout: post\ntitle: "+general.title+"\nprotagonist: "
                         +person.firstName+" "+person.lastName+"\npermalink: "+permalink+
-                        "\n---");
+                        "\n---\n"+general.description);
 
                     var outputPath = '../' + fileName;
 
@@ -66,9 +66,10 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                         console.log(outputPath + ' file generated')
                     })
                 }
+                if(general.isPublic){
+                    generateMD()
+                }
 
-
-                generateMD()
 
 
             })

@@ -1,34 +1,30 @@
 /*
 ToDO:
 - Fix Geo error in objects: 3541, 3662, 3663
-- Add conditional coloring
-- Add "post" links to the buttons
 - Add comments
  */
 
 //DOM Elements definition
 const app = document.getElementById('root');
-const flexContainer = document.createElement("ul");
-flexContainer.setAttribute("class","flex-container wrap" );
-app.appendChild(flexContainer);
+const container = document.createElement("div");
+app.appendChild(container);
 
-//Request to API
+//Request items from API
 const request = new XMLHttpRequest();
 request.open('GET', 'https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527', true);
 request.withCredentials = false;
 
 request.onload = function () {
-
     // Begin accessing JSON data here
     var data = JSON.parse(this.response);
     if (request.status >= 200 && request.status < 400) {
         data.forEach((object) => {
             const obj_values = Object.values(object);
+            console.log(obj_values);
 
             /*
             Entry Instances general, person and geo
              */
-
             const general = Entry.generalInstance(
                 BigInt(obj_values[3]),
                 obj_values[4] ,
@@ -51,37 +47,13 @@ request.onload = function () {
             );
 
 
-            var permalink = person.firstName.replace(/\s/g, "")+
-                person.lastName.replace(/\s/g, "");
-/*
-
-            //DOM Button
-            const nameBtn = document.createElement('Button');
-            nameBtn.setAttribute('class', 'btn btn-primary');
-            nameBtn.setAttribute('type', 'Button');
-            nameBtn.addEventListener("click", function(){
-                location = "http://127.0.0.1:4000/"+permalink;
-            });
-
-
-            const flexItem = document.createElement("li");
-            flexItem.setAttribute("class", "flex-item");
-
-
-
-
-
-
-
-
-
-
-            // Append text to button and button to the container element
-            const name = document.createTextNode(person.firstName+" "+person.lastName);
-            nameBtn.appendChild(name);
-            flexItem.appendChild(nameBtn);
-            flexContainer.appendChild(flexItem);
-*/
+            /*
+                        // Append text to button and button to the container element
+                        const name = document.createTextNode(person.firstName+" "+person.lastName);
+                        nameBtn.appendChild(name);
+                        flexItem.appendChild(nameBtn);
+                        flexContainer.appendChild(flexItem);
+            */
         })
     } else {
         const errorMessage = document.createElement('marquee');
@@ -92,7 +64,6 @@ request.onload = function () {
 };
 
 request.send();
-
 
 
 

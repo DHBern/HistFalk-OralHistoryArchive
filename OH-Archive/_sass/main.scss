@@ -376,7 +376,7 @@ table td {
 .page-heading {
   font-size: 32px;
 }
-
+/** Posts */
 .post-list-heading {
   font-size: 28px;
 }
@@ -401,7 +401,7 @@ table td {
 }
 
 
-/** Posts */
+
 .post-header {
   margin-top: 20px;
   flex: auto;
@@ -409,7 +409,7 @@ table td {
   padding-top: 20px;
   min-height: 500px;
   /* The image used */
-  background-image: url('../images/filler2.png');
+  background-image: url('../images/filler2.jpg');
   background-attachment: fixed;
   background-size: cover;
 
@@ -437,6 +437,10 @@ table td {
   margin-bottom: 0;
   color: white;
   vertical-align: bottom;
+}
+.post-header figure{
+  margin-top: 50px;
+  text-align: center;
 }
 
 .post-title {
