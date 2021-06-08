@@ -3,6 +3,8 @@ ToDO:
 - Fix Geo error in objects: 3541, 3662, 3663
 - Add conditional coloring?
 - Add comments
+- Check URL for correct audio https://stackoverflow.com/questions/42088653/checking-a-url-in-an-if-else-statement
+
  */
 
 //DOM Elements definition
@@ -43,6 +45,7 @@ requestAudio.onload = function () {
         data.forEach((object) => {
             const obj_values = Object.values(object);
             const audio_url = obj_values[22];
+
         })} else {
         const errorMessage = document.createElement('marquee');
         errorMessage.textContent = `Gah, it's not working!`;

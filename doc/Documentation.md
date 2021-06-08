@@ -115,6 +115,7 @@ how the content of the JSON is organized in these instances.
 -[ ] Finish JSON table on how to acces Audio entry
 -[ ] Add audio from API
 -[ ] General styling
+- [ ]Check URL for correct audio https://stackoverflow.com/questions/42088653/checking-a-url-in-an-if-else-statement
 
 
  
