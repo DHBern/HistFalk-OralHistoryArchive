@@ -3,14 +3,13 @@ ToDO:
 - Fix Geo error in objects: 3541, 3662, 3663
 - Add conditional coloring?
 - Add comments
-- Check URL for correct audio https://stackoverflow.com/questions/42088653/checking-a-url-in-an-if-else-statement
-
+- Check URL for correct audio
  */
 
 //DOM Elements definition
+const pageId = window.location.href.split('_')[2];
 const app = document.getElementById('root');
-const container = document.createElement("div");
-app.appendChild(container);
+const figure =document.createElement("figure");
 
 //Request items from API
 const request = new XMLHttpRequest();
@@ -29,7 +28,6 @@ request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
         data.forEach((object) => {
             const obj_values = Object.values(object);
-
         })
     } else {
         const errorMessage = document.createElement('marquee');
@@ -44,7 +42,22 @@ requestAudio.onload = function () {
     if (requestAudio.status >= 200 && requestAudio.status < 400) {
         data.forEach((object) => {
             const obj_values = Object.values(object);
-            const audio_url = obj_values[22];
+
+            const audio = new AudioEntry(obj_values[3], Object.values(obj_values[15])[1],
+                obj_values[4], obj_values[9], obj_values[22]);
+
+            console.log(obj_values);
+
+            if(BigInt(pageId) === BigInt(audio.entryId)){
+                const audioPlayer = document.createElement("audio");
+                audioPlayer.setAttribute("src",audio.audioFileUrl.toString());
+                audioPlayer.setAttribute("controls","");
+                figure.appendChild(audioPlayer);
+                app.appendChild(figure);
+
+            }
+
+
 
         })} else {
         const errorMessage = document.createElement('marquee');
@@ -81,10 +94,10 @@ class Entry {
         this.isSubjof = isSubjOf;
     }
     static generalInstance(id, isPublic, title, description, language, created,
-                           lastMod){
+                           lastMod, isSubjOf){
         return new Entry(id, isPublic, title, description, language, created,
             lastMod,null,null,null,null,
-            null,null)
+            null,isSubjOf)
     }
     static personInstance(firstName, lastName, birthday){
         return new Entry(null,null,null,null,null,null,null,
@@ -96,7 +109,14 @@ class Entry {
     }
 }
 class AudioEntry{
+    constructor(audioId, entryId, isPublic, title, audioFileUrl, ){
+        this.ausioId = audioId;
+        this.entryId = entryId;
+        this.isPublic = isPublic;
+        this.title = title;
+        this.audioFileUrl = audioFileUrl;
 
+    }
 }
 
 

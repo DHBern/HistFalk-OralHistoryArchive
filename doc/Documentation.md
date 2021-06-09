@@ -4,33 +4,26 @@ Documentation for OH-archive website.
 ### Layout Requirements
 * For the layout the inspiration please reference [MailTape](https://www.mailta.pe/).
 * Homepage:
-    * Buttons on the top right linking to different Websites
-        * Pill Navigation: https://www.w3schools.com/howto/howto_css_pill_nav.asp    
-    * Title with logo
-    * Description
+    * Contact Button on the top right to https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html          
+    * Title, no Logo, description (comming from Fran)
     * Buttons linking to the archive entry pages
         * Each Button links to a new page (__done__)
-        * Conditional color pattern for buttons
-    * "Learn more" Button on the bottom
-    
-        *[Pop Up menu](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible)
-        
+        * Conditional color pattern for buttons (is_subject of parameter)        
     * map showing origins of the different archive entries
 * Archive entry page where the mp3 can be played
-    * possibly cover picture under archive entry title, filler picture at the moment
-    * media player for the mp3 (via omeka)
-    * description -> meta data from Omkea
-    * no login, no comment function, no suggestions
+    * media player for the mp3 (__done__)
+    * description, Birthday, etc. (data from Omeka)
 * General styling:
-    * Fonts, colors
+    * Fonts (my choice) https://fonts.google.com/, colors (pastel)
 * Mobile fähig
+    * Mobile testing looks okay
+    * https://tylerkindy.com/2020/05/26/jekyll-serve-mobile
 ### Data Requirements
-* TopBar Button links
-* Condition for conditional Buttons
+* TopBar Button links: https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html
+* Condition for conditional Buttons (is_subject of parameter)  
 * Website: Header, Title, Logo and Description 
-* Images for example Logo, Background etc. 
 * General styling:
-    * Fonts, color theme    
+    * Fonts, color theme (dealers choice)  
 ### Omeka
 * [_root_/api](https://www.corona-memory.ch/api/)
 * The data sets can be found in the „oral-history“ Collection with the set_id: 3527
@@ -115,7 +108,7 @@ how the content of the JSON is organized in these instances.
 -[ ] Finish JSON table on how to acces Audio entry
 -[ ] Add audio from API
 -[ ] General styling
-- [ ]Check URL for correct audio https://stackoverflow.com/questions/42088653/checking-a-url-in-an-if-else-statement
+-[ ]Check URL for correct audio https://stackoverflow.com/questions/42088653/checking-a-url-in-an-if-else-statement
 
 
  
@@ -128,6 +121,7 @@ how the content of the JSON is organized in these instances.
     
         https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
 * geo_info is not correct in every entry see postScript.js
+* Mp3 for Sibel_Arslan_3662 is missing and Ödön_Szabo_3538 has to
 * Is a Backend script okay? -> cronjob
      
         

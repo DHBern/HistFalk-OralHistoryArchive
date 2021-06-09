@@ -52,10 +52,16 @@ The backend file must be run before building the website.
 1. Change into backend directory: `$ cd OH-Archive/_posts/backend`
 2. Produce the posts from Omeka API by running `$ node generate-md-files.js`
 ### Frontend
+#### Desktop
 1. Change into directory: `$ cd OH-Archive`
 2. Build the site and make it available on a local server: `$ bundle exec jekyll serve`
 3. Browse to http://localhost:4000 (if localhost is not working for you try the link displayed under Server address 
 in your terminal)
+#### Mobile
+1. Change into directory: `$ cd OH-Archive`
+2. Build the site and make it available on a local server: `$ bundle exec jekyll serve --host 0.0.0.0`
+3. On your mobile device browse to `http://<Local IP Address>:<port number>` (on Mac Os you will find your local IP 
+Adress in System Preferences > Network)
 
 We recommend using Mozilla Firefox for the best experience of this website. Other browsers may work as well. Note that 
 this website isn't optimized for mobile view yet.

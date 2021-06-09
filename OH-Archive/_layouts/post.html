@@ -29,13 +29,11 @@
     <h2>{{page.author | upcase }}</h2>
     <h2>{{page.date | date_to_string: "ordinal", "US" }}</h2>
     <h1>{{ page.title }}</h1>
-    <figure>
-        <div id="root"></div>
-        <script  type="module" src="../assets/js/scripts/postScript.js"></script>
-        <audio controls src="https://www.corona-memory.ch/files/original/89e37267c7523032436f849388cd38e1fd228f41.m4a">
-            Your browser does not support the <code>audio</code> element.
-        </audio>
-    </figure>
+    <!-- Content from postScript.js -->
+    <!--ToDo Implement player for Mp3 -->
+    <div id="root"></div>
+    <script  type="module" src="../assets/js/scripts/postScript.js"></script>
+
 </div>
 
 <div class="wrapper">
@@ -47,10 +45,6 @@
             </div>
         </div>
 
-        <!-- Content from postScript.js -->
-        <!--ToDo Implement player for Mp3 -->
-        <div id="root"></div>
-        <script  type="module" src="../assets/js/scripts/postScript.js"></script>
 
 
 

@@ -750,22 +750,67 @@ table td {
 }
 
 /* Button styling */
+#root{
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited,
+    .btn-primary:focus {
+      background-color: #8064A2 !important;
+      border-color: #8064A2 !important;
+  }
+  #Schwarzenbach{
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited,
+    .btn-primary:focus {
+    background-color: #71a283 !important;
+    border-color: #71a283 !important;
+  }}
 
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited,
-.btn-primary:focus {
-  background-color: #8064A2 !important;
-  border-color: #8064A2 !important;
+    #tbd{
+      .btn-primary,
+      .btn-primary:hover,
+      .btn-primary:active,
+      .btn-primary:visited,
+      .btn-primary:focus {
+        background-color: #fffd80 !important;
+        border-color: #fffd80 !important;
+      } }
+  #Parlamentarierinnen{
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited,
+    .btn-primary:focus {
+      background-color: #5f83c0 !important;
+      border-color: #5f83c0 !important;
+
+  } }
+
+
+
+
+
+
+
 }
 
-/* Divider */
-.divider{
-  width:5px;
-  height:auto;
-  display:inline-block;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Containers */
 .flex-container {

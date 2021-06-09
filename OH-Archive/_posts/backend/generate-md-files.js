@@ -29,7 +29,9 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                     Object.values(obj_values[24][0])[4],
                     Object.values(obj_values[11])[0],
                     Object.values(obj_values[12])[0],
+                    Object.values(obj_values[23][0])[4]
                 );
+
 
                 const person = Entry.personInstance(
                     Object.values(obj_values[19][0])[4],
@@ -45,18 +47,21 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                 //prepares attributes for markdown
                 var date = general.created.toString().slice(0,10);
                 var name = person.firstName.replace(/\s/g, "")+"-"+person.lastName.replace(/\s/g, "");
-                var permalink = person.firstName.replace(/\s/g, "")+
-                    person.lastName.replace(/\s/g, "");
+                var permalink = person.firstName.replace(/\s/g, "")+"_"+
+                    person.lastName.replace(/\s/g, "")+"_"+general.id;
+
+
 
                 //function for posts markdown
                 function generateMD () {
                     var fileName = date+"-"+name+".md";
 
                     //front matter syntax
-                    var fileContents = ("---\nlayout: post\ntitle: "+general.title+"\nprotagonist: "
-                        +person.firstName+" "+person.lastName+"\npermalink: "+permalink+
+                    var fileContents = ("---\nlayout: post\ntitle: "+general.title
+                        + "\nCollection: " +general.isSubjof
+                        + "\nprotagonist: " +person.firstName+" "+person.lastName
+                        + "\npermalink: "+permalink+
                         "\n---\n"+general.description);
-
                     var outputPath = '../' + fileName;
 
                     fs.writeFile(outputPath,fileContents, function (err) {
@@ -101,10 +106,10 @@ class Entry {
         this.isSubjof = isSubjOf;
     }
     static generalInstance(id, isPublic, title, description, language, created,
-                           lastMod){
+                           lastMod, isSubjOf){
         return new Entry(id, isPublic, title, description, language, created,
             lastMod,null,null,null,null,
-            null,null)
+            null,isSubjOf)
     }
     static personInstance(firstName, lastName, birthday){
         return new Entry(null,null,null,null,null,null,null,
