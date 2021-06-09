@@ -47,6 +47,7 @@ request.onload = function () {
             );
 
 
+            //tests if an element is in Array
             function containsObject(obj, list) {
                 var i;
                 for (i = 0; i < list.length; i++) {
@@ -60,67 +61,59 @@ request.onload = function () {
 
 
 
-
+            var permalink = person.firstName.replace(/\s/g, "")+"_"+
+                person.lastName.replace(/\s/g, "")+"_"+general.id;
 
 
             //create DOM elements
             const flexItem = document.createElement("li");
             flexItem.setAttribute("class", "flex-item");
 
-            var permalink = person.firstName.replace(/\s/g, "")+"_"+
-                person.lastName.replace(/\s/g, "")+"_"+general.id;
             const nameBtn = document.createElement("button");
-            nameBtn.setAttribute("class", "btn btn-primary");
+            nameBtn.setAttribute("class", "btn btn-primary")
             nameBtn.addEventListener("click", function(){
                 location = permalink});
             const name = document.createTextNode(person.firstName+" "+person.lastName);
 
 
-
-
-
-
-            var i = 0;
-
             //set titles for conditional buttons and colors with isSubjectOf parameter
                 if(containsObject(general.isSubjof,collections)){
-                    for (i = 0; i<collections.length;i++){
+                    for (let i = 0; i<collections.length;i++){
                         if(collections[i] === general.isSubjof){
+                            //gets correct container
                             const flexContainerById = document.getElementById(general.isSubjof);
+
                             nameBtn.appendChild(name);
                             flexItem.appendChild(nameBtn);
                             flexContainerById.appendChild(flexItem);
                             app.appendChild(flexContainerById);
-                            console.log("there")
                         }
                     }
                 }
             if(!containsObject(general.isSubjof,collections)){
                     collections.push(general.isSubjof);
-                    //create DOM elemts
+
+                    //creates DOM elemts
                     const flexContainer = document.createElement("ul");
                     flexContainer.setAttribute("class", "flex-container wrap");
                     flexContainer.setAttribute("id",general.isSubjof);
 
                     const h4Container = document.createElement("div");
                     h4Container.setAttribute("class", "container");
+
                     const h4 = document.createElement("h4");
                     h4.setAttribute("style", "font-variant: small-caps;")
                     const h4Text = document.createTextNode(general.isSubjof);
+
+                    //appends elements
                     h4.appendChild(h4Text);
                     h4Container.appendChild(h4);
                     flexContainer.appendChild(h4Container);
-
                     nameBtn.appendChild(name);
                     flexItem.appendChild(nameBtn);
                     flexContainer.appendChild(flexItem);
                     app.appendChild(flexContainer);
                 }
-
-
-
-
-
 
         })
     } else {

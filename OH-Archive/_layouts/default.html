@@ -31,16 +31,13 @@
 
 
 <body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <!-- Topbar with links-->
-<div class="container newTopbar">
-    <div class="d-flex justify-content-start flex-wrap">
-        <!-- ToDo Implement Pill navigation -->
+<div style="padding: 25px">
+<div class="container newTopbar" >
+    <div class="d-flex justify-content-start flex-wrap" style="float: right">
         <div style="margin-top:20px; float: right;">
-            <button class="btn btn-theme" onclick="location.href ='https://www.dh.unibe.ch/';" type="button">Follow
-            </button>
-            <button class="btn btn-theme" onclick="location.href ='https://www.dh.unibe.ch/';" type="button">Donate
-            </button>
-            <button class="btn btn-theme" onclick="location.href ='https://www.dh.unibe.ch/';" type="button">Contact
+            <button type="button" class="btn btn-dark" onclick="location.href ='https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html';">Kontakt
             </button>
         </div>
     </div>
@@ -48,7 +45,7 @@
 
 <div class="container newTopbar">
     <!-- Logo and header styling -->
-    <div class="site-header">
+    <div class="site-header" style="padding-top: 100px">
         <img alt="logo" class="logo" src="../assets/images/frame.jpg"/>
         <h1>Welcome to {{ site.title}}</h1>
         <h2>{{site.subtitle}}</h2>
@@ -70,14 +67,16 @@
     </main>
 
 </div>
+</div>
 <!-- Learn more PopUp Card-->
+<!-- ToDo implement PopUp menu, add Logo and description-->
+<!--
 <footer>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
     <div class="card-footer text-center">
-        <!-- ToDo implement PopUp menu, add Logo and description-->
         <button class="btn btn-theme" type="button">Learn more</button>
     </div>
 </footer>
+-->
 </body>
 
 </html>

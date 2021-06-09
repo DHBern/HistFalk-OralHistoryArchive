@@ -52,6 +52,7 @@ requestAudio.onload = function () {
                 const audioPlayer = document.createElement("audio");
                 audioPlayer.setAttribute("src",audio.audioFileUrl.toString());
                 audioPlayer.setAttribute("controls","");
+                audioPlayer.setAttribute("width","100%")
                 figure.appendChild(audioPlayer);
                 app.appendChild(figure);
 

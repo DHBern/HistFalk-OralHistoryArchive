@@ -6,57 +6,75 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link href="../assets/css/styles.css" rel="stylesheet">
+    <link href="/feed.xml" rel="alternate" title="OH-Archive" type="application/atom+xml"/>
 </head>
 <body>
-<!-- Topbar with links-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!--
+The image  source: https://www.pexels.com/de-de/foto/weiss-gestrichene-wand-1939485/
+Licence:
+✓ Free use
+✓ No naming required
+-->
+<div style="flex: auto;padding: 25px;min-height: 500px;
+background-image: url('../assets/images/PostBackground.jpg');background-attachment: fixed; background-size: cover;">
 <div class="container newTopbar">
-    <div class="d-flex justify-content-start flex-wrap">
-        <!-- ToDo Implement Pill navigation -->
-        <div style="padding:20px; float: right;">
-            <button class="btn btn-theme" onclick="location.href ='https://www.dh.unibe.ch/';" type="button">Follow
-            </button>
-            <button class="btn btn-theme" onclick="location.href ='https://www.dh.unibe.ch/';" type="button">Donate
-            </button>
-            <button class="btn btn-theme" onclick="location.href ='https://www.dh.unibe.ch/';" type="button">Contact
-            </button>
+<div class="post-header">
+    <!-- Topbar with links-->
+        <div style="float: right">
+            <div style="padding-top:20px; padding-right:20px ">
+                <button class="btn btn-dark" onclick="location.href ='https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html';" type="button">Kontakt
+                </button>
+            </div>
+    </div>
+    <div style="float: left">
+        <div style="padding-top:20px;">
+            <button class="btn btn-dark" onclick="location.href='/';" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+                Zurück zum Archiv</button>
         </div>
     </div>
-</div>
-<div class="post-header">
-    <a href="/">
-        <img alt="logo" src="../assets/images/frame.jpg"/>
-    </a>
-    <h2>{{page.author | upcase }}</h2>
-    <h2>{{page.date | date_to_string: "ordinal", "US" }}</h2>
-    <h1>{{ page.title }}</h1>
-    <!-- Content from postScript.js -->
-    <!--ToDo Implement player for Mp3 -->
-    <div id="root"></div>
-    <script  type="module" src="../assets/js/scripts/postScript.js"></script>
 
-</div>
+    <div>
 
-<div class="wrapper">
-    <main aria-label="Content" class="page-content">
+
+    <main aria-label="Content" class="post-header" style="margin-top: 0; padding-top: 100px; margin-left: 0;">
+
+        <h1 style="text-align: center">{{ page.title }}</h1>
+        <h2 style="text-align: center">{{content}}</h2>
+        <!-- Content from postScript.js -->
+        <!-- Mp3 player -->
+        <div id="root"></div>
+        <script  type="module" src="../assets/js/scripts/postScript.js"></script>
         <!-- Start of Markup Content-->
-        <div style="width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto">
-            <div style="width: 100%; padding-right: 15px; padding-left: 15px">
-                    {{ content }}
-            </div>
-        </div>
+
+        <h2>Geburtsdatum: {{page.birthday}}</h2>
+        <h2>Wohnort: {{page.location}}</h2>
+        <h2>Sprache: {{page.language}}</h2>
+        <h2>Aufgenommen am {{page.interviewDate}}</h2>
 
 
+
+    </main>
+
+</div>
+</div>
+</div>
+</div>
 
 
         <!-- Learn more PopUp Card-->
+        <!-- ToDo implement PopUp menu, add Logo and description-->
+        <!--
         <footer>
-            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
             <div class="card-footer text-center">
-                <!-- ToDo implement PopUp menu-->
                 <button class="btn btn-theme" type="button">Learn more</button>
             </div>
         </footer>
-    </main>
-</div>
+        -->
+
 </body>
 </html>

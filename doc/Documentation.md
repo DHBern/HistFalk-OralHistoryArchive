@@ -93,22 +93,20 @@ how the content of the JSON is organized in these instances.
 ```
 
 ### TO DOs
--[X] postScript.js get attribute such as title and implement them in default.html
 -[X] Fix Access-Control-Allow-Origin (for now)
--[ ] Pill navigation Topbar
--[ ] PopUp menu footer
--[ ] Finish Conditional Buttons using category tags
+-[X] Finish Conditional Buttons using category tags
 -[X] Add a tag to verify if there is a post 
--> Maybe post request only set to public if backend file is run?
--> Or use front matter tags
 -[ ] Code Clean Up (it smells :P)
 -[ ] Comments
 -[ ] Documentation
 -[ ] Add seperate Entry Class file
 -[ ] Finish JSON table on how to acces Audio entry
--[ ] Add audio from API
+-[X] Add audio from API
+-[ ] Choose a font
 -[ ] General styling
 -[ ]Check URL for correct audio https://stackoverflow.com/questions/42088653/checking-a-url-in-an-if-else-statement
+-[ ] Omeka Data clean UP!!
+-[ ] Style Audio https://css-tricks.com/lets-create-a-custom-audio-player/
 
 
  
@@ -123,5 +121,7 @@ how the content of the JSON is organized in these instances.
 * geo_info is not correct in every entry see postScript.js
 * Mp3 for Sibel_Arslan_3662 is missing and Ödön_Szabo_3538 has to
 * Is a Backend script okay? -> cronjob
+* Erstellungs Datum des Interview noch nicht sauber
+
      
         
