@@ -756,6 +756,7 @@ table td {
     .btn-primary:focus {
       background-color: #133979 !important;
       border-color: #133979 !important;
+      box-shadow: none!important;
     }
   }
 
@@ -767,17 +768,22 @@ table td {
     .btn-primary:focus {
       background-color: #8064A2 !important;
       border-color: #8064A2 !important;
+      box-shadow: none !important;
     }
   }
 
   #Parlamentarierinnen {
     .btn-primary,
+    .btn-primary.active,
+    .btn-primary:focus,
+    .btn-primary:checked,
     .btn-primary:hover,
     .btn-primary:active,
     .btn-primary:visited,
     .btn-primary:focus {
       background-color: #71a283 !important;
       border-color: #71a283 !important;
+      box-shadow: none!important;
 
     }
   }
