@@ -7,9 +7,13 @@
     <title>{{ page.title }}</title>
     <link href="../assets/css/styles.css" rel="stylesheet">
     <link href="/feed.xml" rel="alternate" title="OH-Archive" type="application/atom+xml"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,400;1,500&display=swap"
+          rel="stylesheet">
 </head>
 <body>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
 
 <!--
 The image  source: https://www.pexels.com/de-de/foto/weiss-gestrichene-wand-1939485/
@@ -19,62 +23,79 @@ Licence:
 -->
 <div style="flex: auto;padding: 25px;min-height: 500px;
 background-image: url('../assets/images/PostBackground.jpg');background-attachment: fixed; background-size: cover;">
-<div class="container newTopbar">
-<div class="post-header">
-    <!-- Topbar with links-->
-        <div style="float: right">
-            <div style="padding-top:20px; padding-right:20px ">
-                <button class="btn btn-dark" onclick="location.href ='https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html';" type="button">Kontakt
-                </button>
+    <div class="container newTopbar">
+        <div class="post-header">
+            <!-- Topbar with links-->
+            <div style="float: right">
+                <div style="padding-top:20px; padding-right:20px ">
+                    <button class="btn btn-dark"
+                            onclick="location.href ='https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html';"
+                            type="button">Kontakt
+                    </button>
+                </div>
             </div>
+            <div style="float: left">
+                <div style="padding-top:20px;">
+                    <button class="btn btn-dark" onclick="location.href='/';" type="button">
+                        <svg class="bi bi-chevron-left" fill="currentColor" height="16" viewBox="0 0 16 16"
+                             width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                                  fill-rule="evenodd"/>
+                        </svg>
+                        Zurück zum Archiv
+                    </button>
+                </div>
+            </div>
+
+            <div>
+
+
+                <main aria-label="Content" class="post-header"
+                      style="margin-top: 0; padding-top: 100px; margin-left: 0;">
+
+                    <h1 style="text-align: center">{{ page.title }}</h1>
+                    <h2 style="text-align: center">{{content}}</h2>
+                    <!-- Content from postScript.js -->
+                    <!-- Mp3 player -->
+                    <div id="root"></div>
+                    <script src="../assets/js/scripts/postScript.js" type="module"></script>
+                    <!-- Start of Markup Content-->
+
+                    <h2>Geburtsdatum: {{page.birthday}}</h2>
+                    <h2>Wohnort: {{page.location}}</h2>
+                    <h2>Herkunftsort: {{page.born}}</h2>
+                    <h2>Sprache: {{page.language}}</h2>
+                    <h2>Aufgenommen am {{page.interviewDate}} von {{page.creator}}</h2>
+
+
+                </main>
+
+            </div>
+        </div>
     </div>
-    <div style="float: left">
-        <div style="padding-top:20px;">
-            <button class="btn btn-dark" onclick="location.href='/';" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-            </svg>
-                Zurück zum Archiv</button>
+</div>
+
+
+<!-- Impressum -->
+<footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <div id="impressumDiv" style="text-align: center; padding-bottom: 20px">
+        <button class="btn btn-dark" id="impressumBtn" onclick="$('#hiddenText').show();$('#impressumDiv').hide(); return false;"
+                type="button">Impressum
+        </button>
+    </div>
+    <div id="hiddenText" style="display: none; text-align: center;">
+        <button class="btn btn-dark" id="closeBtn" onclick="$('#hiddenText').hide();$('#impressumDiv').show(); return false;"
+                type="button">Schliessen
+        </button>
+        <div style="text-align: center; padding: 10px">
+            impressum
         </div>
     </div>
 
-    <div>
 
-
-    <main aria-label="Content" class="post-header" style="margin-top: 0; padding-top: 100px; margin-left: 0;">
-
-        <h1 style="text-align: center">{{ page.title }}</h1>
-        <h2 style="text-align: center">{{content}}</h2>
-        <!-- Content from postScript.js -->
-        <!-- Mp3 player -->
-        <div id="root"></div>
-        <script  type="module" src="../assets/js/scripts/postScript.js"></script>
-        <!-- Start of Markup Content-->
-
-        <h2>Geburtsdatum: {{page.birthday}}</h2>
-        <h2>Wohnort: {{page.location}}</h2>
-        <h2>Sprache: {{page.language}}</h2>
-        <h2>Aufgenommen am {{page.interviewDate}}</h2>
-
-
-
-    </main>
-
-</div>
-</div>
-</div>
-</div>
-
-
-        <!-- Learn more PopUp Card-->
-        <!-- ToDo implement PopUp menu, add Logo and description-->
-        <!--
-        <footer>
-            <div class="card-footer text-center">
-                <button class="btn btn-theme" type="button">Learn more</button>
-            </div>
-        </footer>
-        -->
+</footer>
 
 </body>
 </html>

@@ -6,7 +6,7 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
 
 /** Basic styling */
 body {
-  font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Roboto', sans-serif;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -135,10 +135,20 @@ pre > code {
   padding-top: 15px
 }
 
-.content h4 {
+.content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
   hyphens: auto;
   text-align: justify;
 }
+
+.content h4 {
+  font-size: 35px;
+  font-weight: bolder;
+  margin-bottom: 15px;
+
+}
+
 
 @media screen and (max-width: 800px) {
   .wrapper {
@@ -211,7 +221,8 @@ table td {
 .site-header h1 {
   position: relative;
   top: 18px;
-  left: 10px;
+  font-weight: bolder;
+  font-size: 85px;
 }
 
 .site-header h2 {
@@ -746,33 +757,40 @@ table td {
   color: #099;
 }
 
+.btn-primary {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+
+}
+
 /* Button styling */
 #root {
-  #Schwarzenbach {
+  #Schwarzenbach-Abstimmung {
     .btn-primary,
     .btn-primary:hover,
     .btn-primary:active,
     .btn-primary:visited,
     .btn-primary:focus {
-      background-color: #133979 !important;
-      border-color: #133979 !important;
-      box-shadow: none!important;
-    }
-  }
-
-  #tbd {
-    .btn-primary,
-    .btn-primary:hover,
-    .btn-primary:active,
-    .btn-primary:visited,
-    .btn-primary:focus {
-      background-color: #8064A2 !important;
-      border-color: #8064A2 !important;
+      background-color: #117CA6 !important;
+      border-color: #117CA6 !important;
       box-shadow: none !important;
     }
   }
 
-  #Parlamentarierinnen {
+  #Saisonnières-und-Saisonniers {
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited,
+    .btn-primary:focus {
+      background-color: #5C4176 !important;
+      border-color: #5C4176 !important;
+      box-shadow: none !important;
+    }
+  }
+
+  #Parlamentarierinnen-mit-doppelter-Staatsbürgerschaft {
     .btn-primary,
     .btn-primary.active,
     .btn-primary:focus,
@@ -781,16 +799,30 @@ table td {
     .btn-primary:active,
     .btn-primary:visited,
     .btn-primary:focus {
-      background-color: #71a283 !important;
-      border-color: #71a283 !important;
-      box-shadow: none!important;
+      background-color: #fbe206 !important;
+      border-color: #fbe206 !important;
+      box-shadow: none !important;
 
+    }
+  }
+
+  #tbd-wird-ergänzt {
+    .btn-primary,
+    .btn-primary.active,
+    .btn-primary:focus,
+    .btn-primary:checked,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited,
+    .btn-primary:focus {
+      background-color: #B8145E !important;
+      border-color: #B8145E !important;
+      box-shadow: none !important;
     }
   }
 
 
 }
-
 
 
 /* Containers */

@@ -1,12 +1,14 @@
 ---
 layout: post
 title: Interview mit Guglielmo Grossi
-collection: Schwarzenbach
+collection: Schwarzenbach-Abstimmung
 protagonist: Guglielmo Grossi
+creator: tbd
 birthday: 27.02.1946
-location: Montefiore Conca (Rimini)
+location: Bern
+born: Montefiore Conca (Rimini)
 language: Deutsch
-interviewDate: 00-00-0000
+interviewDate: tbd
 permalink: Guglielmo_Grossi_3545
 ---
 tbd

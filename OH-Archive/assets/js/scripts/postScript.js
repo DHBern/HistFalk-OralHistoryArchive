@@ -9,7 +9,7 @@ ToDO:
 //DOM Elements definition
 const pageId = window.location.href.split('_')[2];
 const app = document.getElementById('root');
-const figure =document.createElement("figure");
+const figure = document.createElement("figure");
 
 //Request items from API
 const request = new XMLHttpRequest();
@@ -48,19 +48,19 @@ requestAudio.onload = function () {
 
             console.log(obj_values);
 
-            if(BigInt(pageId) === BigInt(audio.entryId)){
+            if (BigInt(pageId) === BigInt(audio.entryId)) {
                 const audioPlayer = document.createElement("audio");
-                audioPlayer.setAttribute("src",audio.audioFileUrl.toString());
-                audioPlayer.setAttribute("controls","");
-                audioPlayer.setAttribute("width","100%")
+                audioPlayer.setAttribute("src", audio.audioFileUrl.toString());
+                audioPlayer.setAttribute("controls", "");
+                audioPlayer.setAttribute("width", "100%");
                 figure.appendChild(audioPlayer);
                 app.appendChild(figure);
 
             }
 
 
-
-        })} else {
+        })
+    } else {
         const errorMessage = document.createElement('marquee');
         errorMessage.textContent = `Gah, it's not working!`;
         app.appendChild(errorMessage);
@@ -71,15 +71,12 @@ request.send();
 requestAudio.send();
 
 
-
-
-
 /*
 Entry class definition
  */
 class Entry {
     constructor(id, isPublic, title, description, language, created,
-                lastMod,firstName, lastName, birthday, hasGeoLoc, locIn, isSubjOf ){
+                lastMod, firstName, lastName, birthday, hasGeoLoc, locIn, isSubjOf) {
         this.id = id;
         this.isPublic = isPublic;
         this.title = title;
@@ -94,23 +91,27 @@ class Entry {
         this.locIn = locIn;
         this.isSubjof = isSubjOf;
     }
+
     static generalInstance(id, isPublic, title, description, language, created,
-                           lastMod, isSubjOf){
+                           lastMod, isSubjOf) {
         return new Entry(id, isPublic, title, description, language, created,
-            lastMod,null,null,null,null,
-            null,isSubjOf)
+            lastMod, null, null, null, null,
+            null, isSubjOf)
     }
-    static personInstance(firstName, lastName, birthday){
-        return new Entry(null,null,null,null,null,null,null,
-            firstName, lastName, birthday, null,null,null)
+
+    static personInstance(firstName, lastName, birthday) {
+        return new Entry(null, null, null, null, null, null, null,
+            firstName, lastName, birthday, null, null, null)
     }
-    static geoInstance(hasGeoLoc, locIn, isSubjOf){
-        return new Entry(null,null,null,null,null,null,null, null,
-            null, null, hasGeoLoc,locIn,isSubjOf)
+
+    static geoInstance(hasGeoLoc, locIn, isSubjOf) {
+        return new Entry(null, null, null, null, null, null, null, null,
+            null, null, hasGeoLoc, locIn, isSubjOf)
     }
 }
-class AudioEntry{
-    constructor(audioId, entryId, isPublic, title, audioFileUrl, ){
+
+class AudioEntry {
+    constructor(audioId, entryId, isPublic, title, audioFileUrl,) {
         this.ausioId = audioId;
         this.entryId = entryId;
         this.isPublic = isPublic;

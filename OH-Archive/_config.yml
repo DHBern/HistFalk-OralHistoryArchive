@@ -18,14 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: OH-Archive
-subtitle: An oral history archive
-description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
-  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-  unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-  and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+title: Oral History Archiv
+description: Dieses sich im Aufbau befindende Archiv umfasst biografisch-thematische Oral History Interviews, die in
+  Lehrveranstaltungen von Francesca Falk entstehen. Ein besonderer Fokus liegt dabei auf Migrationserfahrungen.
 
 
 # Build settings

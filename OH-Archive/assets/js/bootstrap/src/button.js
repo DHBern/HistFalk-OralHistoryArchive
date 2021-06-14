@@ -5,7 +5,7 @@
  * --------------------------------------------------------------------------
  */
 
-import { defineJQueryPlugin } from 'OH-Archive/assets/js/bootstrap/src/util'
+import {defineJQueryPlugin} from 'OH-Archive/assets/js/bootstrap/src/util'
 import Data from 'OH-Archive/assets/js/bootstrap/src/dom/data'
 import EventHandler from 'OH-Archive/assets/js/bootstrap/src/dom/event-handler'
 import BaseComponent from 'OH-Archive/assets/js/bootstrap/src/base-component'
@@ -16,16 +16,16 @@ import BaseComponent from 'OH-Archive/assets/js/bootstrap/src/base-component'
  * ------------------------------------------------------------------------
  */
 
-const NAME = 'button'
-const DATA_KEY = 'bs.button'
-const EVENT_KEY = `.${DATA_KEY}`
-const DATA_API_KEY = '.data-api'
+const NAME = 'button';
+const DATA_KEY = 'bs.button';
+const EVENT_KEY = `.${DATA_KEY}`;
+const DATA_API_KEY = '.data-api';
 
-const CLASS_NAME_ACTIVE = 'active'
+const CLASS_NAME_ACTIVE = 'active';
 
-const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="button"]'
+const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="button"]';
 
-const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
 
 /**
  * ------------------------------------------------------------------------
@@ -34,34 +34,34 @@ const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
  */
 
 class Button extends BaseComponent {
-  // Getters
+    // Getters
 
-  static get NAME() {
-    return NAME
-  }
+    static get NAME() {
+        return NAME
+    }
 
-  // Public
+    // Public
 
-  toggle() {
-    // Toggle class and sync the `aria-pressed` attribute with the return value of the `.toggle()` method
-    this._element.setAttribute('aria-pressed', this._element.classList.toggle(CLASS_NAME_ACTIVE))
-  }
+    static jQueryInterface(config) {
+        return this.each(function () {
+            let data = Data.get(this, DATA_KEY);
 
-  // Static
+            if (!data) {
+                data = new Button(this)
+            }
 
-  static jQueryInterface(config) {
-    return this.each(function () {
-      let data = Data.get(this, DATA_KEY)
+            if (config === 'toggle') {
+                data[config]()
+            }
+        })
+    }
 
-      if (!data) {
-        data = new Button(this)
-      }
+    // Static
 
-      if (config === 'toggle') {
-        data[config]()
-      }
-    })
-  }
+    toggle() {
+        // Toggle class and sync the `aria-pressed` attribute with the return value of the `.toggle()` method
+        this._element.setAttribute('aria-pressed', this._element.classList.toggle(CLASS_NAME_ACTIVE))
+    }
 }
 
 /**
@@ -71,17 +71,17 @@ class Button extends BaseComponent {
  */
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, event => {
-  event.preventDefault()
+    event.preventDefault();
 
-  const button = event.target.closest(SELECTOR_DATA_TOGGLE)
+    const button = event.target.closest(SELECTOR_DATA_TOGGLE);
 
-  let data = Data.get(button, DATA_KEY)
-  if (!data) {
-    data = new Button(button)
-  }
+    let data = Data.get(button, DATA_KEY);
+    if (!data) {
+        data = new Button(button)
+    }
 
-  data.toggle()
-})
+    data.toggle()
+});
 
 /**
  * ------------------------------------------------------------------------
@@ -90,6 +90,6 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, event => {
  * add .Button to jQuery only if jQuery is present
  */
 
-defineJQueryPlugin(Button)
+defineJQueryPlugin(Button);
 
 export default Button

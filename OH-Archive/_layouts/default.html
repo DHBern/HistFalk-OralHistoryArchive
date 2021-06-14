@@ -9,13 +9,12 @@
     <title>{{ site.title }}</title>
     <link href="/assets/css/styles.css" rel="stylesheet">
     <meta content="Jekyll v4.2.0" name="generator"/>
-    <meta content="OH-Archive" property="og:title"/>
     <meta content="en_US" property="og:locale"/>
-    <meta content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          name="description"/>
     <link href="/" rel="canonical"/>
     <meta content="/" property="og:url"/>
-    <meta content="OH-Archive" property="og:site_name"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,400;1,500&display=swap"
+          rel="stylesheet">
     <script type="application/ld+json">
         {
             "@type": "WebSite",
@@ -25,58 +24,72 @@
             "url": "/",
             "@context": "https://schema.org"
         }</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
     <!-- End Jekyll SEO tag -->
     <link href="/feed.xml" rel="alternate" title="OH-Archive" type="application/atom+xml"/>
 </head>
 
 
 <body>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
 <!-- Topbar with links-->
 <div style="padding: 25px">
-<div class="container newTopbar" >
-    <div class="d-flex justify-content-start flex-wrap" style="float: right">
-        <div style="margin-top:20px; float: right;">
-            <button type="button" class="btn btn-dark" onclick="location.href ='https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html';">Kontakt
-            </button>
-        </div>
-    </div>
-</div>
-
-<div class="container newTopbar">
-    <!-- Logo and header styling -->
-    <div class="site-header" style="padding-top: 100px">
-        <img alt="logo" class="logo" src="../assets/images/frame.jpg"/>
-        <h1>Welcome to {{ site.title}}</h1>
-        <h2>{{site.subtitle}}</h2>
-    </div>
-
-    <main aria-label="Content" class="page-content">
-        <div class="content">
-            <h4>
-                {{site.description}}
-            </h4>
-            <!-- start content from index.html-->
-            <div class="content">
-                {{content}}
+    <div class="container newTopbar">
+        <div class="d-flex justify-content-start flex-wrap" style="float: right">
+            <div style="margin-top:20px; float: right;">
+                <button class="btn btn-dark" onclick="location.href ='https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html';"
+                        type="button">
+                    Kontakt
+                </button>
             </div>
         </div>
-
-
-
-    </main>
-
-</div>
-</div>
-<!-- Learn more PopUp Card-->
-<!-- ToDo implement PopUp menu, add Logo and description-->
-<!--
-<footer>
-    <div class="card-footer text-center">
-        <button class="btn btn-theme" type="button">Learn more</button>
     </div>
+
+    <div class="container newTopbar">
+        <!-- Logo and header styling -->
+        <div class="site-header" style="padding-top: 50px">
+            <h1>Willkommen beim {{ site.title}}</h1>
+        </div>
+
+        <main aria-label="Content" class="page-content">
+            <div class="content">
+                <p>
+                    {{site.description}}
+                </p>
+                <!-- start content from index.html-->
+                <div class="content" style="padding-top: 25px">
+                    {{content}}
+                </div>
+            </div>
+
+
+        </main>
+
+    </div>
+</div>
+
+<!-- Impressum -->
+<footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <div id="impressumDiv" style="text-align: center; padding-bottom: 20px">
+        <button class="btn btn-dark" id="impressumBtn" onclick="$('#hiddenText').show();$('#impressumDiv').hide(); return false;"
+                type="button">Impressum
+        </button>
+    </div>
+    <div id="hiddenText" style="display: none; text-align: center;">
+        <button class="btn btn-dark" id="closeBtn" onclick="$('#hiddenText').hide();$('#impressumDiv').show(); return false;"
+                type="button">Schliessen
+        </button>
+        <div style="text-align: center; padding: 10px">
+            impressum
+        </div>
+    </div>
+
+
 </footer>
--->
 </body>
 
 </html>

@@ -1,12 +1,14 @@
 ---
 layout: post
 title: Interview mit Rosanna Ambrosi
-collection: Schwarzenbach
+collection: Schwarzenbach-Abstimmung
 protagonist: Rosanna Ambrosi
+creator: tbd
 birthday: 16.09.1944
-location: Zevio (Verona)
+location: Zürich
+born: Zevio (Verona)
 language: Deutsch
-interviewDate: 00-00-0000
+interviewDate: tbd
 permalink: Rosanna_Ambrosi_3543
 ---
 tbd

@@ -1,29 +1,26 @@
 # Documentation: DH-Oral history archive
-Documentation for OH-archive website. 
+Documentation for the OH-archive website. 
 ## Requirements
 ### Layout Requirements
 * For the layout the inspiration please reference [MailTape](https://www.mailta.pe/).
 * Homepage:
-    * Contact Button on the top right to https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html          
-    * Title, no Logo, description (comming from Fran)
+    * Contact Button on the top right to 
+    https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html (__done__)          
+    * Title, description (__done__)
     * Buttons linking to the archive entry pages
         * Each Button links to a new page (__done__)
-        * Conditional color pattern for buttons (is_subject of parameter)        
+        * Conditional color pattern for buttons (__done__)        
     * map showing origins of the different archive entries
 * Archive entry page where the mp3 can be played
     * media player for the mp3 (__done__)
-    * description, Birthday, etc. (data from Omeka)
+    * description, Birthday, etc. (data from Omeka, __ToDo__)
 * General styling:
-    * Fonts (my choice) https://fonts.google.com/, colors (pastel)
+    * Fonts (my choice) https://fonts.google.com/, color theme (dealers choice)  
 * Mobile fähig
     * Mobile testing looks okay
     * https://tylerkindy.com/2020/05/26/jekyll-serve-mobile
 ### Data Requirements
-* TopBar Button links: https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html
-* Condition for conditional Buttons (is_subject of parameter)  
-* Website: Header, Title, Logo and Description 
-* General styling:
-    * Fonts, color theme (dealers choice)  
+
 ### Omeka
 * [_root_/api](https://www.corona-memory.ch/api/)
 * The data sets can be found in the „oral-history“ Collection with the set_id: 3527
@@ -99,14 +96,18 @@ how the content of the JSON is organized in these instances.
 -[ ] Code Clean Up (it smells :P)
 -[ ] Comments
 -[ ] Documentation
--[ ] Add seperate Entry Class file
--[ ] Finish JSON table on how to acces Audio entry
+-[X] Finish JSON table on how to acces Audio entry
 -[X] Add audio from API
--[ ] Choose a font
+-[X] Choose a font
 -[ ] General styling
--[ ]Check URL for correct audio https://stackoverflow.com/questions/42088653/checking-a-url-in-an-if-else-statement
+-[X] Check URL for correct audio https://stackoverflow.com/questions/42088653/checking-a-url-in-an-if-else-statement
 -[ ] Omeka Data clean UP!!
--[ ] Style Audio https://css-tricks.com/lets-create-a-custom-audio-player/
+-[ ] Style the Dates
+-[ ] Paola Monti entry, video display
+-[ ] Table whats missing
+-[ ] Publication page
+-[ ] dockerimage
+-[ ] Impressum
 
 
  
@@ -118,10 +119,9 @@ how the content of the JSON is organized in these instances.
     * Solved for now by using corona memory as Root:
     
         https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
-* geo_info is not correct in every entry see postScript.js
-* Mp3 for Sibel_Arslan_3662 is missing and Ödön_Szabo_3538 has to
 * Is a Backend script okay? -> cronjob
 * Erstellungs Datum des Interview noch nicht sauber
+
 
      
         

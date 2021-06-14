@@ -7,10 +7,10 @@
 
 import Data from 'OH-Archive/assets/js/bootstrap/src/dom/data'
 import {
-  emulateTransitionEnd,
-  execute,
-  getElement,
-  getTransitionDurationFromElement
+    emulateTransitionEnd,
+    execute,
+    getElement,
+    getTransitionDurationFromElement
 } from 'OH-Archive/assets/js/bootstrap/src/util'
 import EventHandler from 'OH-Archive/assets/js/bootstrap/src/dom/event-handler'
 
@@ -20,62 +20,62 @@ import EventHandler from 'OH-Archive/assets/js/bootstrap/src/dom/event-handler'
  * ------------------------------------------------------------------------
  */
 
-const VERSION = '5.0.1'
+const VERSION = '5.0.1';
 
 class BaseComponent {
-  constructor(element) {
-    element = getElement(element)
+    constructor(element) {
+        element = getElement(element);
 
-    if (!element) {
-      return
+        if (!element) {
+            return
+        }
+
+        this._element = element;
+        Data.set(this._element, this.constructor.DATA_KEY, this)
     }
 
-    this._element = element
-    Data.set(this._element, this.constructor.DATA_KEY, this)
-  }
-
-  dispose() {
-    Data.remove(this._element, this.constructor.DATA_KEY)
-    EventHandler.off(this._element, this.constructor.EVENT_KEY)
-
-    Object.getOwnPropertyNames(this).forEach(propertyName => {
-      this[propertyName] = null
-    })
-  }
-
-  _queueCallback(callback, element, isAnimated = true) {
-    if (!isAnimated) {
-      execute(callback)
-      return
+    static get VERSION() {
+        return VERSION
     }
 
-    const transitionDuration = getTransitionDurationFromElement(element)
-    EventHandler.one(element, 'transitionend', () => execute(callback))
+    static get NAME() {
+        throw new Error('You have to implement the static method "NAME", for each component!')
+    }
 
-    emulateTransitionEnd(element, transitionDuration)
-  }
+    static get DATA_KEY() {
+        return `bs.${this.NAME}`
+    }
 
-  /** Static */
+    static get EVENT_KEY() {
+        return `.${this.DATA_KEY}`
+    }
 
-  static getInstance(element) {
-    return Data.get(element, this.DATA_KEY)
-  }
+    /** Static */
 
-  static get VERSION() {
-    return VERSION
-  }
+    static getInstance(element) {
+        return Data.get(element, this.DATA_KEY)
+    }
 
-  static get NAME() {
-    throw new Error('You have to implement the static method "NAME", for each component!')
-  }
+    dispose() {
+        Data.remove(this._element, this.constructor.DATA_KEY);
+        EventHandler.off(this._element, this.constructor.EVENT_KEY);
 
-  static get DATA_KEY() {
-    return `bs.${this.NAME}`
-  }
+        Object.getOwnPropertyNames(this).forEach(propertyName => {
+            this[propertyName] = null
+        })
+    }
 
-  static get EVENT_KEY() {
-    return `.${this.DATA_KEY}`
-  }
+    _queueCallback(callback, element, isAnimated = true) {
+        if (!isAnimated) {
+            execute(callback);
+            return
+        }
+
+        const transitionDuration = getTransitionDurationFromElement(element);
+        EventHandler.one(element, 'transitionend', () => execute(callback));
+
+        emulateTransitionEnd(element, transitionDuration)
+    }
 }
 
 export default BaseComponent

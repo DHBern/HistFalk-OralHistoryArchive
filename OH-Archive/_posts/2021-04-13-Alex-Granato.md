@@ -1,12 +1,14 @@
 ---
 layout: post
 title: Interview mit Alex Granato
-collection: Schwarzenbach
+collection: Schwarzenbach-Abstimmung
 protagonist: Alex Granato
+creator: tbd
 birthday: 4.2.1961
-location: Sant'Agata di Puglia
+location: Götighofen
+born: Sant'Agata di Puglia
 language: Schweizerdeutsch
-interviewDate: 00-00-0000
+interviewDate: tbd
 permalink: Alex_Granato_3547
 ---
 tbd

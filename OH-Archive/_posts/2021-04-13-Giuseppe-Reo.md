@@ -1,12 +1,14 @@
 ---
 layout: post
 title: Interview mit Giuseppe Reo
-collection: tbd
+collection: Schwarzenbach-Abstimmung
 protagonist: Giuseppe Reo
+creator: tbd
 birthday: tbd
-location: Schweizerdeutsch
-language: tbd
-interviewDate: 00-00-0000
+location: tbd
+born: tbd
+language: Schweizerdeutsch
+interviewDate: tbd
 permalink: Giuseppe_Reo_3541
 ---
 tbd

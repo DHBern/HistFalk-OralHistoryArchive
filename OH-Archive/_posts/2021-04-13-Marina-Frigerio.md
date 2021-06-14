@@ -1,12 +1,14 @@
 ---
 layout: post
 title: Interview mit Marina Frigerio
-collection: Schwarzenbach
+collection: Schwarzenbach-Abstimmung
 protagonist: Marina Frigerio
+creator: tbd
 birthday: 1.10.1959
-location: Lugano-Viganello
+location: Bern
+born: Lugano-Viganello
 language: Deutsch
-interviewDate: 00-00-0000
+interviewDate: tbd
 permalink: Marina_Frigerio_3536
 ---
 tbd

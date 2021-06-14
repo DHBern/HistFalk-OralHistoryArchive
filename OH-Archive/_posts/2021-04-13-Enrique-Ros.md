@@ -1,12 +1,14 @@
 ---
 layout: post
 title: Interview mit Enrique Ros
-collection: Schwarzenbach
+collection: Schwarzenbach-Abstimmung
 protagonist: Enrique Ros
+creator: tbd
 birthday: 10.8.1955
 location: Bern
+born: Bern
 language: Schweizerdeutsch
-interviewDate: 00-00-0000
+interviewDate: tbd
 permalink: Enrique_Ros_3534
 ---
 tbd
