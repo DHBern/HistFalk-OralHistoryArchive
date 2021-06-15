@@ -7,4 +7,4 @@ vendor
 .idea/workspace.xml
 .idea/modules.xml
 .idea/HistFalk-OralHistoryArchive.iml
-OH-Archive/backend/node_modules
+OH-Archive/_posts/backend/node_modules
