@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interview mit Paola Monti_Teil 1
+title: Interview mit Paola Monti
 collection: Schwarzenbach-Abstimmung
 protagonist: Paola Monti
 creator: tbd

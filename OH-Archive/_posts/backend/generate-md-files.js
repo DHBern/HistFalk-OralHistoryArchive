@@ -9,6 +9,10 @@ var fs = require('fs');
 var request = require('request');
 const https = require('http');
 const Entry = require('./entry');
+keys = [];
+values = [];
+var x = 0;
+
 
 
 //Request to API
@@ -19,6 +23,7 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
         // Begin accessing JSON data here
         data.forEach((object) => {
             const obj_values = Object.values(object);
+            const obj_keys = Object.keys(object);
 
 
             //creating Entry, person and geo instances
@@ -83,6 +88,50 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
             if (general.isPublic) {
                 generateMD()
             }
+
+
+
+            if(x === 0){
+                keys.push(obj_keys[3]+";");
+                keys.push(obj_keys[9]+";");
+                keys.push(obj_keys[11]+";");
+                for(var i = 0; i < 10;i++) {
+                    keys.push(obj_keys[17 + i]+";");
+                }
+                x++;
+            }
+
+            values.push(obj_values[3]+";");
+            values.push(obj_values[9]+";");
+            values.push(Object.values(obj_values[11])[0]+";");
+            for(i = 0; i < 10;i++) {
+                if(i === 9){
+                    values.push(Object.values(obj_values[17 + i][0])[4]+"\n");
+                }
+                else {
+                    values.push(Object.values(obj_values[17 + i][0])[4]+";");
+                }
+            }
+
+
+
+            function generateCsv(){
+                var fileName = "missingEntryTable.csv";
+                var fileContents = (keys.toString().replace(/,/g, "")+"\n"+values.toString().replace(/,/g, "")
+                );
+                var outputPath = '../../../doc/' + fileName;
+
+                fs.writeFile(outputPath, fileContents, function (err) {
+                    if (err) {
+                        return console.log(err)
+                    }
+                    console.log(outputPath + ' file generated')
+                })
+
+
+            }
+            generateCsv()
+
 
 
         })

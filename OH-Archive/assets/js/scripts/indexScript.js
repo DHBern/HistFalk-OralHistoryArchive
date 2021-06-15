@@ -20,9 +20,6 @@ request.onload = function () {
         data.forEach((object) => {
             const obj_values = Object.values(object);
 
-            console.log(Object.entries(object));
-            console.log(obj_values);
-
 
             //creating Entry instances
             //generalInstance(id, isPublic, title, description, language, isSubjOf, created, creator)
@@ -48,6 +45,7 @@ request.onload = function () {
                 Object.values(obj_values[21][0])[4],
                 Object.values(obj_values[22][0])[4],
             );
+
 
 
             //tests if an element is in Array
@@ -78,6 +76,12 @@ request.onload = function () {
             });
             const name = document.createTextNode(person.firstName + " " + person.lastName);
 
+            const publicationBtn = document.createElement("button");
+            publicationBtn.setAttribute("class", "btn btn-outline-primary");
+            const publication = document.createTextNode("Publikationen");
+            publicationBtn.appendChild(publication);
+
+
 
             //set titles for conditional buttons and colors with isSubjectOf parameter
             if (containsObject(general.isSubjof, collections)) {
@@ -105,12 +109,14 @@ request.onload = function () {
                 h4Container.setAttribute("class", "container");
                 h4Container.setAttribute("style", "padding-right: 0px; padding-left: 0px;padding-top: 15px;padding-top: 15p");
 
+
                 const h4 = document.createElement("h4");
                 //h4.setAttribute("style", "font-variant: small-caps;")
                 const h4Text = document.createTextNode(general.isSubjof);
 
                 //appends elements
                 h4.appendChild(h4Text);
+                h4Container.appendChild(publicationBtn)
                 h4Container.appendChild(h4);
                 flexContainer.appendChild(h4Container);
                 nameBtn.appendChild(name);

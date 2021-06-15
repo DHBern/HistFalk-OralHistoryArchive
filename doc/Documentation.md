@@ -105,9 +105,10 @@ how the content of the JSON is organized in these instances.
 -[ ] Style the Dates
 -[ ] Paola Monti entry, video display
 -[ ] Table whats missing
--[ ] Publication page
--[ ] dockerimage
--[ ] Impressum
+-[ ] Publication page, whit anquor
+-[ ] dockerimage (file mit allen abhängigkeiten, dockerfile)
+-[ ] Impressum jumps around
+
 
 
  
