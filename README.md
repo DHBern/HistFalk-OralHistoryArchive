@@ -13,7 +13,7 @@ Jekyll is a static Site-Generator, which means all the components must be added 
 Please reference [requirements](https://jekyllrb.com/docs/installation/#requirements) for more detailed instructions.
 
 * You should have Node.js and NPM installed (NPM is installed automatically with latest versions of Node.js) which is
- needed for the backend. You can verify whether you have both by running `node -v` and `npm -v in terminal 
+ needed for the backend. You can verify whether you have both by running `node -v` and `npm -v` in terminal 
  or command prompt.
     * If you don't have node.js installed please follow the instruction please [download](https://nodejs.org/en/download/)
      the package.

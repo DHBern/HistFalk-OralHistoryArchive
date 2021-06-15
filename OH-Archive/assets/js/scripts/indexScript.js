@@ -78,6 +78,7 @@ request.onload = function () {
 
             const publicationBtn = document.createElement("button");
             publicationBtn.setAttribute("class", "btn btn-outline-primary");
+            publicationBtn.setAttribute("style","text-align: right; float: right")
             const publication = document.createTextNode("Publikationen");
             publicationBtn.appendChild(publication);
 
@@ -111,6 +112,7 @@ request.onload = function () {
 
 
                 const h4 = document.createElement("h4");
+                h4.setAttribute("style","text-align: left;")
                 //h4.setAttribute("style", "font-variant: small-caps;")
                 const h4Text = document.createTextNode(general.isSubjof);
 

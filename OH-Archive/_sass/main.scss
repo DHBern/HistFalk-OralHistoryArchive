@@ -763,6 +763,13 @@ table td {
   font-weight: bold !important;
 
 }
+.btn-outline-primary{
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+
+
+}
 
 /* Button styling */
 #root {
@@ -774,6 +781,19 @@ table td {
     .btn-primary:focus {
       background-color: #117CA6 !important;
       border-color: #117CA6 !important;
+      box-shadow: none !important;
+    }
+    .btn-outline-primary:hover {
+      color: white !important;
+      border-color: #117CA6 !important;
+      background-color: #117CA6 !important; ;
+    }
+    .btn-outline-primary,
+    .btn-outline-primary:active,
+    .btn-outline-primary:visited,
+    .btn-outline-primary:focus {
+      border-color: #117CA6 !important;
+      color:  #117CA6 !important;
       box-shadow: none !important;
     }
   }
