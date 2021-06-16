@@ -11,6 +11,7 @@ const https = require('http');
 const Entry = require('./entry');
 keys = [];
 values = [];
+const collections = [];
 var x = 0;
 
 
@@ -49,6 +50,17 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                 Object.values(obj_values[21][0])[4],
                 Object.values(obj_values[22][0])[4],
             );
+
+            //tests if an element is in Array
+            function containsObject(obj, list) {
+                var i;
+                for (i = 0; i < list.length; i++) {
+                    if (list[i] === obj) {
+                        return true;
+                    }
+                }
+                return false;
+            }
 
 
             //prepares attributes for markdown
@@ -114,6 +126,15 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
             }
 
 
+            if(!containsObject(general.isSubjof,collections)){
+                collections.push(general.isSubjof);
+            }
+
+
+
+
+
+
 
             function generateCsv(){
                 var fileName = "missingEntryTable.csv";
@@ -130,7 +151,24 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
 
 
             }
-            generateCsv()
+            function generateIsSubList(){
+                var fileName = "isSubOf.txt";
+                var fileContents = ("List of current Themes with entries: \n"+collections.toString().replace(/,/g, "\n").replace(/ /g,"-"));
+                var outputPath = '../../../doc/' + fileName;
+
+                fs.writeFile(outputPath, fileContents, function (err) {
+                    if (err) {
+                        return console.log(err)
+                    }
+                    console.log(outputPath + ' file generated')
+                })
+
+
+            }
+
+
+            generateCsv();
+            generateIsSubList()
 
 
 

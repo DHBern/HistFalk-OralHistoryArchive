@@ -107,7 +107,7 @@ how the content of the JSON is organized in these instances.
 -[ ] Table whats missing
 -[ ] Publication page, whit anquor
 -[ ] dockerimage (file mit allen abhängigkeiten, dockerfile)
--[ ] Impressum jumps around
+-[X] Impressum in entry page, background
 
 
 

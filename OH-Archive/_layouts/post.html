@@ -11,18 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,400;1,500&display=swap"
           rel="stylesheet">
 </head>
-<body>
-<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
-
 <!--
 The image  source: https://www.pexels.com/de-de/foto/weiss-gestrichene-wand-1939485/
 Licence:
 ✓ Free use
 ✓ No naming required
 -->
-<div style="flex: auto;padding: 25px;min-height: 500px;
-background-image: url('../assets/images/PostBackground.jpg');background-attachment: fixed; background-size: cover;">
+<body style="min-height: 500px;
+background-image: url('../assets/images/PostBackground.jpg');background-attachment: fixed; background-size: cover;" >
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+<div style="flex: auto;padding: 25px;">
     <div class="container newTopbar">
         <div class="post-header">
             <!-- Topbar with links-->
@@ -79,7 +80,6 @@ background-image: url('../assets/images/PostBackground.jpg');background-attachme
 <!-- Impressum -->
 <footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
     <div id="impressumDiv" style="text-align: center; padding-bottom: 20px">
         <button class="btn btn-dark" id="impressumBtn" onclick="$('#hiddenText').show();$('#impressumDiv').hide(); return false;"
                 type="button">Impressum
@@ -90,10 +90,15 @@ background-image: url('../assets/images/PostBackground.jpg');background-attachme
                 type="button">Schliessen
         </button>
         <div style="text-align: center; padding: 10px">
-            impressum
+            <h5 style="font-size: 14px">Herausgeberin:</h5>
+            <p style="font-size: 12px">Verantwortlich für den Inhalt der Portalseite ist Francesca Falk.<br>
+                Für Anfragen beachten Sie bitte unsere Kontaktseite. Für die hier veröffentlichten Interviews liegen Einverständniserklärungen vor.
+            </p>
+            <h5 style="font-size: 14px">Technik:</h5>
+            <p style="font-size: 12px">Verantwortlich für den technischen Betrieb dieser Seite sind die Digital Humanities der Universität Bern.
+            </p>
         </div>
     </div>
-
 
 </footer>
 

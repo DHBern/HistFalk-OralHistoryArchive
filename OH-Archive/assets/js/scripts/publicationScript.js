@@ -1,11 +1,10 @@
 /*
-ToDO:
-- Add comments
- */
-
+*
+*
+*/
 const collections = [];
 //DOM Elements definition
-const app = document.getElementById('root');
+var i= 0;
 
 //second request items from API
 const request = new XMLHttpRequest();
@@ -59,83 +58,35 @@ request.onload = function () {
             }
 
 
-            var permalink = person.firstName.replace(/\s/g, "") + "_" +
-                person.lastName.replace(/\s/g, "") + "_" + general.id;
-
-
-            //create DOM elements
-            const flexItem = document.createElement("li");
-            flexItem.setAttribute("class", "flex-item");
-
-            const nameBtn = document.createElement("button");
-            nameBtn.setAttribute("class", "btn btn-primary");
-            nameBtn.setAttribute("style", "font-variant: small-caps;");
-            nameBtn.addEventListener("click", function () {
-                location = permalink
-            });
-            const name = document.createTextNode(person.firstName + " " + person.lastName);
-
-            const publicationBtn = document.createElement("button");
-            publicationBtn.setAttribute("class", "btn btn-outline-primary");
-            publicationBtn.setAttribute("style","text-align: right; float: right");
-
-            const publication = document.createTextNode("Publikationen");
-            publicationBtn.appendChild(publication);
-
-
-
             //set titles for conditional buttons and colors with isSubjectOf parameter
-            if (containsObject(general.isSubjof, collections)) {
-                for (let i = 0; i < collections.length; i++) {
-                    if (collections[i] === general.isSubjof) {
-                        //gets correct container
-                        const flexContainerById = document.getElementById(general.isSubjof.replaceAll(" ", "-"));
-
-                        nameBtn.appendChild(name);
-                        flexItem.appendChild(nameBtn);
-                        flexContainerById.appendChild(flexItem);
-                        app.appendChild(flexContainerById);
-                    }
-                }
-            }
             if (!containsObject(general.isSubjof, collections)) {
                 collections.push(general.isSubjof);
 
+                const app = document.getElementById(general.isSubjof.replaceAll(" ", "-"))
                 //creates DOM elemts
-                const flexContainer = document.createElement("ul");
-                flexContainer.setAttribute("class", "flex-container wrap");
-                flexContainer.setAttribute("id", general.isSubjof.replaceAll(" ", "-"));
-
                 const h4Container = document.createElement("div");
+                h4Container.setAttribute("id", general.isSubjof.replaceAll(" ", "-"));
                 h4Container.setAttribute("class", "container");
                 h4Container.setAttribute("style", "padding-right: 0px; padding-left: 0px;padding-top: 15px;padding-top: 15p");
 
 
                 const h4 = document.createElement("h4");
-                h4.setAttribute("style","text-align: left;");
-                //h4.setAttribute("style", "font-variant: small-caps;")
+                h4.setAttribute("style","text-align: left;")
                 const h4Text = document.createTextNode(general.isSubjof);
-
-                publicationBtn.addEventListener("click",function () {
-                    location = "/Publikationen#"+general.isSubjof.replaceAll(" ", "-")
-                });
 
                 //appends elements
                 h4.appendChild(h4Text);
-                h4Container.appendChild(publicationBtn);
                 h4Container.appendChild(h4);
-                flexContainer.appendChild(h4Container);
-                nameBtn.appendChild(name);
-                flexItem.appendChild(nameBtn);
-                flexContainer.appendChild(flexItem);
-                app.appendChild(flexContainer);
+                app.appendChild(h4Container);
+                console.log(app);
+                i++
             }
 
         })
     } else {
         const errorMessage = document.createElement('marquee');
         errorMessage.textContent = `Gah, it's not working!`;
-        app.appendChild(errorMessage);
+        app1.appendChild(errorMessage);
     }
 
 };

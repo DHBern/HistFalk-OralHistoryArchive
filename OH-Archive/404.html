@@ -1,5 +1,6 @@
 ---
 permalink: /404.html
+title: Page not found
 ---
 
 <style media="screen" type="text/css">
@@ -7,19 +8,47 @@ permalink: /404.html
         margin: 10px auto;
         max-width: 600px;
         text-align: center;
+        padding: 30px;
+        font-family: 'Roboto', sans-serif;
     }
 
     h1 {
         margin: 30px 0;
-        font-size: 4em;
+        font-size: 8em;
         line-height: 1;
         letter-spacing: -1px;
+        text-align: center;
     }
 </style>
+<head>
+    <title>
+        {{page.title}}
+    </title>
+</head>
+
+<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
 
 <div class="container">
+
+<div style="float: left">
+    <div style="padding-top:20px;">
+        <button class="btn btn-dark" onclick="location.href='/';" type="button">
+            <svg class="bi bi-chevron-left" fill="currentColor" height="16" viewBox="0 0 16 16"
+                 width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                      fill-rule="evenodd"/>
+            </svg>
+            Zurück zum Archiv
+        </button>
+    </div>
+</div>
+</div>
+
+<div class="container" style="text-align: center">
+
     <h1>404</h1>
 
-    <p><strong>Page not found :(</strong></p>
+    <p><strong>Page not found</strong></p>
     <p>The requested page could not be found.</p>
 </div>
