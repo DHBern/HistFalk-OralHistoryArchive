@@ -673,6 +673,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Button styling */
 #root {
+  /* Filled buttons for the archive entries*/
   #Schwarzenbach-Abstimmung {
     .btn-primary,
     .btn-primary:hover,
@@ -688,6 +689,7 @@ h1, h2, h3, h4, h5, h6 {
       border-color: #117CA6 !important;
       background-color: #117CA6 !important; ;
     }
+    /* outlined buttons for publication button*/
     .btn-outline-primary,
     .btn-outline-primary:active,
     .btn-outline-primary:visited,
@@ -696,14 +698,6 @@ h1, h2, h3, h4, h5, h6 {
       color:  #117CA6 !important;
       box-shadow: none !important;
     }
-    .link-primary,
-    .link-primary:hover,
-    .link-primary:active,
-    .link-primary:visited{
-      color:  #117CA6 !important;
-    }
-
-
   }
 
   #Saisonnières-und-Saisonniers {
@@ -789,7 +783,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-/* Link styling*/
+/* Link styling for publication page*/
 #Schwarzenbach-Abstimmung-links {
   .link-primary,
   .link-primary:hover,

@@ -2,8 +2,6 @@
 HistFalk-Oral history archive is a project in cooperation with [Francesca Falk](https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html). 
 We are building a website for the publication of oral history recordings (sound and/or video).
 This website is generated using Jekyll and inspired by [MailTape](https://www.mailta.pe/).
-Jekyll is a static Site-Generator, which means all the components must be added before building the site. 
-
 
 ## Prerequisites 
 * Jekyll requires the following:
@@ -16,18 +14,14 @@ for more detailed instructions.
 * You should have Node.js and NPM installed (NPM is installed automatically with latest versions of Node.js) which is
  needed for the backend. You can verify whether you have both by running `node -v` and `npm -v` in terminal 
  or command prompt.
-    * If you don't have node.js installed please follow the instruction please [download](https://nodejs.org/en/download/)
+    * If you don't have node.js installed please follow the instruction to [download](https://nodejs.org/en/download/)
      the package.
 
-
-* You may download jetbrains [WebStorm](https://www.jetbrains.com/de-de/webstorm/) as IDE  for an optimal workspace. 
-The [.idea](.idea) directory is used for the Webstorm project.
-
-## Installation
-Follow [Quickstart](https://jekyllrb.com/docs/). 
-<br/> 
-If you get the following this error when installing the jekyll and bundler gems using
-`$ gem install jekyll bundler`
+## Installation  ([Jekyll Quickstart](https://jekyllrb.com/docs/))
+After installing all the prerequisite. <br>
+Install the jekyll and bundler gems. `$ gem install jekyll bundler`
+<br> 
+If you get the following this error when installing the jekyll and bundler gems:
 ```    
 ERROR:  While executing gem ... (Gem::FilePermissionError) 
 You don't have write permissions for the /Library/Ruby/Gems/2.6.0 directory.
@@ -44,13 +38,15 @@ $ echo "source /usr/local/share/chruby/chruby.sh" >> ~/.zshrc
 $ echo "source /usr/local/share/chruby/auto.sh" >> ~/.zshrc
 $ echo "chruby ruby-2.7.2" >> ~/.zshrc
 ```
-For futher information please consult [this Guide](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/?utm_source=stackoverflow).
+For futher information concerning this problem  please consult [this Guide](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/?utm_source=stackoverflow).
 If you successfully installed jekyll you can run OH-Archive.
 
 ## Usage
 ### Backend
-The backend file must be run before building the website.
-1. Change into backend directory: `$ cd OH-Archive/_posts/backend`
+Jekyll is a static Site-Generator, which means all the components must be added before building the site. Therefore it is
+essential to run the backend module. For further information please reference the [documentation](doc/Documentation.md#Backend).
+The backend module must be run before building the website.
+1. Change into backend directory: `$ cd OH-Archive/backend`
 2. Produce the posts from Omeka API by running `$ node generate-md-files.js`
 ### Frontend
 #### Desktop
@@ -71,19 +67,27 @@ this website isn't optimized for mobile view yet.
 ## Project structure
 ```
 ...
-├── _layouts
-│   └── In this directory you will find the different layouts. 
-│       For example default.html"
-├── _posts
-│   ├── Backend
-│   │ 
-│   └── Stores blog posts in markdown.
+├── _layouts (Contains the different layouts, which are accessed via front matter)
+│   ├── default (used for 404.html and publication.html)
+|   ├── homePage (used for index.html)
+|   └── post (used for all the posts in _post)
+├── _posts (Stores blog posts in markdown with the following format YEAR-MONTH-DAY-title.MARKUP)
+|
 ├── _sass
-│   └── Styling sheet for the project.
-├── assets
+│   └── main.scss (styling sheet for the project, contains generel styling aswell as the conditional button styling)
+├── assets (everything that is placed in this folder will be copied  across to the built site)
 │   ├── css
-│   ├── images
-│   └── js
+|   |    └── styles.scss (imports styling sheets, namly main.scss)
+│   ├── images (contains the used images for the page)
+│   └── js (contains the different scripts for the page)
+|       ├── indexScript (runs on index.html)
+|       ├── postScript  (runs on posts)
+|       └── publicationScript (runs on publication.html)
+├── Backend
+│   ├── Entry (Class, structures the JSON from OMEKA, is used by generate-md-files.js
+│   │   and documentationScript.js)
+│   └── generate-md-files (Module, gets Metadata via API from OMEKA, structures data and produces "post" form it as 
+        markdown)
 ...
 
 ```

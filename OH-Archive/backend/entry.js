@@ -1,5 +1,12 @@
 /*
-Entry class definition
+* The Entry class provides structure for the data form OMEKA API. The values form the JSON are assigned to the
+* corresponding attibute in correct format for easier access.
+*
+* Note that there are three different constructors for different purposes: generalInstance, personInstance and
+* geoInstance.
+*
+* This class is required by generate-md-files and documentation script.
+* A copy of this class can be found in indexScrip.js, postScript.js and publicationScript.js.
  */
 class Entry {
     constructor(id, isPublic, title, created, description, language
