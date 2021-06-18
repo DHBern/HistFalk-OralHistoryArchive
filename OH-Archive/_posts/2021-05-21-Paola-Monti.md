@@ -3,12 +3,12 @@ layout: post
 title: Interview mit Paola Monti
 collection: Schwarzenbach-Abstimmung
 protagonist: Paola Monti
-creator: tbd
+creator: Desirée Besomi
 birthday: 24.02.1963
 location: Magliaso
 born: Chur
 language: Italienisch
-interviewDate: tbd
+interviewDate: 08.03.2020
 permalink: Paola_Monti_3696
 ---
-tbd
+Oral History Interview zur Schwarzenbach-Abstimmung

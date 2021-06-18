@@ -10,7 +10,8 @@ Jekyll is a static Site-Generator, which means all the components must be added 
     * Ruby version 2.4.0 or higher
     * RubyGems
     * GCC and Make
-Please reference [requirements](https://jekyllrb.com/docs/installation/#requirements) for more detailed instructions.
+Please reference [the Jekyll requirements](https://jekyllrb.com/docs/installation/#requirements) in the Jekyll docs
+for more detailed instructions.
 
 * You should have Node.js and NPM installed (NPM is installed automatically with latest versions of Node.js) which is
  needed for the backend. You can verify whether you have both by running `node -v` and `npm -v` in terminal 

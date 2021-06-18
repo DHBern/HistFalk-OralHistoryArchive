@@ -3,12 +3,12 @@ layout: post
 title: Interview mit Gemma Capone
 collection: Schwarzenbach-Abstimmung
 protagonist: Gemma Capone
-creator: tbd
+creator: Noëmi Schöb
 birthday: 30.06.1945
 location: Jona SG
 born: Italien
 language: Deutsch
-interviewDate: tbd
+interviewDate: 09.03.2020
 permalink: Gemma_Capone_3694
 ---
-tbd
+Oral History Interview zur Schwarzenbach-Abstimmung

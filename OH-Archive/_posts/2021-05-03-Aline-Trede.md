@@ -3,7 +3,7 @@ layout: post
 title: Interview mit Aline Trede
 collection: Parlamentarierinnen mit doppelter Staatsbürgerschaft
 protagonist: Aline Trede
-creator: tbd
+creator: Isabelle Föllmi
 birthday: 26.08.1983
 location: Bern
 born: Bern

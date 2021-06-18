@@ -2,22 +2,20 @@
 *
 *
 */
-const collections = [];
-//DOM Elements definition
 var i= 0;
+const collections = [];
 
-//second request items from API
+// request items from API
 const request = new XMLHttpRequest();
 request.open('GET', 'https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527', true);
 request.withCredentials = false;
-
 request.onload = function () {
+
     // Begin accessing JSON data here
     var data = JSON.parse(this.response);
     if (request.status >= 200 && request.status < 400) {
         data.forEach((object) => {
             const obj_values = Object.values(object);
-
 
             //creating Entry instances
             //generalInstance(id, isPublic, title, description, language, isSubjOf, created, creator)
@@ -61,8 +59,9 @@ request.onload = function () {
             //set titles for conditional buttons and colors with isSubjectOf parameter
             if (!containsObject(general.isSubjof, collections)) {
                 collections.push(general.isSubjof);
+                console.log(collections)
 
-                const app = document.getElementById(general.isSubjof.replaceAll(" ", "-"))
+                const app = document.getElementById(general.isSubjof.replaceAll(" ", "-"));
                 //creates DOM elemts
                 const h4Container = document.createElement("div");
                 h4Container.setAttribute("id", general.isSubjof.replaceAll(" ", "-"));

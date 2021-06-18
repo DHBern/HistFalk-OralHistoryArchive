@@ -657,7 +657,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-dark{
   font-family: 'Roboto', sans-serif !important;
-
 }
 
 .btn-primary {
@@ -697,6 +696,14 @@ h1, h2, h3, h4, h5, h6 {
       color:  #117CA6 !important;
       box-shadow: none !important;
     }
+    .link-primary,
+    .link-primary:hover,
+    .link-primary:active,
+    .link-primary:visited{
+      color:  #117CA6 !important;
+    }
+
+
   }
 
   #Saisonnières-und-Saisonniers {
@@ -780,6 +787,16 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 
+}
+
+/* Link styling*/
+#Schwarzenbach-Abstimmung-links {
+  .link-primary,
+  .link-primary:hover,
+  .link-primary:active,
+  .link-primary:visited {
+    color: #117CA6 !important;
+  }
 }
 
 

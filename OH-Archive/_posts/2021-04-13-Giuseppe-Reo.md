@@ -3,12 +3,12 @@ layout: post
 title: Interview mit Giuseppe Reo
 collection: Schwarzenbach-Abstimmung
 protagonist: Giuseppe Reo
-creator: tbd
-birthday: tbd
+creator: Laura Schleiss
+birthday: 1964
 location: tbd
 born: tbd
 language: Schweizerdeutsch
-interviewDate: tbd
+interviewDate: 24.03.2020
 permalink: Giuseppe_Reo_3541
 ---
-tbd
+Oral History Interview zur Schwarzenbach-Abstimmung
