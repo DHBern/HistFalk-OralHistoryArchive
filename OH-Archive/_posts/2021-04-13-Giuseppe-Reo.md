@@ -5,8 +5,8 @@ collection: Schwarzenbach-Abstimmung
 protagonist: Giuseppe Reo
 creator: Laura Schleiss
 birthday: 1964
-location: tbd
-born: tbd
+location: ubk
+born: ubk
 language: Schweizerdeutsch
 interviewDate: 24.03.2020
 permalink: Giuseppe_Reo_3541

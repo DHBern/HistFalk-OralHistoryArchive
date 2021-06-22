@@ -131,7 +131,8 @@ The color are assined to the themes in the [styling sheet](../OH-Archive/_sass/m
 
 #### How to ad a new color for a new theme 
 If there is no special color assigned the buttons will be displayed with its default color.
-To se how the color for the button is assigned see the example below  for Schwarzenbach-Abstimmung id:
+To understand how a color is assigned to a button. Please look at the example below  for Schwarzenbach-Abstimmung id 
+in main.scss:
 ```
 /* Button styling */
 #root {
@@ -174,7 +175,7 @@ To se how the color for the button is assigned see the example below  for Schwar
 ```
 
 If you need to add a new color for a new theme, please run `$ node doc/documentationScript.js`. 
-This will give you the correct id for the [styling sheet](../OH-Archive/_sass/main.scss).
+This will save the correct ids for the [styling sheet](../OH-Archive/_sass/main.scss) in [themes.txt](themes.txt).
 Then add your new color like this in main.scss:
 
 ```
@@ -224,8 +225,8 @@ This are the issues we accrued or currently face:
 -[ ] Comments namely in the scripts!
 -[ ] Documentation (better now)
 -[ ] General styling and clean up of sass
--[ ] ressource template clean up and 
--[ ] Style the Dates
+-[X] ressource template clean up and 
+-[X] Style the Dates
 -[ ] Paola Monti entry, video display mp4 player must be displayes (if else statement)
 -[ ] dockerimage (file mit allen abhängigkeiten, dockerfile)
 -[ ] map showing origins of the different archive entries

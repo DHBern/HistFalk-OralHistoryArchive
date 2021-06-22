@@ -22,15 +22,15 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
 
             //creating Entry, person and geo instances
             const general = Entry.generalInstance(
-                BigInt(obj_values[3]),
-                obj_values[4],
-                obj_values[9],
-                Object.values(obj_values[11])[0],
-                Object.values(obj_values[17][0])[4],
-                Object.values(obj_values[24][0])[4],
-                Object.values(obj_values[23][0])[4],
-                Object.values(obj_values[26][0])[4],
-                Object.values(obj_values[25][0])[4],
+                BigInt(obj_values[3]), //id
+                obj_values[4],//is public
+                obj_values[9],//title
+                Object.values(obj_values[11])[0],//created
+                Object.values(obj_values[17][0])[4],//description
+                Object.values(obj_values[24][0])[4],//language
+                Object.values(obj_values[23][0])[4],//isSubjectOf
+                Object.values(obj_values[26][0])[4],// interviewCreated
+                Object.values(obj_values[25][0])[4]// creator
             );
 
             const person = Entry.personInstance(
@@ -76,7 +76,7 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                     + "\nlocation: " + geo.hasGeoloc
                     + "\nborn: " + geo.locIn
                     + "\nlanguage: " + general.language
-                    + "\ninterviewDate: " + general.interviewCreated
+                    + "\ninterviewDate: " + general.interviewCreated.toString().replace(/-/g, ".")
                     + "\npermalink: " + permalink +
                     "\n---\n" + general.description);
 

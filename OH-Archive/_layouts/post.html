@@ -61,10 +61,15 @@ background-image: url('../assets/images/PostBackground.jpg');background-attachme
                     <div id="root"></div>
                     <script src="../assets/js/postScript.js" type="module"></script>
                     <!-- Start of Markup Content-->
-
+                    {% if page.birthday != "ubk" %}
                     <h2>Geburtsdatum: {{page.birthday}}</h2>
+                    {% endif %}
+                    {% if page.location != "ubk" %}
                     <h2>Wohnort: {{page.location}}</h2>
+                    {% endif %}
+                    {% if page.born != "ubk" %}
                     <h2>Herkunftsort: {{page.born}}</h2>
+                    {% endif %}
                     <h2>Sprache: {{page.language}}</h2>
                     <h2>Aufgenommen am {{page.interviewDate}} von {{page.creator}}</h2>
 

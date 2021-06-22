@@ -11,50 +11,46 @@ const pageId = window.location.href.split('_')[2];
 const app = document.getElementById('root');
 const figure = document.createElement("figure");
 
-//Request items from API
-const request = new XMLHttpRequest();
-request.open('GET', 'https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527', true);
-request.withCredentials = false;
-
 //Request audio from API
-const requestAudio = new XMLHttpRequest();
-requestAudio.open('GET', 'https://www.corona-memory.ch/api/media?item_set_id=3527', true);
-requestAudio.withCredentials = false;
-
-
+const request = new XMLHttpRequest();
+request.open('GET', 'https://www.corona-memory.ch/api/media?item_set_id=3527', true);
+request.withCredentials = false;
 request.onload = function () {
     // Begin accessing JSON data here
     var data = JSON.parse(this.response);
     if (request.status >= 200 && request.status < 400) {
         data.forEach((object) => {
             const obj_values = Object.values(object);
-        })
-    } else {
-        const errorMessage = document.createElement('marquee');
-        errorMessage.textContent = `Gah, it's not working!`;
-        app.appendChild(errorMessage);
-    }
+            const media = new MediaEntry(obj_values[3], Object.values(obj_values[15])[1],
+                obj_values[4], obj_values[9], obj_values[17].toString().split('/')[0], obj_values[22]);
+            const mediaTypeEnd = media.mediaFileUrl.toString().split(".");
 
-};
-requestAudio.onload = function () {
-    // Begin accessing JSON data here
-    var data = JSON.parse(this.response);
-    if (requestAudio.status >= 200 && requestAudio.status < 400) {
-        data.forEach((object) => {
-            const obj_values = Object.values(object);
+            if (BigInt(pageId) === BigInt(media.entryId)) {
+                console.log(media);
+                if(media.mediaType === "video" && mediaTypeEnd[3] === "mp4"){
 
-            const audio = new AudioEntry(obj_values[3], Object.values(obj_values[15])[1],
-                obj_values[4], obj_values[9], obj_values[22]);
+                    //const mediaTitle = document.createElement("h4");
+                    //const mediaTextTitle = document.createTextNode(media.title);
+                    //mediaTitle.appendChild(mediaTextTitle);
+                    const videoPlayer = document.createElement("video");
+                    videoPlayer.setAttribute("src", media.mediaFileUrl.toString());
+                    videoPlayer.setAttribute("type", "video/mp4");
+                    videoPlayer.setAttribute("controls", "");
+                    videoPlayer.setAttribute("width", "100%");
+                    //app.appendChild(mediaTitle)
+                    figure.appendChild(videoPlayer);
+                    app.appendChild(figure);
 
-            console.log(obj_values);
+                }
+                else{
+                    const audioPlayer = document.createElement("audio");
+                    audioPlayer.setAttribute("src", media.mediaFileUrl.toString());
+                    audioPlayer.setAttribute("controls", "");
+                    audioPlayer.setAttribute("width", "100%");
+                    figure.appendChild(audioPlayer);
+                    app.appendChild(figure);
 
-            if (BigInt(pageId) === BigInt(audio.entryId)) {
-                const audioPlayer = document.createElement("audio");
-                audioPlayer.setAttribute("src", audio.audioFileUrl.toString());
-                audioPlayer.setAttribute("controls", "");
-                audioPlayer.setAttribute("width", "100%");
-                figure.appendChild(audioPlayer);
-                app.appendChild(figure);
+                }
 
             }
 
@@ -68,56 +64,19 @@ requestAudio.onload = function () {
 };
 
 request.send();
-requestAudio.send();
 
 
 /*
 Entry class definition
  */
-class Entry {
-    constructor(id, isPublic, title, description, language, created,
-                lastMod, firstName, lastName, birthday, hasGeoLoc, locIn, isSubjOf) {
-        this.id = id;
-        this.isPublic = isPublic;
-        this.title = title;
-        this.description = description;
-        this.language = language;
-        this.created = created;
-        this.lastMod = lastMod;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthday = birthday;
-        this.hasGeoloc = hasGeoLoc;
-        this.locIn = locIn;
-        this.isSubjof = isSubjOf;
-    }
-
-    static generalInstance(id, isPublic, title, description, language, created,
-                           lastMod, isSubjOf) {
-        return new Entry(id, isPublic, title, description, language, created,
-            lastMod, null, null, null, null,
-            null, isSubjOf)
-    }
-
-    static personInstance(firstName, lastName, birthday) {
-        return new Entry(null, null, null, null, null, null, null,
-            firstName, lastName, birthday, null, null, null)
-    }
-
-    static geoInstance(hasGeoLoc, locIn, isSubjOf) {
-        return new Entry(null, null, null, null, null, null, null, null,
-            null, null, hasGeoLoc, locIn, isSubjOf)
-    }
-}
-
-class AudioEntry {
-    constructor(audioId, entryId, isPublic, title, audioFileUrl,) {
-        this.ausioId = audioId;
+class MediaEntry {
+    constructor(mediaId, entryId, isPublic, title,mediaType, mediaFileUrl,) {
+        this.mediaId = mediaId;
         this.entryId = entryId;
         this.isPublic = isPublic;
         this.title = title;
-        this.audioFileUrl = audioFileUrl;
-
+        this.mediaType = mediaType;
+        this.mediaFileUrl = mediaFileUrl;
     }
 }
 

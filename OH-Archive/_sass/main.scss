@@ -79,17 +79,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .content p {
   font-family: 'Roboto', sans-serif;
-  font-size: 25px;
   hyphens: auto;
   text-align: justify;
 }
 
+.content h3 {
+  font-size: 26px;
+  font-weight: bolder;
+  margin-bottom: 15px;
+  margin-right: 10px;
+
+}
 .content h4 {
   font-size: 35px;
   font-weight: bolder;
   margin-bottom: 15px;
-
 }
+
 
 
 @media screen and (max-width: 800px) {
@@ -790,8 +796,29 @@ h1, h2, h3, h4, h5, h6 {
   .link-primary:active,
   .link-primary:visited {
     color: #117CA6 !important;
-  }
-}
+  }}
+  #Parlamentarierinnen-mit-doppelter-Staatsbürgerschaft-links{
+    .link-primary,
+    .link-primary:hover,
+    .link-primary:active,
+    .link-primary:visited {
+      color: #fbe206 !important;
+  }}
+  #Saisonnières-und-Saisonniers-links{
+    .link-primary,
+    .link-primary:hover,
+    .link-primary:active,
+    .link-primary:visited {
+      color: #5C4176 !important; ;
+    }}
+  #tbd-wird-ergänzt-links{
+    .link-primary,
+    .link-primary:hover,
+    .link-primary:active,
+    .link-primary:visited {
+      color: #B8145E !important;
+  } }
+
 
 
 /* Containers */

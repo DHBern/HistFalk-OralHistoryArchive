@@ -1,6 +1,6 @@
 /*
 * The Entry class provides structure for the data form OMEKA API. The values form the JSON are assigned to the
-* corresponding attibute in correct format for easier access.
+* corresponding attribute in correct format for easier access.
 *
 * Note that there are three different constructors for different purposes: generalInstance, personInstance and
 * geoInstance.

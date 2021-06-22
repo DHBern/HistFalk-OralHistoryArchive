@@ -19,16 +19,17 @@ request.onload = function () {
 
             //creating Entry instances
             //generalInstance(id, isPublic, title, description, language, isSubjOf, created, creator)
+            //creating Entry, person and geo instances
             const general = Entry.generalInstance(
-                BigInt(obj_values[3]),
-                obj_values[4],
-                obj_values[9],
-                Object.values(obj_values[11])[0],
-                Object.values(obj_values[17][0])[4],
-                Object.values(obj_values[24][0])[4],
-                Object.values(obj_values[23][0])[4],
-                Object.values(obj_values[25][0])[4],
-                Object.values(obj_values[26][0])[4],
+                BigInt(obj_values[3]), //id
+                obj_values[4],//is public
+                obj_values[9],//title
+                Object.values(obj_values[11])[0],//created
+                Object.values(obj_values[17][0])[4],//description
+                Object.values(obj_values[24][0])[4],//language
+                Object.values(obj_values[23][0])[4],//isSubjectOf
+                Object.values(obj_values[26][0])[4],// interviewCreated
+                Object.values(obj_values[25][0])[4]// creator
             );
 
             const person = Entry.personInstance(
@@ -41,7 +42,6 @@ request.onload = function () {
                 Object.values(obj_values[21][0])[4],
                 Object.values(obj_values[22][0])[4],
             );
-
 
 
             //tests if an element is in Array
@@ -63,20 +63,21 @@ request.onload = function () {
 
                 const app = document.getElementById(general.isSubjof.replaceAll(" ", "-"));
                 //creates DOM elemts
-                const h4Container = document.createElement("div");
-                h4Container.setAttribute("id", general.isSubjof.replaceAll(" ", "-"));
-                h4Container.setAttribute("class", "container");
-                h4Container.setAttribute("style", "padding-right: 0px; padding-left: 0px;padding-top: 15px;padding-top: 15p");
+                const h3Container = document.createElement("div");
+                h3Container.setAttribute("id", general.isSubjof.replaceAll(" ", "-"));
+                h3Container.setAttribute("class", "container");
+                h3Container.setAttribute("style", "padding-right: 0px; padding-left: 0px;padding-top: " +
+                    "15px;padding-top: 15px");
 
 
-                const h4 = document.createElement("h4");
-                h4.setAttribute("style","text-align: left;")
-                const h4Text = document.createTextNode(general.isSubjof);
+                const h3 = document.createElement("h3");
+                h3.setAttribute("style","text-align: left;")
+                const h3Text = document.createTextNode("Publikationen zu " +general.isSubjof);
 
                 //appends elements
-                h4.appendChild(h4Text);
-                h4Container.appendChild(h4);
-                app.appendChild(h4Container);
+                h3.appendChild(h3Text);
+                h3Container.appendChild(h3);
+                app.appendChild(h3Container);
                 console.log(app);
                 i++
             }
@@ -125,11 +126,10 @@ class Entry {
     }
 
     static geoInstance(hasGeoLoc, locIn) {
-        return new Entry(null, null, null, null, null, null, null, null,
+        return new Entry(null, null, null, null, null, null, null, null, null,
             hasGeoLoc, locIn, null, null, null)
     }
 
 }
-
 
 

@@ -19,19 +19,19 @@ request.onload = function () {
         data.forEach((object) => {
             const obj_values = Object.values(object);
 
-
             //creating Entry instances
             //generalInstance(id, isPublic, title, description, language, isSubjOf, created, creator)
+            //creating Entry, person and geo instances
             const general = Entry.generalInstance(
-                BigInt(obj_values[3]),
-                obj_values[4],
-                obj_values[9],
-                Object.values(obj_values[11])[0],
-                Object.values(obj_values[17][0])[4],
-                Object.values(obj_values[24][0])[4],
-                Object.values(obj_values[23][0])[4],
-                Object.values(obj_values[25][0])[4],
-                Object.values(obj_values[26][0])[4],
+                BigInt(obj_values[3]), //id
+                obj_values[4],//is public
+                obj_values[9],//title
+                Object.values(obj_values[11])[0],//created
+                Object.values(obj_values[17][0])[4],//description
+                Object.values(obj_values[24][0])[4],//language
+                Object.values(obj_values[23][0])[4],//isSubjectOf
+                Object.values(obj_values[26][0])[4],// interviewCreated
+                Object.values(obj_values[25][0])[4]// creator
             );
 
             const person = Entry.personInstance(
@@ -117,7 +117,7 @@ request.onload = function () {
                 const h4Text = document.createTextNode(general.isSubjof);
 
                 publicationBtn.addEventListener("click",function () {
-                    location = "/Publikationen#"+general.isSubjof.replaceAll(" ", "-")
+                    location = "/Publikationen#"+general.isSubjof.replaceAll(" ", "-")+"-links"
                 });
 
                 //appends elements
@@ -175,7 +175,7 @@ class Entry {
     }
 
     static geoInstance(hasGeoLoc, locIn) {
-        return new Entry(null, null, null, null, null, null, null, null,
+        return new Entry(null, null, null, null, null, null, null, null, null,
             hasGeoLoc, locIn, null, null, null)
     }
 
