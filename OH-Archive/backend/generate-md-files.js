@@ -1,7 +1,8 @@
 /*
 * This file must be run before building the Website.
-* Gets data from OMEKA API and parses JSON. Creates Entry instances general, person and geo from JSON.
-* For more information about ENTRY class pleas reference entry.js and the documentation of this project.
+* Gets data from OMEKA API and parses JSON.
+* Creates Entry instances general, person and geo from JSON. For more information about ENTRY class pleas reference
+* entry.js and the documentation of this project.
 * Generates post files (in markdown format and with front matter syntax) in _posts directory.
  */
 

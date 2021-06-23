@@ -1,8 +1,8 @@
 /*
-Backend file. Must be run before building the Website.
-Gets data from Omeka API and parses JSON.
-Creates Entry instances general, person and geo from JSON.
-Generates post files (in markdown format and with front matter syntax) in _posts directory.
+Gets Oral History Archive data from Omeka API and parses JSON.
+Uses Entry class. Creates Entry instances general, person and geo from JSON.
+Generates missingEntryTable.csv which is a table of all the used metadata.
+Generates themes.txt a list of current themes with entries (and their id for the buttonStyling sheet)
  */
 
 var fs = require('fs');

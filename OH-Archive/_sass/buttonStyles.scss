@@ -1,0 +1,214 @@
+/* Styling sheet for all the buttons*/
+
+.btn-dark{
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.btn-primary {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+
+}
+.btn-outline-primary{
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+/* Button styling and link styling */
+
+
+#Schwarzenbach-Abstimmung {
+  /* Filled buttons for the archive entries*/
+  .btn-primary,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:visited,
+  .btn-primary:focus {
+    background-color: #117CA6 !important;
+    border-color: #117CA6 !important;
+    box-shadow: none !important;
+  }
+  /* Outlined buttons for publication button*/
+  .btn-outline-primary:hover {
+    color: white !important;
+    border-color: #117CA6 !important;
+    background-color: #117CA6 !important;
+  }
+  .btn-outline-primary,
+  .btn-outline-primary:active,
+  .btn-outline-primary:visited,
+  .btn-outline-primary:focus {
+    border-color: #117CA6 !important;
+    color:  #117CA6 !important;
+    box-shadow: none !important;
+  }
+  /* Link styling for publication page*/
+  #Schwarzenbach-Abstimmung-links {
+    .link-primary,
+    .link-primary:hover,
+    .link-primary:active,
+    .link-primary:visited {
+      color: #117CA6 !important;
+    }}
+
+}
+
+#Saisonnières-und-Saisonniers {
+  .btn-primary,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:visited,
+  .btn-primary:focus {
+    background-color: #5C4176 !important;
+    border-color: #5C4176 !important;
+    box-shadow: none !important;
+  }
+  .btn-outline-primary:hover {
+    color: white !important;
+    border-color: #5C4176 !important;
+    background-color: #5C4176 !important; ;
+  }
+  .btn-outline-primary,
+  .btn-outline-primary:active,
+  .btn-outline-primary:visited,
+  .btn-outline-primary:focus {
+    border-color: #5C4176 !important;
+    color:  #5C4176 !important;
+    box-shadow: none !important;
+  }
+  #Saisonnières-und-Saisonniers-links{
+    .link-primary,
+    .link-primary:hover,
+    .link-primary:active,
+    .link-primary:visited {
+      color: #5C4176 !important; ;
+    }}
+}
+
+#Parlamentarierinnen-mit-doppelter-Staatsbürgerschaft {
+  .btn-primary,
+  .btn-primary.active,
+  .btn-primary:focus,
+  .btn-primary:checked,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:visited,
+  .btn-primary:focus {
+    background-color: #fbe206 !important;
+    border-color: #fbe206 !important;
+    box-shadow: none !important;
+  }
+  .btn-outline-primary:hover {
+    color: white !important;
+    border-color: #fbe206 !important;
+    background-color: #fbe206 !important; ;
+  }
+  .btn-outline-primary,
+  .btn-outline-primary:active,
+  .btn-outline-primary:visited,
+  .btn-outline-primary:focus {
+    border-color: #fbe206 !important;
+    color:  #fbe206 !important;
+    box-shadow: none !important;
+  }
+
+  #Parlamentarierinnen-mit-doppelter-Staatsbürgerschaft-links{
+    .link-primary,
+    .link-primary:hover,
+    .link-primary:active,
+    .link-primary:visited {
+      color: #fbe206 !important;
+    }}
+}
+
+#tbd-wird-ergänzt {
+  .btn-primary,
+  .btn-primary.active,
+  .btn-primary:focus,
+  .btn-primary:checked,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:visited,
+  .btn-primary:focus {
+    background-color: #B8145E !important;
+    border-color: #B8145E !important;
+    box-shadow: none !important;
+  }
+  .btn-outline-primary:hover {
+    color: white !important;
+    border-color: #B8145E !important;
+    background-color: #B8145E !important; ;
+  }
+  .btn-outline-primary,
+  .btn-outline-primary:active,
+  .btn-outline-primary:visited,
+  .btn-outline-primary:focus {
+    border-color: #B8145E !important;
+    color:  #B8145E !important;
+    box-shadow: none !important;
+  }
+  #tbd-wird-ergänzt-links{
+    .link-primary,
+    .link-primary:hover,
+    .link-primary:active,
+    .link-primary:visited {
+      color: #B8145E !important;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Containers */
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.nowrap {
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.wrap li {
+}
+
+.wrap-reverse {
+  -webkit-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+.wrap-reverse li {
+
+}
+
+.flex-item {
+
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
