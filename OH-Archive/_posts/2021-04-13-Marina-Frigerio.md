@@ -10,5 +10,6 @@ born: Lugano-Viganello
 language: Deutsch
 interviewDate: 27.02.2020
 permalink: Marina_Frigerio_3536
+published: true
 ---
 Oral History Interview zur Schwarzenbach-Abstimmung

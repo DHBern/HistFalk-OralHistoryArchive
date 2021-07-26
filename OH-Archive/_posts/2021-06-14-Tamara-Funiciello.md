@@ -10,5 +10,6 @@ born: Bern
 language: Deutsch
 interviewDate: 16.04.2021
 permalink: Tamara_Funiciello_3718
+published: true
 ---
 Oral-History

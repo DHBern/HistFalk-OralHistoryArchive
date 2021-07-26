@@ -259,6 +259,7 @@ color theme will not work:
         https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
 * Running backend module automatically -> CronJob
 * Paola Monti entry on OMEKA, video can't be uploaded
+* If an Omeka object is published and then unpublished the published parameter has to be set manually to false.
 
 ## TO DOs
 -[ ] docker images 

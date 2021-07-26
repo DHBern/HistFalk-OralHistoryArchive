@@ -10,5 +10,6 @@ born: Montefiore Conca (Rimini)
 language: Deutsch
 interviewDate: 03.03.2020
 permalink: Guglielmo_Grossi_3545
+published: true
 ---
 Oral History Interview zur Schwarzenbach-Abstimmung

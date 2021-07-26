@@ -78,8 +78,10 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                     + "\nborn: " + geo.locIn
                     + "\nlanguage: " + general.language
                     + "\ninterviewDate: " + general.interviewCreated.toString().replace(/-/g, ".")
-                    + "\npermalink: " + permalink +
-                    "\n---\n" + general.description);
+                    + "\npermalink: " + permalink
+                    + "\npublished: "+ general.isPublic
+                    + "\n---\n" + general.description);
+
 
                 var outputPath = '../_posts/' + fileName;
 
@@ -90,10 +92,8 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                     console.log(outputPath + ' file generated')
                 })
             }
+            generateMD()
 
-            if (general.isPublic) {
-                generateMD()
-            }
         })
 
     });

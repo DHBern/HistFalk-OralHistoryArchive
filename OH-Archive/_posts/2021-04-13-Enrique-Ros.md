@@ -10,5 +10,6 @@ born: Bern
 language: Schweizerdeutsch
 interviewDate: 13.03.2020
 permalink: Enrique_Ros_3534
+published: true
 ---
 Oral History Interview zur Schwarzenbach-Abstimmung

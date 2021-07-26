@@ -17,9 +17,10 @@ for more detailed instructions.
     * If you don't have node.js installed please follow the instruction to [download](https://nodejs.org/en/download/)
      the package.
 
-## Installation  ([Jekyll Quickstart](https://jekyllrb.com/docs/))
+## Installation 
+### Jekyll ([Jekyll Quickstart](https://jekyllrb.com/docs/))
 After installing all the prerequisite. <br>
-Install the jekyll and bundler gems. `$ gem install jekyll bundler`
+Install the jekyll and bundler gems in the root. `$ gem install jekyll bundler`
 <br> 
 If you get the following this error when installing the jekyll and bundler gems:
 ```    
@@ -40,6 +41,9 @@ $ echo "chruby ruby-2.7.2" >> ~/.zshrc
 ```
 For futher information concerning this problem  please consult [this Guide](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/?utm_source=stackoverflow).
 If you successfully installed jekyll you can run OH-Archive.
+
+### NPM
+In the root directory install all the needed modules using ``$ npm install``
 
 ## Usage
 ### Backend

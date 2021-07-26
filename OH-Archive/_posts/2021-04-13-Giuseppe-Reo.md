@@ -10,5 +10,6 @@ born: ubk
 language: Schweizerdeutsch
 interviewDate: 24.03.2020
 permalink: Giuseppe_Reo_3541
+published: true
 ---
 Oral History Interview zur Schwarzenbach-Abstimmung

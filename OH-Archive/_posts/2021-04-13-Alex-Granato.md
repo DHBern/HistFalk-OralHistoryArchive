@@ -10,5 +10,6 @@ born: Sant'Agata di Puglia
 language: Schweizerdeutsch
 interviewDate: 02.03.2020
 permalink: Alex_Granato_3547
+published: true
 ---
 Oral History Interview zur Schwarzenbach-Abstimmung

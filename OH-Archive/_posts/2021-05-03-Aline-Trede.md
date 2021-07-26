@@ -10,5 +10,6 @@ born: Bern
 language: Deutsch
 interviewDate: 21.03.2021
 permalink: Aline_Trede_3663
+published: true
 ---
 Oral History Interview mit Aline Trede mit einem Fokus auf Parlamentarierinnen mit Doppelbürgerschaft

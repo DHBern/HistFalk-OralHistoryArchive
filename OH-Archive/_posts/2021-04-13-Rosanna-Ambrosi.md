@@ -10,5 +10,6 @@ born: Zevio (Verona)
 language: Deutsch
 interviewDate: 28.02.2020
 permalink: Rosanna_Ambrosi_3543
+published: true
 ---
 Oral History Interview zur Schwarzenbach-Abstimmung
