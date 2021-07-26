@@ -1,0 +1,11 @@
+OH-Archive/_site
+.sass-cache
+OH-Archive/.jekyll-cache
+.jekyll-metadata
+vendor
+.git
+.idea/workspace.xml
+.idea/modules.xml
+.idea/HistFalk-OralHistoryArchive.iml
+node_modules
+.idea
