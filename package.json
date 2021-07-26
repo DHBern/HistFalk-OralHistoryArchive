@@ -1,0 +1,27 @@
+{
+  "name": "histfalk-oralhistoryarchive",
+  "version": "1.0.0",
+  "description": "HistFalk-Oral history archive is a project in cooperation with [Francesca Falk](https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html).  We are building a website for the publication of oral history recordings (sound and/or video). This website is generated using Jekyll and inspired by [MailTape](https://www.mailta.pe/).",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "request": "^2.88.2",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DHBern/HistFalk-OralHistoryArchive.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DHBern/HistFalk-OralHistoryArchive/issues"
+  },
+  "homepage": "https://github.com/DHBern/HistFalk-OralHistoryArchive#readme"
+}
