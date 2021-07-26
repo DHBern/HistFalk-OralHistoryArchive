@@ -51,7 +51,7 @@ Jekyll is a static Site-Generator, which means all the components must be added 
 essential to run the backend module. For further information please reference the [documentation](doc/Documentation.md#Backend).
 The backend module must be run before building the website.
 1. Change into backend directory: `$ cd OH-Archive/backend`
-2. Produce the posts from Omeka API by running `$ node generate-md-files.js`
+2. Produce the posts from Omeka API by running `$ nocde generate-md-files.js`
 ### Frontend
 #### Desktop
 1. Change into directory: `$ cd OH-Archive`
