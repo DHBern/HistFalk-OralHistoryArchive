@@ -96,33 +96,34 @@ in the assets directory.
 ...
 ├── index.html (http://localhost:4000)
 |   ├── css
-|   |   ├── buttonStyle.scss
-|   |   └─ main.scss
+|   |   ├─– buttonStyle.scss
+|   |   └─– main.scss
 |   ├── script
-|   |   └─ indexScript.js
+|   |   └─– indexScript.js
 |   └── layout
-|       └─ homePage.html
+|       └─– homePage.html
 ├── posts (http://localhost:4000/Firstname_Lastname_id) 
 |   ├── css
 |   |   ├── buttonStyle.scss
-|   |   └─ main.scss
+|   |   ├── postStyles
+|   |   └─– main.scss
 |   ├── script
-|   |   └─ postScript.js
+|   |   └─– postScript.js
 |   └── layout
-|       └─ post.html
+|       └─– post.html
 |           └─ PostBackground.jpg
 ├── publication.html (http://localhost:4000/Publikationen
 |   ├── css
 |   |   ├── buttonStyle.scss
-|   |   └─ main.scss
+|   |   └─– main.scss
 |   └── layout
-|       └─ default.html
+|       └─– default.html
 └── 404.html
     ├── css
     |   ├── buttonStyle.scss
-    |   └─ main.scss
+    |   └─- main.scss
     └── layout
-       └─ default.html
+        └─- default.html
 ...
 
 ```
@@ -256,19 +257,12 @@ color theme will not work:
     * Solved for now by using corona memory as Root:
     
         https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
-* running backend module automatically
+* Running backend module automatically -> CronJob
+* Paola Monti entry on OMEKA, video can't be uploaded
+
 ## TO DOs
--[ ] Code Clean Up (it smells :P)
--[ ] Comments namely in the scripts!
--[ ] Documentation (better now)
--[ ] General styling and clean up of sass
--[X] ressource template clean up and 
--[X] Style the Dates
--[ ] Clean Up and seperate Styling Sheet
--[ ] Paola Monti entry, video display mp4 player must be displayes (if else statement)
--[ ] dockerimage (file mit allen abhängigkeiten, dockerfile)
+-[ ] docker images 
 -[ ] map showing origins of the different archive entries
--[ ] cronjob
  
  
 

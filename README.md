@@ -75,6 +75,7 @@ this website isn't optimized for mobile view yet.
 |
 ├── _sass
 |   ├── buttonStyles.scss (Styling sheet for all the buttons, especially the conditional button styling)
+|   ├── postStyles.scss (Styling sheet for the post.html layout)
 │   └── main.scss (Styling sheet for the project, contains generel styling)
 ├── assets (everything that is placed in this folder will be copied  across to the built site)
 │   ├── css
@@ -82,8 +83,7 @@ this website isn't optimized for mobile view yet.
 │   ├── images (contains the used images for the page)
 │   └── js (contains the different scripts for the page)
 |       ├── indexScript (runs on index.html)
-|       ├── postScript  (runs on posts)
-|       └── publicationScript
+|       └──  postScript  (runs on posts)      
 ├── Backend
 │   ├── Entry (Class, structures the JSON from OMEKA, is used by generate-md-files.js
 │   │   and documentationScript.js)

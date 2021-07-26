@@ -6,7 +6,7 @@
 * geoInstance.
 *
 * This class is required by generate-md-files and documentation script.
-* A copy of this class can be found in indexScrip.js, postScript.js and publicationScript.js.
+* A copy of this class can be found in indexScrip.js and postScript.js
  */
 class Entry {
     constructor(id, isPublic, title, created, description, language

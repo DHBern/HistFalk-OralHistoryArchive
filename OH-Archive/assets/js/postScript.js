@@ -1,17 +1,16 @@
 /*
-ToDO:
-- Fix Geo error in objects: 3541, 3662, 3663
-- Add conditional coloring?
-- Add comments
-- Check URL for correct audio
- */
+* Gets media from OMEKA API and parses JSON. Each requests gets all the media from oral-history-collection.
+* Checks for matching media for each post.
+* Generates DOM elements for posts (media player).
+
+*/
 
 //DOM Elements definition
 const pageId = window.location.href.split('_')[2];
 const app = document.getElementById('root');
 const figure = document.createElement("figure");
 
-//Request audio from API
+//Request media from API
 const request = new XMLHttpRequest();
 request.open('GET', 'https://www.corona-memory.ch/api/media?item_set_id=3527', true);
 request.withCredentials = false;
@@ -23,15 +22,16 @@ request.onload = function () {
             const obj_values = Object.values(object);
             const media = new MediaEntry(obj_values[3], Object.values(obj_values[15])[1],
                 obj_values[4], obj_values[9], obj_values[17].toString().split('/')[0], obj_values[22]);
-            const mediaTypeEnd = media.mediaFileUrl.toString().split(".");
 
+            const mediaTypeEnd = media.mediaFileUrl.toString().split(".");
+            /*
+            * Checks for matching media via pageId and entryId.
+            * Checks if it is video or audio.
+            * creates media DOM element.
+             */
             if (BigInt(pageId) === BigInt(media.entryId)) {
-                console.log(media);
                 if(media.mediaType === "video" && mediaTypeEnd[3] === "mp4"){
 
-                    //const mediaTitle = document.createElement("h4");
-                    //const mediaTextTitle = document.createTextNode(media.title);
-                    //mediaTitle.appendChild(mediaTextTitle);
                     const videoPlayer = document.createElement("video");
                     videoPlayer.setAttribute("src", media.mediaFileUrl.toString());
                     videoPlayer.setAttribute("type", "video/mp4");
@@ -49,12 +49,8 @@ request.onload = function () {
                     audioPlayer.setAttribute("width", "100%");
                     figure.appendChild(audioPlayer);
                     app.appendChild(figure);
-
                 }
-
             }
-
-
         })
     } else {
         const errorMessage = document.createElement('marquee');
@@ -67,7 +63,7 @@ request.send();
 
 
 /*
-Entry class definition
+MediaEntry class definition
  */
 class MediaEntry {
     constructor(mediaId, entryId, isPublic, title,mediaType, mediaFileUrl,) {

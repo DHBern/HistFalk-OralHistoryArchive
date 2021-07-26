@@ -1,13 +1,16 @@
 /*
-ToDO:
-- Add comments
+* Gets data from OMEKA API and parses JSON.
+* Creates Entry instances general, person and geo from JSON (uses a copy of entry class).
+* For more information about ENTRY class pleas reference entry.js and the documentation of this project.
+* Generates DOM elements for homePage (colored buttons for each theme and titles).
  */
 
+// Array of themes (see themes.txt in documentation)
 const collections = [];
 //DOM Elements definition
 const app = document.getElementById('root');
 
-//second request items from API
+//request items from API
 const request = new XMLHttpRequest();
 request.open('GET', 'https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527', true);
 request.withCredentials = false;
@@ -20,8 +23,6 @@ request.onload = function () {
             const obj_values = Object.values(object);
 
             //creating Entry instances
-            //generalInstance(id, isPublic, title, description, language, isSubjOf, created, creator)
-            //creating Entry, person and geo instances
             const general = Entry.generalInstance(
                 BigInt(obj_values[3]), //id
                 obj_values[4],//is public
@@ -58,12 +59,12 @@ request.onload = function () {
                 return false;
             }
 
-
+            // creates correct permalink for the posts (see generate-md-files.js as refrence)
             var permalink = person.firstName.replace(/\s/g, "") + "_" +
                 person.lastName.replace(/\s/g, "") + "_" + general.id;
 
 
-            //create DOM elements
+            //creates DOM elements
             const flexItem = document.createElement("li");
             flexItem.setAttribute("class", "flex-item");
 
@@ -83,12 +84,15 @@ request.onload = function () {
             publicationBtn.appendChild(publication);
 
 
-
-            //set titles for conditional buttons and colors with isSubjectOf parameter
+            /*
+            * Creates conditional buttons.
+            * Sets text and colors via if clause using isSubjectOf parameter.
+            */
+            // If the theme xy is already contained in collections array
             if (containsObject(general.isSubjof, collections)) {
                 for (let i = 0; i < collections.length; i++) {
                     if (collections[i] === general.isSubjof) {
-                        //gets correct container
+                        //gets correct container by id
                         const flexContainerById = document.getElementById(general.isSubjof.replaceAll(" ", "-"));
 
                         nameBtn.appendChild(name);
@@ -98,7 +102,10 @@ request.onload = function () {
                     }
                 }
             }
+
+            // If the theme xy is not contained in collections array
             if (!containsObject(general.isSubjof, collections)) {
+                // add to array
                 collections.push(general.isSubjof);
 
                 //creates DOM elemts
@@ -120,7 +127,7 @@ request.onload = function () {
                     location = "/Publikationen#"+general.isSubjof.replaceAll(" ", "-")+"-links"
                 });
 
-                //appends elements
+                //appends all elements
                 h4.appendChild(h4Text);
                 h4Container.appendChild(publicationBtn);
                 h4Container.appendChild(h4);
@@ -143,7 +150,7 @@ request.send();
 
 
 /*
-Entry class definition
+Entry class definition (copie from entry.js)
  */
 class Entry {
     constructor(id, isPublic, title, created, description, language
