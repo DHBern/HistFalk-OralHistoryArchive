@@ -9,3 +9,4 @@ vendor
 .idea/HistFalk-OralHistoryArchive.iml
 node_modules
 .idea
+package-lock.json
