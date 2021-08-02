@@ -7,24 +7,26 @@ This website is generated using Jekyll and inspired by [MailTape](https://www.ma
 ## Prerequisites
 
 * Jekyll requires the following:
-* Ruby version 2.4.0 or higher
-* RubyGems
-* GCC and Make
+    * Ruby version 2.4.0 or higher
+    * RubyGems
+    * GCC and Make
+
 Please reference [the Jekyll requirements](https://jekyllrb.com/docs/installation/#requirements) in the Jekyll docs
 for more detailed instructions.
 
 * You should have Node.js and NPM installed (NPM is installed automatically with latest versions of Node.js) which is
  needed for the backend. You can verify whether you have both by running `node -v` and `npm -v` in terminal
- or command prompt.
-* If you don't have node.js installed please follow the instruction to [download](https://nodejs.org/en/download/)
+ or command prompt. If you don't have node.js installed please follow the instruction to [download](https://nodejs.org/en/download/)
 the package.
 
 ## Installation
 
 ### Jekyll ([Jekyll Quickstart](https://jekyllrb.com/docs/))
 
-After installing all the prerequisite.  
-Install the jekyll and bundler gems in the root. `$ gem install jekyll bundler`  
+After installing all the prerequisite. Install the jekyll and bundler gems in the root. 
+
+`$ gem install jekyll bundler`  
+
 If you get the following this error when installing the jekyll and bundler gems:
 
 ```shell
