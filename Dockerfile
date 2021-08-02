@@ -8,7 +8,9 @@ COPY --chown=jekyll:jekyll ./OH-Archive/ ./OH-Archive/
 COPY --chown=jekyll:jekyll ./package.json ./
 
 # Cronjob erstellen
-RUN echo '0 * * * * node /home/jekyll/OH-Archive/backend/generate-md-files.js' >> /etc/crontabs/root
+COPY update.sh /
+RUN chmod +x /update.sh
+RUN echo '10 * * * * /update.sh' >> /etc/crontabs/root
 
 # Dependencies installieren
 USER jekyll
