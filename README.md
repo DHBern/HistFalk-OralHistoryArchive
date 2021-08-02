@@ -133,8 +133,18 @@ If you want to run the container in detached mode, add `-d`. Like this, you won'
 `sudo` is needed, if you didn't activate rootless mode (<https://docs.docker.com/engine/security/rootless/>).  
 You can check this with `docker images`.  
 
-If something changed in the application, you have to rebuild the image. Just build it as described above.  
-You can remove the obsolete image by getting its ID through `sudo docker images`. First you need to remove the running container: Get its ID through `sudo docker ps -a` and remove it with `sudo docker rm $containerID$`. Then run `sudo docker rmi $imageID$`.  
+### If something changed in the application, you have to rebuild the image. 
+1. Run ``$ sudo git pull`` in HistFalk-OralHistoryArchive directory.
+2. Then run ``$ sudo docker ps -a`` and stop and remove the container which occupies the oh-archive IMAGE using 
+
+```
+$ sudo docker stop $containerID$
+$ sudo docker rm $containerID$
+
+```
+
+3. Build the Docker image as described above. Currently options ``d and --rm`` are used.
+``$ sudo docker run -p 4000:4000 -d --rm --name oh-archive oh-archive``
 
 Note: If something in the project structure changed, maybe you have to adjust the Dockerfile too.
 
