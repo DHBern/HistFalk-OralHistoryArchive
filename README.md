@@ -126,7 +126,7 @@ $ sudo docker run -p 4000:4000 --name oh-archive oh-archive
 ```
 
 `-p` ist for port-forwarding - the Jekyll server runs on port 4000, so we forward this port to get access from outside the docker container.  
-If the container should be removed as soon as it stops, add `-rm` after `run` (this won't harm the Docker image).  
+If the container should be removed as soon as it stops, add `--rm` after `run` (this won't harm the Docker image).  
 If you want to run the container in detached mode, add `-d`. Like this, you won't see the output - it runs in background.  
 `sudo` is needed, if you didn't activate rootless mode (<https://docs.docker.com/engine/security/rootless/>).  
 You can check this with `docker images`.  
