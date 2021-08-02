@@ -2,6 +2,7 @@ _site
 .sass-cache
 OH-Archive/.jekyll-cache
 .jekyll-metadata
+.jekyll-cache
 vendor
 .git
 .idea/workspace.xml
