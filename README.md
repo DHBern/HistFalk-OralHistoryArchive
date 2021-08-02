@@ -7,24 +7,26 @@ This website is generated using Jekyll and inspired by [MailTape](https://www.ma
 ## Prerequisites
 
 * Jekyll requires the following:
-* Ruby version 2.4.0 or higher
-* RubyGems
-* GCC and Make
+    * Ruby version 2.4.0 or higher
+    * RubyGems
+    * GCC and Make
+
 Please reference [the Jekyll requirements](https://jekyllrb.com/docs/installation/#requirements) in the Jekyll docs
 for more detailed instructions.
 
 * You should have Node.js and NPM installed (NPM is installed automatically with latest versions of Node.js) which is
  needed for the backend. You can verify whether you have both by running `node -v` and `npm -v` in terminal
- or command prompt.
-* If you don't have node.js installed please follow the instruction to [download](https://nodejs.org/en/download/)
+ or command prompt. If you don't have node.js installed please follow the instruction to [download](https://nodejs.org/en/download/)
 the package.
 
 ## Installation
 
 ### Jekyll ([Jekyll Quickstart](https://jekyllrb.com/docs/))
 
-After installing all the prerequisite.  
-Install the jekyll and bundler gems in the root. `$ gem install jekyll bundler`  
+After installing all the prerequisite. Install the jekyll and bundler gems in the root. 
+
+`$ gem install jekyll bundler`  
+
 If you get the following this error when installing the jekyll and bundler gems:
 
 ```shell
@@ -131,8 +133,18 @@ If you want to run the container in detached mode, add `-d`. Like this, you won'
 `sudo` is needed, if you didn't activate rootless mode (<https://docs.docker.com/engine/security/rootless/>).  
 You can check this with `docker images`.  
 
-If something changed in the application, you have to rebuild the image. Just build it as described above.  
-You can remove the obsolete image by getting its ID through `sudo docker images`. First you need to remove the running container: Get its ID through `sudo docker ps -a` and remove it with `sudo docker rm $containerID$`. Then run `sudo docker rmi $imageID$`.  
+### If something changed in the application, you have to rebuild the image. 
+1. Run ``$ sudo git pull`` in HistFalk-OralHistoryArchive directory.
+2. Then run ``$ sudo docker ps -a`` and stop and remove the container which occupies the oh-archive IMAGE using 
+
+```
+$ sudo docker stop $containerID$
+$ sudo docker rm $containerID$
+
+```
+
+3. Build the Docker image as described above. Currently options ``d and --rm`` are used.
+``$ sudo docker run -p 4000:4000 -d --rm --name oh-archive oh-archive``
 
 Note: If something in the project structure changed, maybe you have to adjust the Dockerfile too.
 

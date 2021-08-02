@@ -1,5 +1,6 @@
 /*
 * This file must be run before building the Website.
+* Clears _posts directory to ensure that only published posts are generated.
 * Gets data from OMEKA API and parses JSON.
 * Creates Entry instances general, person and geo from JSON. For more information about ENTRY class pleas reference
 * entry.js and the documentation of this project.
@@ -10,8 +11,13 @@ var fs = require('fs');
 var request = require('request');
 const https = require('http');
 const Entry = require('./entry'); //imports Entry class
+const path = require('path');
+const directory = '../_posts/';
 keys = [];
 values = [];
+
+clearDirectory();
+
 //Request to API
 request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527',
     function (error, response, body) {
@@ -83,7 +89,7 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                     + "\n---\n" + general.description);
 
 
-                var outputPath = '../_posts/' + fileName;
+                var outputPath = directory + fileName;
 
                 fs.writeFile(outputPath, fileContents, function (err) {
                     if (err) {
@@ -92,10 +98,27 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                     console.log(outputPath + ' file generated')
                 })
             }
+
             generateMD()
 
         })
 
     });
+
+//function to clear _post directory
+function clearDirectory(){
+    fs.readdir(directory, (err, files) => {
+        if (err) throw err;
+
+        for (const file of files) {
+            fs.unlink(path.join(directory, file), err => {
+                if (err) throw err;
+            });
+            console.log(file+" was successfully deleted")
+        }
+
+    });
+
+}
 
 

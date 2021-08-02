@@ -257,13 +257,12 @@ color theme will not work:
     * Solved for now by using corona memory as Root:
     
         https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
-* Running backend module automatically -> CronJob
-* Paola Monti entry on OMEKA, video can't be uploaded
-* If an Omeka object is published and then unpublished the published parameter has to be set manually to false.
+* If an Omeka object is published and then unpublished (or vice versa) the backend file must be run to activate the 
+changes.
 
 ## TO DOs
--[ ] docker images 
 -[ ] map showing origins of the different archive entries
+-[ ] cronjob needs to run more often 
  
  
 
