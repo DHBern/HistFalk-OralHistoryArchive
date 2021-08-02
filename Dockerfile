@@ -1,33 +1,36 @@
-FROM jekyll/jekyll:4.2.0 as frontend
+FROM jekyll/jekyll:4.2.0
 
-RUN mkdir /home/jekyll/OH-Archive/ && chown -R jekyll:jekyll /home/jekyll/OH-Archive
+RUN mkdir -p /home/jekyll/OH-Archive/
 
-WORKDIR /home/jekyll
+RUN chown -R jekyll:jekyll /home/jekyll/OH-Archive
 
-COPY --chown=jekyll:jekyll ./OH-Archive/* ./OH-Archive/
+WORKDIR /home/jekyll/
 
-RUN ls -al
+COPY --chown=jekyll:jekyll ./OH-Archive/ ./OH-Archive/
 
-RUN chmod -R 666 ./OH-Archive
-
-USER jekyll
-
-CMD [ "bundle", "exec", "jekyll", "serve"]
-
-FROM node:14-alpine as production
-
-WORKDIR /home/jekyll
-
-COPY --chown=node:node ./package.json ./
-
-USER node
-
-RUN npm install
+COPY --chown=jekyll:jekyll ./package.json ./
 
 RUN echo '0 0 * * * node /home/jekyll/OH-Archive/backend/generate-md-files.js' >> /etc/crontab
 
-RUN node ./OH-Archive/backend/generate-md-files.js
+USER jekyll
 
+RUN npm install
 
+WORKDIR /home/jekyll/OH-Archive
 
+USER root
 
+RUN bundle install
+
+USER jekyll
+
+WORKDIR /home/jekyll/OH-Archive/backend
+
+RUN node ./generate-md-files.js
+
+WORKDIR /home/jekyll/OH-Archive
+
+CMD [ "bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
+
+EXPOSE 4000
+EXPOSE 35729
