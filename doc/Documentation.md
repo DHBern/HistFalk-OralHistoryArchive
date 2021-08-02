@@ -257,13 +257,12 @@ color theme will not work:
     * Solved for now by using corona memory as Root:
     
         https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
-* If an Omeka object is published and then unpublished the published parameter in the entry file in the _posts directory
- has to be set manually to false. 
-* If an Omeka object is published its button is produced (because the info is fetched via ) but the Entry is online 
-produced the next day. Could either disable button, make cronjob more often or create a comming soon page.
+* If an Omeka object is published and then unpublished (or vice versa) the backend file must be run to activate the 
+changes.
 
 ## TO DOs
 -[ ] map showing origins of the different archive entries
+-[ ] cronjob needs to run more often 
  
  
 
