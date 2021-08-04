@@ -62,10 +62,10 @@ In the root directory install all the needed modules using ``$ npm install``
 
 Jekyll is a static Site-Generator, which means all the components must be added before building the site. Therefore it is
 essential to run the backend module. For further information please reference the [documentation](doc/Documentation.md#Backend).
-The backend module must be run before building the website.
+To run the backend module:
 
 1. Change into backend directory: `$ cd OH-Archive/backend`
-2. Produce the posts from Omeka API by running `$ nocde generate-md-files.js`
+2. Produce the posts from Omeka API by running `$ node generate-md-files.js`
 
 ### Frontend
 
@@ -85,7 +85,7 @@ We recommend using Mozilla Firefox for the best experience of this website. Othe
 
 ## Project structure
 
-```shell
+```
 ...
 ├── _layouts (Contains the different layouts, which are accessed via front matter)
 │   ├── default (Used for 404.html and publication.html)
@@ -99,11 +99,11 @@ We recommend using Mozilla Firefox for the best experience of this website. Othe
 │   └── main.scss (Styling sheet for the project, contains generel styling)
 ├── assets (everything that is placed in this folder will be copied  across to the built site)
 │   ├── css
-|   |    └── styles.scss (imports styling sheets, namly main.scss and buttonsStyles.scss)
+|   |    └── styles.scss (imports styling sheets, namly main.scss, buttonsStyles.scss and postStyles.scss)
 │   ├── images (contains the used images for the page)
 │   └── js (contains the different scripts for the page)
 |       ├── indexScript (runs on index.html)
-|       └──  postScript  (runs on posts)      
+|       └── postScript  (runs on posts)      
 ├── Backend
 │   ├── Entry (Class, structures the JSON from OMEKA, is used by generate-md-files.js
 │   │   and documentationScript.js)

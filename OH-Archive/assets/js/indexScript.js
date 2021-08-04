@@ -144,11 +144,6 @@ request.onload = function () {
         errorMessage.textContent = `Gah, it's not working!`;
         app.appendChild(errorMessage);
     }
-
-    $.getJSON('./_posts', data => {
-        console.log(data); //["doc1.jpg", "doc2.jpg", "doc3.jpg"]
-    });
-
 };
 request.send();
 

@@ -1,5 +1,5 @@
 # Documentation: HistFalk-Oral history archive
-This is the documentation for the "Oral History Archiv" website. This website publicises oral history recordings 
+This is the documentation for the "Oral History Archiv" website. This website publishes oral history recordings 
 (sound or video). It is generated using Jekyll and inspired by [MailTape](https://www.mailta.pe/).
 Jekyll is a static Site-Generator, which means all the components must be added before building the site. Therefore it is
 essential to run the [backendmodule](../OH-Archive/_posts/backend/generate-md-files.js).
@@ -7,8 +7,8 @@ Please note that "Oral History Archiv" is not optimized for mobile us, all thoug
 
 ## Backend
 The Backend directory contains the [Entry class](../OH-Archive/backend/entry.js) and the generate-md-files module. 
-generate-md-files module access OMEKA API and produces the markdown posts from the metadata. These Markdown files are 
-needed to build build the post pages (due to Jekyll being a static Site-Generator). 
+generate-md-files module accesses OMEKA API and produces the markdown posts from the metadata. These Markdown files are 
+needed to build the post pages (due to Jekyll being a static Site-Generator). 
 ### Data access
 The recordings and the Metadata for "Oral History Archiv" are located on OMEKA.
 
@@ -30,9 +30,9 @@ is queried with the parameters per_page and item_set_id.
 As a response the server sends a JSON with all items. Please reference [this table](JSON_Response_table.xlsx) for more information on how 
 to query the JSON content. The tables depicts the indices of the different values and how to access them.
 ### Creating the posts
-To create a post, a file with the following format YEAR-MONTH-DAY-title.MARKUP has to be added to [_posts directory](../OH-Archive/_posts)
+To create a post, a file with the following format YEAR-MONTH-DAY-title.MARKUP has to be added to [_posts](../OH-Archive/_posts) directory.
 In this project this is done automatically using [generate-md-files.js](../OH-Archive/_posts/backend/generate-md-files.js).
-Therefore it is very important to run the backendmodule  before building the website. This modules gets the Oral History 
+Therefore it is very important to run the backend module  before building the website. This module gets the Oral History 
 Archive Entries as a JSON from OMEKA via API (see the above GET query).
 For organisation purpose and easier access to the Metadata the JSON is parsed and added to different instances of the [Entry](../OH-Archive/backend/entry.js) 
 class.
@@ -52,7 +52,7 @@ This syntax will be explained further down. Finally for each JSON object a Marku
 ## Frontend
 The frontend uses both static and dynamic content. Due to Jekyll being a static Site-Generator the dynamic content is 
 displayed with the HTML DOM. For example index.html uses the indexScrip.js to build dynamic conditional buttons
-form the data received from OMEKA API. The buttons are displayed in the "root" <div> using the HTML DOM.
+form the data received from OMEKA API. The buttons are displayed in the "root" `<div> using the HTML DOM.
 
 For the static content the YAML front matter syntax is used. Any file that contains a YAML  front matter block will 
 be processed by Jekyll as a special file. The front matter must be the first thing in the file 
@@ -73,22 +73,22 @@ born: Sant'Agata di Puglia
 language: Schweizerdeutsch
 interviewDate: 02.03.2020
 permalink: Alex_Granato_3547
+published: true
 ---
-
 
 ```
 Between these triple-dashed lines, you can set predefined variables and  create custom variables. These variables will 
-then be available for you to access using Liquid tags ( {{page.title}} ) both further down in the file and also in any 
+then be available for you to access using Liquid tags (for example `{{page.title}} `) both further down in the file and also in any 
 layouts or includes that the page or post in question relies on. In this project the variables are set and assigned
-by the "backendmodule" before building the website. 
+by the backend module before building the website. 
 After building the website each archive entry page (or post) takes its entry information (static) from its Markdown using 
 the Liquid tag syntax.
 
 ### Dependencies
-Oral History Archiv consist of the following components (see overview below). The individual post pages are produced from 
-the Markdowns contained in the _post folder. They all have the same structure.
+Oral History Archiv consist the following components: a home page (index.html), a publication page (publication.html) and post pages which are produced from 
+the Markdowns contained in the _post folder. They all have the same structure (see overview below).
 
-Each components uses the styling sheets form [sass directory](../OH-Archive/_sass) 
+Each website component uses styling sheets form [sass directory](../OH-Archive/_sass) 
 and a layout from [layout directory](../OH-Archive/_layouts). Some components may use a script from the 
 [js directory in the assets folder](../OH-Archive/assets/js). The post layout uses a background image form the image folder 
 in the assets directory.
@@ -133,8 +133,8 @@ It is imported via HTML <link> tag in each layout file and assigned in main.scss
 in each layout and accessed via HTML <link> tag. Please don't remove this tag, bootstrap is needed for conditional buttons 
 leading to the archive entries on index.html.
 
-The post layout uses this [Background image](../OH-Archive/assets/images/PostBackground.jpg).The image  
-[source](https://www.pexels.com/de-de/foto/weiss-gestrichene-wand-1939485/). The licence is free us and no naming required.
+The post layout uses this [Background image](../OH-Archive/assets/images/PostBackground.jpg) from [this source](https://www.pexels.com/de-de/foto/weiss-gestrichene-wand-1939485/). 
+The licence is "free use and no naming required".
 
 For the color theme for conditional buttons please reference the [ColorTheme.pdf](ColorTheme.pdf).
 Currently there are 4 themes for the conditional buttons Schwarzenbach-Abstimmung, Parlamentarierinnen-mit-doppelter-Staatsbürgerschaft, 
@@ -239,9 +239,9 @@ Then add your new color like this in buttonStyle.scss:
 ```
 You can copy the code above and simply change the id and color to the desired values. 
 
-Finally you need to ad two <div> elements to the publication.html. You only need to add the <div> elements to the 
+Finally you need to ad two `<div>` elements to the publication.html. You only need to add the `<div>` elements to the 
 publication.html, because the other components build the new themes dynamically. You may also add the desired links 
-and information to publication.html in the your-new-theme-id-links <div>. Please use the syntax as seen below for the links or the
+ and information to publication.html in the your-new-theme-id-links `<div>`. Please use the syntax as seen below for the links or the
 color theme will not work:
 
 ```
@@ -257,12 +257,9 @@ color theme will not work:
     * Solved for now by using corona memory as Root:
     
         https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
-* If an Omeka object is published and then unpublished (or vice versa) the backend file must be run to activate the 
-changes.
 
 ## TO DOs
 -[ ] map showing origins of the different archive entries
--[ ] cronjob needs to run more often 
  
  
 
