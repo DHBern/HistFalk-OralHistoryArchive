@@ -79,7 +79,7 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                     + "\ncollection: " + general.isSubjof
                     + "\nprotagonist: " + person.firstName + " " + person.lastName
                     + "\ncreator: " + general.creator
-                    + "\nbirthday: " + person.birthday
+                    + "\nbirthday: " + person.birthday.toString().replace(/-/g, ".")
                     + "\nlocation: " + geo.hasGeoloc
                     + "\nborn: " + geo.locIn
                     + "\nlanguage: " + general.language
