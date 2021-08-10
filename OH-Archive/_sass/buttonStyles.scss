@@ -205,8 +205,10 @@
 }
 
 .flex-item {
-
-  padding: 5px;
+  padding-left: 0 !important;
+  padding-right: 10px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
   color: white;
   font-weight: bold;
   font-size: 2em;

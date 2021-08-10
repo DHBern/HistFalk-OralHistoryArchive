@@ -64,7 +64,6 @@ h1, h2, h3, h4, h5, h6 {
   hyphens: auto;
   text-align: justify;
 }
-
 .content h3 {
   font-size: 26px;
   font-weight: bolder;
@@ -99,9 +98,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-header h1 {
   position: relative;
+  text-align: left;
   top: 18px;
   font-weight: bolder;
-  font-size: 85px;
+  font-size: 10vw;
 }
 
 .site-header h2 {

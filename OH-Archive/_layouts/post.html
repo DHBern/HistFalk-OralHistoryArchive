@@ -17,16 +17,15 @@ Licence:
 ✓ Free use
 ✓ No naming required
 -->
-<body style="min-height: 500px;
-background-image: url('../assets/images/PostBackground.jpg');background-attachment: fixed; background-size: cover;" >
+<body style="
+background-image: url('../assets/images/PostBackground.jpg');
+background-attachment: fixed;  background-size: cover; background-repeat: no-repeat;" >
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
-
-<div style="flex: auto;padding: 25px;">
+<!-- Topbar with links-->
+<div style="padding: 25px;">
     <div class="container newTopbar">
         <div class="post-header">
-            <!-- Topbar with links-->
             <div style="float: right">
                 <div style="padding-top:20px; padding-right:20px ">
                     <button class="btn btn-dark"
@@ -47,43 +46,46 @@ background-image: url('../assets/images/PostBackground.jpg');background-attachme
                     </button>
                 </div>
             </div>
-
-            <div>
-
-
-                <main aria-label="Content" class="post-header"
-                      style="margin-top: 0; padding-top: 100px; margin-left: 0;">
-
-                    <h1 style="text-align: center">{{ page.title }}</h1>
-                    <h2 style="text-align: center">{{content}}</h2>
-                    <!-- Content from postScript.js -->
-                    <!-- Mp3/Mp4 player -->
-                    <div id="root"></div>
-                    <script src="../assets/js/postScript.js" type="module"></script>
-                    <!-- Start of Markup Content-->
-                    {% if page.birthday != "ubk" %}
-                    <h2>Geburtsdatum: {{page.birthday}}</h2>
-                    {% endif %}
-                    {% if page.location != "ubk" %}
-                    <h2>Wohnort: {{page.location}}</h2>
-                    {% endif %}
-                    {% if page.born != "ubk" %}
-                    <h2>Herkunftsort: {{page.born}}</h2>
-                    {% endif %}
-                    <h2>Sprache: {{page.language}}</h2>
-                    <h2>Aufgenommen am {{page.interviewDate}} von {{page.creator}}</h2>
-
-
-                </main>
-
-            </div>
         </div>
     </div>
 </div>
+<div style="padding-right: 25px;padding-left: 25px">
+    <div class="container newTopbar">
+        <!-- Logo and header styling -->
+        <div id="post-title" style="padding-top: 100px;padding-bottom: 50px;text-align: center">
+            <h1>{{ page.title }}</h1>
+        </div>
 
+        <main aria-label="Content" class="post-header">
+            <h2 style="text-align: center">{{content}}
+            </h2>
+            <!-- Content from postScript.js -->
+            <!-- Mp3/Mp4 player -->
+            <div id="root"></div>
+            <script src="../assets/js/postScript.js" type="module"></script>
+            <!-- Start of Markup Content-->
+            {% if page.birthday != "ubk" %}
+            <h2>Geburtsdatum: {{page.birthday}}</h2>
+            {% endif %}
+            {% if page.location != "ubk" %}
+            <h2>Wohnort: {{page.location}}</h2>
+            {% endif %}
+            {% if page.born != "ubk" %}
+            <h2>Herkunftsort: {{page.born}}</h2>
+            {% endif %}
+            <h2>Sprache: {{page.language}}</h2>
+            <h2>Aufgenommen am {{page.interviewDate}} von {{page.creator}}</h2>
+
+
+        </main>
+
+    </div>
+
+
+</div>
 
 <!-- Impressum -->
-<footer>
+<footer style="padding-top: 75px;">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <div id="impressumDiv" style="text-align: center; padding-bottom: 20px">
         <button class="btn btn-dark" id="impressumBtn" onclick="$('#hiddenText').show();$('#impressumDiv').hide(); return false;"

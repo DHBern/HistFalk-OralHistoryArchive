@@ -78,8 +78,7 @@ request.onload = function () {
 
             const publicationBtn = document.createElement("button");
             publicationBtn.setAttribute("class", "btn btn-outline-primary");
-            publicationBtn.setAttribute("style","text-align: right; float: right");
-
+            publicationBtn.setAttribute("style","float: right");
             const publication = document.createTextNode("Publikationen");
             publicationBtn.appendChild(publication);
 
@@ -115,12 +114,19 @@ request.onload = function () {
 
                 const h4Container = document.createElement("div");
                 h4Container.setAttribute("class", "container");
-                h4Container.setAttribute("style", "padding-right: 0px; padding-left: 0px;padding-top: 15px;padding-top: 15p");
+                h4Container.setAttribute("style", "padding-right: 0px; padding-left: 0px;padding-top: " +
+                    "15px;padding-top: 15p;");
 
+                const row = document.createElement("div");
+                row.setAttribute("class","row");
+                row.setAttribute("style","padding: 0");
+                const col10 = document.createElement("div");
+                col10.setAttribute("class","col-md-10");
+                const col2 = document.createElement("div");
+                col2.setAttribute("class","col-md-2");
 
                 const h4 = document.createElement("h4");
                 h4.setAttribute("style","text-align: left;");
-                //h4.setAttribute("style", "font-variant: small-caps;")
                 const h4Text = document.createTextNode(general.isSubjof);
 
                 publicationBtn.addEventListener("click",function () {
@@ -129,8 +135,14 @@ request.onload = function () {
 
                 //appends all elements
                 h4.appendChild(h4Text);
-                h4Container.appendChild(publicationBtn);
-                h4Container.appendChild(h4);
+                col2.appendChild(publicationBtn);
+                col10.appendChild(h4);
+                row.appendChild(col10);
+                row.appendChild(col2);
+
+                h4Container.appendChild(row);
+                //h4Container.appendChild(h4);
+                //h4Container.appendChild(publicationBtn);
                 flexContainer.appendChild(h4Container);
                 nameBtn.appendChild(name);
                 flexItem.appendChild(nameBtn);
