@@ -258,9 +258,19 @@ color theme will not work:
     
         https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
 
+## Feedback from DH-Team
+Please reference [this google spreadsheet](https://docs.google.com/spreadsheets/d/1NX8sl2FoIbBQm0FLG06Y3eQGUhusYogwno6ZgM2ZcVQ/edit#gid=0) for the feedback.
 ## TO DOs
 -[ ] map showing origins of the different archive entries
- 
+-[ ] external links open a new tab (about_blank)
+-[ ] link FF in site description, link dh in impressum
+-[ ] stick impressum to the bottom of the page
+-[ ] Change sound default in media player to 75%
+-[ ] Interviews can not be opened in a new tab
+-[ ] Navigation -> must be decided with FF
+-[ ] Have a look at OMEKA data with missingEntryTable.csv
+-[ ] Change post layout (info not central)
+-[ ] Sort categories differently (chronological)
  
 
 
