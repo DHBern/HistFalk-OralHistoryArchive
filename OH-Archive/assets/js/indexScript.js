@@ -12,7 +12,7 @@ const app = document.getElementById('root');
 
 //request items from API
 const request = new XMLHttpRequest();
-request.open('GET', 'https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527', true);
+request.open('GET', 'https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527&sort_order=desc', true);
 request.withCredentials = false;
 
 request.onload = function () {
@@ -21,6 +21,7 @@ request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
         data.forEach((object) => {
             const obj_values = Object.values(object);
+
 
             //creating Entry instances
             const general = Entry.generalInstance(
@@ -34,7 +35,7 @@ request.onload = function () {
                 Object.values(obj_values[26][0])[4],// interviewCreated
                 Object.values(obj_values[25][0])[4]// creator
             );
-
+            console.log(general.isSubjof);
             const person = Entry.personInstance(
                 Object.values(obj_values[19][0])[4],
                 Object.values(obj_values[20][0])[4],
@@ -74,6 +75,13 @@ request.onload = function () {
             nameBtn.addEventListener("click", function () {
                 location = permalink
             });
+
+            const nameBtn2 = document.createElement("button");
+            nameBtn2.setAttribute("class", "btn btn-outline-primary");
+            nameBtn2.setAttribute("style", "font-variant: small-caps;");
+            nameBtn2.addEventListener("click", function () {
+                location = permalink
+            });
             const name = document.createTextNode(person.firstName + " " + person.lastName);
 
             const publicationBtn = document.createElement("button");
@@ -94,8 +102,10 @@ request.onload = function () {
                         //gets correct container by id
                         const flexContainerById = document.getElementById(general.isSubjof.replaceAll(" ", "-"));
 
-                        nameBtn.appendChild(name);
-                        flexItem.appendChild(nameBtn);
+                        //nameBtn.appendChild(name);
+                        nameBtn2.appendChild(name);
+                        //flexItem.appendChild(nameBtn);
+                        flexItem.appendChild(nameBtn2);
                         flexContainerById.appendChild(flexItem);
                         app.appendChild(flexContainerById);
                     }
@@ -139,10 +149,8 @@ request.onload = function () {
                 col10.appendChild(h4);
                 row.appendChild(col10);
                 row.appendChild(col2);
-
                 h4Container.appendChild(row);
-                //h4Container.appendChild(h4);
-                //h4Container.appendChild(publicationBtn);
+
                 flexContainer.appendChild(h4Container);
                 nameBtn.appendChild(name);
                 flexItem.appendChild(nameBtn);

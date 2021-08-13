@@ -19,9 +19,6 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Oral History Archiv
-description: Dieses sich im Aufbau befindende Archiv umfasst biografisch-thematische Oral History Interviews, die in
-  Lehrveranstaltungen von Francesca Falk entstehen. Ein besonderer Fokus liegt dabei auf Migrationserfahrungen.
-
 
 # Build settings
 theme: minima

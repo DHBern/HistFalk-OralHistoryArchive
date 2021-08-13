@@ -262,7 +262,7 @@ color theme will not work:
 Please reference [this google spreadsheet](https://docs.google.com/spreadsheets/d/1NX8sl2FoIbBQm0FLG06Y3eQGUhusYogwno6ZgM2ZcVQ/edit#gid=0) for the feedback.
 ## TO DOs
 -[ ] map showing origins of the different archive entries
--[ ] external links open a new tab (about_blank)
+-[x] external links open a new tab (about_blank)
 -[ ] link FF in site description, link dh in impressum
 -[ ] stick impressum to the bottom of the page
 -[ ] Change sound default in media player to 75%
@@ -270,7 +270,7 @@ Please reference [this google spreadsheet](https://docs.google.com/spreadsheets/
 -[ ] Navigation -> must be decided with FF
 -[ ] Have a look at OMEKA data with missingEntryTable.csv
 -[ ] Change post layout (info not central)
--[ ] Sort categories differently (chronological)
+-[x] Sort categories differently (chronological)
  
 
 

@@ -39,7 +39,15 @@
     <div class="container newTopbar">
         <div class="d-flex justify-content-start flex-wrap" style="float: right">
             <div style="margin-top:20px; float: right;">
-                <button class="btn btn-dark" onclick="location.href ='https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html';"
+                <button class="btn btn-dark" onclick="window.open('https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html', '_blank');"
+                        type="button">
+                    Kontakt
+                </button>
+                <button class="btn btn-light" onclick="window.open('https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html', '_blank');"
+                        type="button">
+                    Kontakt
+                </button>
+                <button class="btn btn-outline-dark" onclick="window.open('https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html', '_blank');"
                         type="button">
                     Kontakt
                 </button>
@@ -52,7 +60,9 @@
 
             <div class="content">
                 <p style="font-size: 30px;">
-                    {{site.description}}
+                    Dieses sich im Aufbau befindende Archiv umfasst biografisch-thematische Oral History Interviews, die in
+                    Lehrveranstaltungen von <a href="https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html"  target="_blank" class="link-dark">Francesca Falk </a>entstehen. Ein besonderer Fokus liegt dabei auf Migrationserfahrungen.
+
                 </p>
                 <!-- start content from index.html-->
                 <div style="padding-top: 25px;">
@@ -63,7 +73,6 @@
 
 
 </div>
-<!-- Impressum -->
 <!-- Impressum -->
 <footer style="padding-top: 75px;">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
