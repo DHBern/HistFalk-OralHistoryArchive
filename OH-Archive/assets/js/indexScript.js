@@ -75,13 +75,14 @@ request.onload = function () {
             nameBtn.addEventListener("click", function () {
                 location = permalink
             });
-
+            /*
             const nameBtn2 = document.createElement("button");
             nameBtn2.setAttribute("class", "btn btn-outline-primary");
             nameBtn2.setAttribute("style", "font-variant: small-caps;");
             nameBtn2.addEventListener("click", function () {
                 location = permalink
             });
+             */
             const name = document.createTextNode(person.firstName + " " + person.lastName);
 
             const publicationBtn = document.createElement("button");
@@ -102,10 +103,10 @@ request.onload = function () {
                         //gets correct container by id
                         const flexContainerById = document.getElementById(general.isSubjof.replaceAll(" ", "-"));
 
-                        //nameBtn.appendChild(name);
-                        nameBtn2.appendChild(name);
-                        //flexItem.appendChild(nameBtn);
-                        flexItem.appendChild(nameBtn2);
+                        nameBtn.appendChild(name);
+                        flexItem.appendChild(nameBtn);
+                        //nameBtn2.appendChild(name);
+                        //flexItem.appendChild(nameBtn2);
                         flexContainerById.appendChild(flexItem);
                         app.appendChild(flexContainerById);
                     }
