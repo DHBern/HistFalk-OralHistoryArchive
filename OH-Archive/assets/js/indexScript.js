@@ -35,7 +35,6 @@ request.onload = function () {
                 Object.values(obj_values[26][0])[4],// interviewCreated
                 Object.values(obj_values[25][0])[4]// creator
             );
-            console.log(general.isSubjof);
             const person = Entry.personInstance(
                 Object.values(obj_values[19][0])[4],
                 Object.values(obj_values[20][0])[4],
@@ -61,35 +60,30 @@ request.onload = function () {
             }
 
             // creates correct permalink for the posts (see generate-md-files.js as refrence)
-            var permalink = person.firstName.replace(/\s/g, "") + "_" +
-                person.lastName.replace(/\s/g, "") + "_" + general.id;
+            var permalink =  "Interview_"+general.id;
 
 
-            //creates DOM elements
+            //creates DOM elements for conditional buttons
             const flexItem = document.createElement("li");
             flexItem.setAttribute("class", "flex-item");
+
+            const a = document.createElement("a");
+            a.setAttribute("class", "use-loader");
+            a.setAttribute("href",permalink);
 
             const nameBtn = document.createElement("button");
             nameBtn.setAttribute("class", "btn btn-primary");
             nameBtn.setAttribute("style", "font-variant: small-caps;");
-            nameBtn.addEventListener("click", function () {
-                location = permalink
-            });
-            /*
-            const nameBtn2 = document.createElement("button");
-            nameBtn2.setAttribute("class", "btn btn-outline-primary");
-            nameBtn2.setAttribute("style", "font-variant: small-caps;");
-            nameBtn2.addEventListener("click", function () {
-                location = permalink
-            });
-             */
+
             const name = document.createTextNode(person.firstName + " " + person.lastName);
 
+            //"Beiträge" Buttons
             const publicationBtn = document.createElement("button");
             publicationBtn.setAttribute("class", "btn btn-outline-primary");
             publicationBtn.setAttribute("style","float: right");
-            const publication = document.createTextNode("Publikationen");
+            const publication = document.createTextNode("Beiträge");
             publicationBtn.appendChild(publication);
+
 
 
             /*
@@ -100,23 +94,32 @@ request.onload = function () {
             if (containsObject(general.isSubjof, collections)) {
                 for (let i = 0; i < collections.length; i++) {
                     if (collections[i] === general.isSubjof) {
+                        if(general.isSubjof !=="Podcastbeitrag"){
                         //gets correct container by id
                         const flexContainerById = document.getElementById(general.isSubjof.replaceAll(" ", "-"));
+                        const divById = document.getElementById(general.isSubjof.replaceAll(" ", "-")+"_div");
+
 
                         nameBtn.appendChild(name);
                         flexItem.appendChild(nameBtn);
-                        //nameBtn2.appendChild(name);
-                        //flexItem.appendChild(nameBtn2);
+                        a.appendChild(nameBtn);
+                        flexItem.appendChild(a);
                         flexContainerById.appendChild(flexItem);
                         app.appendChild(flexContainerById);
-                    }
+
+
+
+                    }}
                 }
             }
 
             // If the theme xy is not contained in collections array
             if (!containsObject(general.isSubjof, collections)) {
                 // add to array
-                collections.push(general.isSubjof);
+                if(general.isSubjof !=="Podcastbeitrag"){
+                    collections.push(general.isSubjof);
+
+
 
                 //creates DOM elemts
                 const flexContainer = document.createElement("ul");
@@ -125,16 +128,16 @@ request.onload = function () {
 
                 const h4Container = document.createElement("div");
                 h4Container.setAttribute("class", "container");
-                h4Container.setAttribute("style", "padding-right: 0px; padding-left: 0px;padding-top: " +
-                    "15px;padding-top: 15p;");
+                h4Container.setAttribute("style", "padding-right: 0px; padding-left: 0px;padding-top: 15px;");
 
                 const row = document.createElement("div");
                 row.setAttribute("class","row");
                 row.setAttribute("style","padding: 0");
-                const col10 = document.createElement("div");
-                col10.setAttribute("class","col-md-10");
-                const col2 = document.createElement("div");
-                col2.setAttribute("class","col-md-2");
+                const col9 = document.createElement("div");
+                col9.setAttribute("class","col-md-9");
+                col9.setAttribute("style","display: inline-block;");
+                const col3 = document.createElement("div");
+                col3.setAttribute("class","col-md-3");
 
                 const h4 = document.createElement("h4");
                 h4.setAttribute("style","text-align: left;");
@@ -144,20 +147,29 @@ request.onload = function () {
                     location = "/Publikationen#"+general.isSubjof.replaceAll(" ", "-")+"-links"
                 });
 
+
                 //appends all elements
                 h4.appendChild(h4Text);
-                col2.appendChild(publicationBtn);
-                col10.appendChild(h4);
-                row.appendChild(col10);
-                row.appendChild(col2);
+                console.log(general.isSubjof)
+                if(general.isSubjof === '"Schwarzenbach-Abstimmung"'){
+                    col3.appendChild(publicationBtn);
+                }
+
+                col9.appendChild(h4);
+                row.appendChild(col9);
+                row.appendChild(col3);
                 h4Container.appendChild(row);
 
                 flexContainer.appendChild(h4Container);
                 nameBtn.appendChild(name);
-                flexItem.appendChild(nameBtn);
+                a.appendChild(nameBtn);
+                flexItem.appendChild(a);
                 flexContainer.appendChild(flexItem);
                 app.appendChild(flexContainer);
-            }
+
+
+            }}
+
 
         })
     } else {

@@ -6,13 +6,16 @@
 */
 
 //DOM Elements definition
-const pageId = window.location.href.split('_')[2];
-const app = document.getElementById('root');
+const pageId = window.location.href.split('_')[1];
+const mediaPlayer = document.getElementById("mediaPlayer");
+const chevron_left = document.getElementById("chevron_left");
+const chevron_right = document.getElementById("chevron_right");
 const figure = document.createElement("figure");
+const nextNeighbourLink = [];
 
 //Request media from API
 const request = new XMLHttpRequest();
-request.open('GET', 'https://www.corona-memory.ch/api/media?item_set_id=3527', true);
+request.open('GET', 'https://www.corona-memory.ch/api/media?item_set_id=3527&sort_order=desc', true);
 request.withCredentials = false;
 request.onload = function () {
     // Begin accessing JSON data here
@@ -22,13 +25,18 @@ request.onload = function () {
             const obj_values = Object.values(object);
             const media = new MediaEntry(obj_values[3], Object.values(obj_values[15])[1],
                 obj_values[4], obj_values[9], obj_values[17].toString().split('/')[0], obj_values[22]);
-
             const mediaTypeEnd = media.mediaFileUrl.toString().split(".");
+
             /*
             * Checks for matching media via pageId and entryId.
             * Checks if it is video or audio.
             * creates media DOM element.
              */
+
+            nextNeighbourLink.push(media.entryId);
+
+
+
             if (BigInt(pageId) === BigInt(media.entryId)) {
                 if(media.mediaType === "video" && mediaTypeEnd[3] === "mp4"){
 
@@ -37,9 +45,8 @@ request.onload = function () {
                     videoPlayer.setAttribute("type", "video/mp4");
                     videoPlayer.setAttribute("controls", "");
                     videoPlayer.setAttribute("width", "100%");
-                    //app.appendChild(mediaTitle)
                     figure.appendChild(videoPlayer);
-                    app.appendChild(figure);
+                    mediaPlayer.appendChild(figure);
 
                 }
                 else{
@@ -48,14 +55,41 @@ request.onload = function () {
                     audioPlayer.setAttribute("controls", "");
                     audioPlayer.setAttribute("width", "100%");
                     figure.appendChild(audioPlayer);
-                    app.appendChild(figure);
+                    mediaPlayer.appendChild(figure);
                 }
             }
-        })
+
+        });
+
+        //Add before and next (chevron button)
+        for(var i = 0;i< nextNeighbourLink.length;i++){
+            if(BigInt(nextNeighbourLink[i])===BigInt(pageId)){
+                if(BigInt(i)=== BigInt(nextNeighbourLink.length-1)){
+                    chevron_left.setAttribute("href","Interview_"+nextNeighbourLink[i-1]);
+                    chevron_right.setAttribute("href","Interview_"+nextNeighbourLink[0]);
+                    console.log(nextNeighbourLink[i-1]);
+                    console.log(nextNeighbourLink[0])
+                }
+                if(i === 0){
+                    chevron_left.setAttribute("href","Interview_"+nextNeighbourLink[nextNeighbourLink.length-1]);
+                    chevron_right.setAttribute("href","Interview_"+nextNeighbourLink[i+1])
+                    console.log(nextNeighbourLink[nextNeighbourLink.length-1])
+                    console.log(nextNeighbourLink[i+1])
+                }
+                if(i!==0){
+                    if(BigInt(i) !== BigInt(nextNeighbourLink.length-1)) {
+                    chevron_left.setAttribute("href","Interview_"+nextNeighbourLink[i-1]);
+                    chevron_right.setAttribute("href","Interview_"+nextNeighbourLink[i+1])
+                    console.log(nextNeighbourLink[i-1])
+                    console.log(nextNeighbourLink[i+1])
+                    }
+
+            }
+        }}
     } else {
         const errorMessage = document.createElement('marquee');
         errorMessage.textContent = `Gah, it's not working!`;
-        app.appendChild(errorMessage);
+        mediaPlayer.appendChild(errorMessage);
     }
 };
 

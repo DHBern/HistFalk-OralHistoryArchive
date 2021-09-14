@@ -1,8 +1,10 @@
 /* Styling sheet for all the buttons*/
 
-.btn-dark{
+.btn-outline-dark{
   font-family: 'Roboto', sans-serif !important;
+  font-size: 18px !important;
 }
+
 
 .btn-primary {
   font-family: 'Roboto', sans-serif !important;
@@ -19,7 +21,7 @@
 /* Button styling and link styling */
 
 
-#Schwarzenbach-Abstimmung {
+#\"Schwarzenbach-Abstimmung\" {
   /* Filled buttons for the archive entries*/
   .btn-primary,
   .btn-primary:hover,
@@ -45,7 +47,7 @@
     box-shadow: none !important;
   }
   /* Link styling for publication page*/
-  #Schwarzenbach-Abstimmung-links {
+  #\"Schwarzenbach-Abstimmung\"-links {
     .link-primary,
     .link-primary:hover,
     .link-primary:active,
@@ -55,7 +57,7 @@
 
 }
 
-#Saisonnières-und-Saisonniers {
+#Saisonnières-und-Saisonniers-und-zeitgenössische-Pendelmigration {
   .btn-primary,
   .btn-primary:hover,
   .btn-primary:active,
@@ -78,7 +80,7 @@
     color:  #5C4176 !important;
     box-shadow: none !important;
   }
-  #Saisonnières-und-Saisonniers-links{
+  #Saisonnières-und-Saisonniers-und-zeitgenössische-Pendelmigrationlinks{
     .link-primary,
     .link-primary:hover,
     .link-primary:active,

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interview mit Guglielmo Grossi
-collection: Schwarzenbach-Abstimmung
+collection: "Schwarzenbach-Abstimmung"
 protagonist: Guglielmo Grossi
 creator: Seraina Campell
 birthday: 27.02.1946
@@ -9,7 +9,7 @@ location: Bern
 born: Montefiore Conca (Rimini)
 language: Deutsch
 interviewDate: 03.03.2020
-permalink: Guglielmo_Grossi_3545
+permalink: Interview_3545
 published: true
 ---
 Oral History Interview zur Schwarzenbach-Abstimmung

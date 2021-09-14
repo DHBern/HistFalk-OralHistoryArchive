@@ -16,6 +16,7 @@ const directory = '../_posts/';
 keys = [];
 values = [];
 
+
 clearDirectory();
 
 //Request to API
@@ -29,7 +30,7 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
 
             //creating Entry, person and geo instances
             const general = Entry.generalInstance(
-                BigInt(obj_values[3]), //id
+                obj_values[3], //id
                 obj_values[4],//is public
                 obj_values[9],//title
                 Object.values(obj_values[11])[0],//created
@@ -66,8 +67,7 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
             //prepares attributes for markdown
             var date = general.created.toString().slice(0, 10);
             var name = person.firstName.replace(/\s/g, "") + "-" + person.lastName.replace(/\s/g, "");
-            var permalink = person.firstName.replace(/\s/g, "") + "_" +
-                person.lastName.replace(/\s/g, "") + "_" + general.id;
+            var permalink = "Interview_"+general.id;
 
 
             //function for posts markdown

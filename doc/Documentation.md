@@ -136,7 +136,8 @@ leading to the archive entries on index.html.
 The post layout uses this [Background image](../OH-Archive/assets/images/PostBackground.jpg) from [this source](https://www.pexels.com/de-de/foto/weiss-gestrichene-wand-1939485/). 
 The licence is "free use and no naming required".
 
-For the color theme for conditional buttons please reference the [ColorTheme.pdf](ColorTheme.pdf).
+For the color theme for conditional buttons please reference the [ColorTheme.pdf](ColorTheme.pdf) or
+ [this link](https://coolors.co/2a7ca6-5c4276-b8145e-edc51b-369653-424f61).
 Currently there are 4 themes for the conditional buttons Schwarzenbach-Abstimmung, Parlamentarierinnen-mit-doppelter-Staatsbürgerschaft, 
 Saisonnières-und-Saisonniers, tbd-wird-ergänzt. You can use [themes.txt](themes.txt) as a reference for the current themes 
 with entries in OMEKA. This file is produced when you run `$ node doc/documentationScript.js`.
@@ -263,15 +264,16 @@ Please reference [this google spreadsheet](https://docs.google.com/spreadsheets/
 ## TO DOs
 -[ ] map showing origins of the different archive entries
 -[x] external links open a new tab (about_blank)
--[ ] link FF in site description, link dh in impressum
--[ ] stick impressum to the bottom of the page
+-[x] link FF in site description, link dh in impressum
+-[X] stick impressum to the bottom of the page
 -[ ] Change sound default in media player to 75%
--[ ] Interviews can not be opened in a new tab
--[ ] Navigation -> must be decided with FF
+-[X] Interviews can not be opened in a new tab
+-[X] Navigation -> must be decided with FF
 -[ ] Have a look at OMEKA data with missingEntryTable.csv
--[ ] Change post layout (info not central)
+-[x] Change post layout (info not central)
 -[x] Sort categories differently (chronological)
- 
+-[x] Dropdown content in index.js, styling to dropdown styling sheet
+-[ ] Add Favicon and Logo
 
 
      
