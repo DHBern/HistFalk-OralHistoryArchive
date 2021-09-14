@@ -8,23 +8,21 @@
     <!-- Begin Jekyll SEO tag v2.7.1 -->
     <title>{{ site.title }}</title>
     <link href="/assets/css/styles.css" rel="stylesheet">
-    <meta content="Jekyll v4.2.0" name="generator"/>
-    <meta content="en_US" property="og:locale"/>
     <link href="/" rel="canonical"/>
-    <meta content="/" property="og:url"/>
-    <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css?family=Roboto"
           rel="stylesheet">
+    <meta content="Jekyll v4.2.0" name="generator"/>
+    <meta content="en_US" property="og:locale"/>
+    <meta content="/" property="og:url"/>
+
     <script type="application/ld+json">
         {
             "@type": "WebSite",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             "headline": "OH-Archive",
             "name": "OH-Archive",
             "url": "/",
             "@context": "https://schema.org"
         }</script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <!-- End Jekyll SEO tag -->
     <link href="/feed.xml" rel="alternate" title="OH-Archive" type="application/atom+xml"/>
@@ -33,7 +31,8 @@
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" >
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-    <script src="../assets/js/dropDownMenu.js" type="module"></script>
+    <script src="../assets/js/dropDownMenuScript.js" type="module"></script>
+    <script src="../assets/js/impressumScript.js" type="module"></script>
 
 </head>
 
@@ -79,17 +78,17 @@
 </div>
 <!-- Impressum -->
 <footer>
+
     <div id="impressumDiv">
-        <button class="btn btn-outline-dark" id="impressumBtn"  onclick="$('#hiddenText').show();$('#impressumDiv').hide(); return false;"
-                type="button">Impressum
+        <button class="btn btn-outline-dark" id="impressumBtn">Impressum
         </button>
     </div>
     <div id="hiddenText">
-        <button type="button" class="btn-close" aria-label="Close" id="closeBtn" onclick="$('#hiddenText').hide();$('#impressumDiv').show(); return false;">
+        <button type="button" class="btn-close" aria-label="Close" id="closeBtn">
         </button>
 
         <div id="impressumTxt">
-            <h5 >Herausgeberin:</h5>
+            <h5>Herausgeberin:</h5>
             <p>Verantwortlich für den Inhalt der Portalseite ist<a href="https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html"  target="_blank" class="link-dark"> Francesca Falk</a>.<br>
                 Für Anfragen beachten Sie bitte unsere Kontaktseite. Für die hier veröffentlichten Interviews liegen Einverständniserklärungen vor.
             </p>

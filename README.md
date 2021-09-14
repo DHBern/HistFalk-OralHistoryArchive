@@ -143,7 +143,7 @@ You can check this with `docker images`.
 
     ```
 
-3.Build the Docker image as described above. Currently options ``d and --rm`` are used.
+3. Build the Docker image as described above. Currently options ``d and --rm`` are used.
 ``$ sudo docker run -p 4000:4000 -d --rm --name oh-archive oh-archive``
 
 Note: If something in the project structure changed, maybe you have to adjust the Dockerfile too.

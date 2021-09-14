@@ -1,7 +1,7 @@
 // Array of themes (see themes.txt in documentation)
 const collections = [];
 //DOM Elements definition
-const dropDownMenu = document.getElementById("dropdown-menu");
+const dropDownMenuScript = document.getElementById("dropdown-menu");
 
 //request items from API
 const request = new XMLHttpRequest();
@@ -67,7 +67,7 @@ request.onload = function () {
                         dropDownItem.appendChild(LinkText);
                         li_2.appendChild(dropDownItem);
                         divById.appendChild(li_2);
-                        dropDownMenu.appendChild(divById);
+                        dropDownMenuScript.appendChild(divById);
 
                     }}
                 }
@@ -95,7 +95,7 @@ request.onload = function () {
                 li_2.appendChild(dropDownItem);
                 dropDownDiv.appendChild(li_1);
                 dropDownDiv.appendChild(li_2);
-                dropDownMenu.appendChild(dropDownDiv);
+                dropDownMenuScript.appendChild(dropDownDiv);
             }}
 
 

@@ -67,21 +67,18 @@ request.onload = function () {
                 if(BigInt(i)=== BigInt(nextNeighbourLink.length-1)){
                     chevron_left.setAttribute("href","Interview_"+nextNeighbourLink[i-1]);
                     chevron_right.setAttribute("href","Interview_"+nextNeighbourLink[0]);
-                    console.log(nextNeighbourLink[i-1]);
-                    console.log(nextNeighbourLink[0])
+
                 }
                 if(i === 0){
                     chevron_left.setAttribute("href","Interview_"+nextNeighbourLink[nextNeighbourLink.length-1]);
                     chevron_right.setAttribute("href","Interview_"+nextNeighbourLink[i+1])
-                    console.log(nextNeighbourLink[nextNeighbourLink.length-1])
-                    console.log(nextNeighbourLink[i+1])
+
                 }
                 if(i!==0){
                     if(BigInt(i) !== BigInt(nextNeighbourLink.length-1)) {
                     chevron_left.setAttribute("href","Interview_"+nextNeighbourLink[i-1]);
                     chevron_right.setAttribute("href","Interview_"+nextNeighbourLink[i+1])
-                    console.log(nextNeighbourLink[i-1])
-                    console.log(nextNeighbourLink[i+1])
+
                     }
 
             }
