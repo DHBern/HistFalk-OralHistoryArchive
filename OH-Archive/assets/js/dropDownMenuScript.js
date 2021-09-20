@@ -136,16 +136,6 @@ class Entry {
             null, isSubjOf, interviewCreated, creator)
     }
 
-    static personInstance(firstName, lastName, birthday) {
-        return new Entry(null, null, null, null, null, null,
-            firstName, lastName, birthday, null, null, null, null, null)
-    }
-
-    static geoInstance(hasGeoLoc, locIn) {
-        return new Entry(null, null, null, null, null, null, null, null, null,
-            hasGeoLoc, locIn, null, null, null)
-    }
-
 }
 
 

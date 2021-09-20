@@ -274,6 +274,8 @@ Please reference [this google spreadsheet](https://docs.google.com/spreadsheets/
 -[x] Sort categories differently (chronological)
 -[x] Dropdown content in index.js, styling to dropdown styling sheet
 -[ ] Add Favicon and Logo
+-[ ] Mobile view post layout -> Videos does not work in mobile view!!!
+
 
 
      

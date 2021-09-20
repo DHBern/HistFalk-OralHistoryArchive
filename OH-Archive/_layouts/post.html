@@ -1,21 +1,23 @@
 <!--This is the post layout-->
 <!doctype html>
 <html lang="en">
-<meta content="width=device-width, initial-scale=1" name="viewport">
 <head>
+
     <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>{{ page.title }}</title>
+    <!-- site stylesheets -->
     <link href="../assets/css/styles.css" rel="stylesheet">
-    <link href="/feed.xml" rel="alternate" title="OH-Archive" type="application/atom+xml"/>
-    <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css?family=Roboto"
-          rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" >
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+
+    <!-- important Scripts-->
     <script src="../assets/js/dropDownMenuScript.js" type="module"></script>
     <script src="../assets/js/impressumScript.js" type="module"></script>
+    <!-- Bootstrap v 5.0.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" >
+    <!-- font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 
 
 
@@ -29,11 +31,13 @@ Licence:
 <body style="
 background-image: url('../assets/images/PostBackground.jpg');
 background-attachment: fixed;  background-size: cover; background-repeat: no-repeat;" >
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-<!-- Topbar with links-->
-<div style="padding: 25px;">
-    <div style="padding: 25px">
+<!-- inline Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+
+<!-- Toolbar -->
+<div style="padding: 50px;">
         <div class="container newTopbar">
             <div class="d-flex justify-content-start flex-wrap" style="float: right">
             <button class="btn btn-outline-dark" onclick="window.open('https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html', '_blank');"
@@ -55,42 +59,49 @@ background-attachment: fixed;  background-size: cover; background-repeat: no-rep
             </svg></a>
         </div>
         </div>
-
+    </div>
 <div style="padding-right: 25px;padding-left: 25px">
     <div class="container newTopbar">
-        <!-- Logo and header styling -->
-        <div id="post-title" style="padding-top: 100px;padding-bottom: 50px;text-align: center">
-            <h1>{{ page.title }}</h1>
+    <div class="container">
+        <div id="post-title" style="text-align: center;">
+            <h1 >{{ page.title }}</h1>
         </div>
+        <div class="row" style="padding-bottom: 10px; padding-top: 10px">
+            <div class="col-1">
+                <a id="chevron_left" class="link-dark">
+                    <svg class="bi bi-chevron-left" fill="black" height="75" viewBox="0 0 16 16 "
+                         width="75" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                              fill-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="col-10" style="text-align: center;">
+                <h2 style="text-align: center">{{content}}
+                </h2>
+            </div>
+            <div class="col-1">
+                <a id="chevron_right" class="link-dark">
+                    <svg class="bi bi-chevron-right" fill="black" height="75" viewBox="0 0 16 16"
+                         width="75" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                              fill-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+        <!-- Logo and header styling -->
 
         <main aria-label="Content" class="post-header">
-            <h2 style="text-align: center">{{content}}
-            </h2>
+
             <!-- Content from postScript.js -->
 
-            <div class="row" style="display:table-row;">
-                <div class="col-md-1" style="display: table-cell;vertical-align: middle;">
-                    <a id="chevron_left" class="link-dark">
-                        <svg class="bi bi-chevron-left" fill="black" height="75" viewBox="0 0 16 16"
-                             width="75" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-                                  fill-rule="evenodd"/>
-                        </svg>
-                    </a>
-                </div>
-                <!-- Mp3/Mp4 player -->
-                <div id="mediaPlayer" class="col-md-10" style="display: table-cell;vertical-align: middle;"></div>
-                <div class="col-md-1" style="display: table-cell;vertical-align: middle;">
-                    <a id="chevron_right" class="link-dark">
-                        <svg class="bi bi-chevron-right" fill="black" height="75" viewBox="0 0 16 16"
-                             width="75" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                                  fill-rule="evenodd"/>
-                        </svg>
-                    </a>
-                </div>
-                </div>
 
+            <div class="row">
+                <!-- Mp3/Mp4 player -->
+                <div id="mediaPlayer" class="col-12"></div>
+            </div>
 
             <script src="../assets/js/postScript.js" type="module"></script>
 
@@ -100,20 +111,11 @@ background-attachment: fixed;  background-size: cover; background-repeat: no-rep
 
 
             <!-- Start of Markup Content-->
-            <div class="card" style="
-            box-shadow: 0 4px 8px 0
-            rgba(0,0,0,0.2);
-            transition: 0.3s;
-            width: 100%;
-            border-radius: 5px;
-            background-image: url('../assets/images/PostBackground.jpg');
-            background-repeat: no-repeat;
-            margin-bottom: 20px;
-            margin-top: 20px;
-">
+            <div class="card" id="infoCard" style="background-image: url('../assets/images/PostBackground.jpg');">
+                <div class="container">
                 <div class="row">
-                    <h2 style="text-align:center;font-size: 30px !important"> Weitere Informationen zum Interview</h2>
-                    <div class="col-sm-6">
+                    <h1> Weitere Informationen zum Interview</h1>
+                    <div class="col">
                         {% if page.birthday != "ubk" %}
                         <h2 style="text-align: right;padding-left: 15px">Geburtsdatum: </h2>
                         {% endif %}
@@ -125,7 +127,7 @@ background-attachment: fixed;  background-size: cover; background-repeat: no-rep
                         {% endif %}
                         <h2  style="text-align: right;padding-left: 15px">Sprache: </h2>
                 </div>
-                    <div class="col-sm-6">
+                    <div class="col">
                         {% if page.birthday != "ubk" %}
                         <h2 style="text-align: left;">{{page.birthday}}</h2>
                         {% endif %}
@@ -137,9 +139,10 @@ background-attachment: fixed;  background-size: cover; background-repeat: no-rep
                         {% endif %}
                         <h2  style="text-align: left;">{{page.language}}</h2>
                     </div>
-                    <h2 style="text-align:center">Aufgenommen am {{page.interviewDate}} von {{page.creator}}</h2>
+                    <h2>Aufgenommen am {{page.interviewDate}} von {{page.creator}}</h2>
 
                 </div>
+            </div>
             </div>
 
 
@@ -149,8 +152,8 @@ background-attachment: fixed;  background-size: cover; background-repeat: no-rep
 
     </div>
 
-</div>
-</div>
+
+
 </div>
 <!-- Impressum -->
 <footer>

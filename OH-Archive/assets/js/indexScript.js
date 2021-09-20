@@ -41,23 +41,8 @@ request.onload = function () {
                 Object.values(obj_values[18][0])[4],
             );
 
-            const geo = Entry.geoInstance(
-                Object.values(obj_values[21][0])[4],
-                Object.values(obj_values[22][0])[4],
-            );
 
 
-
-            //tests if an element is in Array
-            function containsObject(obj, list) {
-                var i;
-                for (i = 0; i < list.length; i++) {
-                    if (list[i] === obj) {
-                        return true;
-                    }
-                }
-                return false;
-            }
 
             // creates correct permalink for the posts (see generate-md-files.js as refrence)
             var permalink =  "Interview_"+general.id;
@@ -68,22 +53,26 @@ request.onload = function () {
             flexItem.setAttribute("class", "flex-item");
 
             const a = document.createElement("a");
-            a.setAttribute("class", "use-loader");
-            a.setAttribute("href",permalink);
+            setAttributes(a,{"class": "use-loader", "href":permalink})
 
             const nameBtn = document.createElement("button");
-            nameBtn.setAttribute("class", "btn btn-primary");
-            nameBtn.setAttribute("style", "font-variant: small-caps;");
+            setAttributes(nameBtn,{ "class": "btn btn-primary","style": "font-variant: small-caps;" })
 
             const name = document.createTextNode(person.firstName + " " + person.lastName);
 
             //"Beiträge" Buttons
             const publicationBtn = document.createElement("button");
-            publicationBtn.setAttribute("class", "btn btn-outline-primary");
-            publicationBtn.setAttribute("style","float: right");
+            setAttributes(publicationBtn,{"class": "btn btn-outline-primary","style":"float: right"});
+
             const publication = document.createTextNode("Beiträge");
             publicationBtn.appendChild(publication);
 
+            function finalAppend(){
+                nameBtn.appendChild(name);
+                flexItem.appendChild(nameBtn);
+                a.appendChild(nameBtn);
+                flexItem.appendChild(a);
+            }
 
 
             /*
@@ -97,17 +86,10 @@ request.onload = function () {
                         if(general.isSubjof !=="Podcastbeitrag"){
                         //gets correct container by id
                         const flexContainerById = document.getElementById(general.isSubjof.replaceAll(" ", "-"));
-                        const divById = document.getElementById(general.isSubjof.replaceAll(" ", "-")+"_div");
 
-
-                        nameBtn.appendChild(name);
-                        flexItem.appendChild(nameBtn);
-                        a.appendChild(nameBtn);
-                        flexItem.appendChild(a);
+                        finalAppend();
                         flexContainerById.appendChild(flexItem);
                         app.appendChild(flexContainerById);
-
-
 
                     }}
                 }
@@ -123,24 +105,23 @@ request.onload = function () {
 
                 //creates DOM elemts
                 const flexContainer = document.createElement("ul");
-                flexContainer.setAttribute("class", "flex-container wrap");
-                flexContainer.setAttribute("id", general.isSubjof.replaceAll(" ", "-"));
+                setAttributes(flexContainer,{"class":"flex-container wrap","id": general.isSubjof.replaceAll(" ", "-")  })
 
                 const h4Container = document.createElement("div");
-                h4Container.setAttribute("class", "container");
-                h4Container.setAttribute("style", "padding-right: 0px; padding-left: 0px;padding-top: 15px;");
+                setAttributes(h4Container, {"class":"container", "style": "padding-right: 0px; padding-left: 0px;padding-top: 15px;"})
 
                 const row = document.createElement("div");
-                row.setAttribute("class","row");
-                row.setAttribute("style","padding: 0");
+                setAttributes(row, {"class":"row","style":"padding: 0"})
+
                 const col9 = document.createElement("div");
-                col9.setAttribute("class","col-md-9");
-                col9.setAttribute("style","display: inline-block;");
+                setAttributes(col9, {"class":"col-md-9", "style":"display: inline-block;" })
+
                 const col3 = document.createElement("div");
                 col3.setAttribute("class","col-md-3");
 
                 const h4 = document.createElement("h4");
                 h4.setAttribute("style","text-align: left;");
+
                 const h4Text = document.createTextNode(general.isSubjof);
 
                 publicationBtn.addEventListener("click",function () {
@@ -150,21 +131,17 @@ request.onload = function () {
 
                 //appends all elements
                 h4.appendChild(h4Text);
-                console.log(general.isSubjof)
                 if(general.isSubjof === '"Schwarzenbach-Abstimmung"'){
                     col3.appendChild(publicationBtn);
                 }
 
                 col9.appendChild(h4);
-                row.appendChild(col9);
-                row.appendChild(col3);
+                row.append(col9, col3);
                 h4Container.appendChild(row);
 
-                flexContainer.appendChild(h4Container);
-                nameBtn.appendChild(name);
-                a.appendChild(nameBtn);
-                flexItem.appendChild(a);
-                flexContainer.appendChild(flexItem);
+
+                finalAppend();
+                flexContainer.append(h4Container, flexItem);
                 app.appendChild(flexContainer);
 
 
@@ -212,13 +189,27 @@ class Entry {
         return new Entry(null, null, null, null, null, null,
             firstName, lastName, birthday, null, null, null, null, null)
     }
-
-    static geoInstance(hasGeoLoc, locIn) {
-        return new Entry(null, null, null, null, null, null, null, null, null,
-            hasGeoLoc, locIn, null, null, null)
-    }
-
 }
+
+//tests if an element is in Array
+function containsObject(obj, list) {
+    var i;
+    for (i = 0; i < list.length; i++) {
+        if (list[i] === obj) {
+            return true;
+        }
+    }
+    return false;
+}
+//sets multiple Attributes
+function setAttributes(el, attrs) {
+    for(var key in attrs) {
+        el.setAttribute(key, attrs[key]);
+    }
+}
+
+
+
 
 
 

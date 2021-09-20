@@ -36,24 +36,20 @@ request.onload = function () {
             nextNeighbourLink.push(media.entryId);
 
 
-
             if (BigInt(pageId) === BigInt(media.entryId)) {
                 if(media.mediaType === "video" && mediaTypeEnd[3] === "mp4"){
 
                     const videoPlayer = document.createElement("video");
-                    videoPlayer.setAttribute("src", media.mediaFileUrl.toString());
-                    videoPlayer.setAttribute("type", "video/mp4");
-                    videoPlayer.setAttribute("controls", "");
-                    videoPlayer.setAttribute("width", "100%");
+                    setAttributes(videoPlayer,{"src":media.mediaFileUrl.toString(), "type": "video/mp4",
+                        "controls": "","width":"100%", "height":"100%", "loop":"loop", "muted":"", "defaultMuted":"", "playsinline":""})
                     figure.appendChild(videoPlayer);
                     mediaPlayer.appendChild(figure);
 
                 }
                 else{
                     const audioPlayer = document.createElement("audio");
-                    audioPlayer.setAttribute("src", media.mediaFileUrl.toString());
-                    audioPlayer.setAttribute("controls", "");
-                    audioPlayer.setAttribute("width", "100%");
+                    setAttributes(audioPlayer,{"src":media.mediaFileUrl.toString(),
+                        "controls": "","width":"100%"})
                     figure.appendChild(audioPlayer);
                     mediaPlayer.appendChild(figure);
                 }
@@ -107,7 +103,12 @@ class MediaEntry {
     }
 }
 
-
+//sets multiple Attributes
+function setAttributes(el, attrs) {
+    for(var key in attrs) {
+        el.setAttribute(key, attrs[key]);
+    }
+}
 
 
 

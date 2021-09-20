@@ -1,4 +1,7 @@
 /** Posts */
+body{
+  font-family: 'Roboto', sans-serif;
+}
 .post-header img {
   height: 75px;
   padding-left: 40px;
@@ -6,14 +9,14 @@
 
 
 #post-title h1 {
-  font-size: 8vw;
+  font-size: 120px;
   letter-spacing: 2px;
   line-height: 1;
   font-weight: bold;
   text-align: center;
   margin-bottom: 0;
   color: black;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 .post-header h2 {
@@ -25,8 +28,81 @@
   margin-top: 20px;
 }
 
-.post-header figure {
+figure {
   margin-top: 50px;
   text-align: center;
 }
+
+#mediaPlayer{
+  vertical-align: middle;
+}
+#chevron_left{
+  vertical-align: middle;
+  text-align: left;
+  float: left;
+
+}
+#chevron_right{
+  vertical-align: middle;
+  text-align: right;
+  float: right;
+
+}
+
+
+#infoCard{
+  box-shadow: 0 4px 8px 0
+  rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+}
+#infoCard h1{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align:center;
+  font-size: 30px
+}
+/* < 992px (phones und kleine tablets) */
+@media (max-width: 62em) {
+  p{
+    font-size: 3vw;
+  }
+  #post-title h1 {
+    font-size: 5vw;
+  }
+  #mediaPlayer{
+    width: auto;
+    vertical-align: middle;
+  }
+  #chevron_left{
+    vertical-align: middle;
+  }
+  #chevron_right{
+    vertical-align: middle;
+
+  }
+  #infoCard h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align:center;
+    font-size: 3vw
+  }
+  #infoCard h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align:center;
+    font-size: 2vw
+  }
+
+
+
+}
+
+
+
 
