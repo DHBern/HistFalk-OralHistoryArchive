@@ -64,6 +64,9 @@ h1, h2, h3, h4, h5, h6 {
   hyphens: auto;
   text-align: justify;
 }
+#description{
+  font-size: 30px;
+}
 .content h3 {
   font-size: 26px;
   font-weight: bolder;
@@ -137,5 +140,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-heading {
   font-size: 32px;
+}
+@media (max-width: 62em) {
+#description{
+  font-size: 15px;
+}
+  .content h4 {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+  }
 }
 
