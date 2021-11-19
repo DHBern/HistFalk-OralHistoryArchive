@@ -52,16 +52,6 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                 Object.values(obj_values[22][0])[4],
             );
 
-            //tests if an element is in Array
-            function containsObject(obj, list) {
-                var i;
-                for (i = 0; i < list.length; i++) {
-                    if (list[i] === obj) {
-                        return true;
-                    }
-                }
-                return false;
-            }
 
 
             //prepares attributes for markdown

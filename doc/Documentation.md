@@ -17,10 +17,6 @@ The recordings and the Metadata for "Oral History Archiv" are located on OMEKA.
 This table is produced when you run `$ node doc/documentationScript.js`.
 * The resource template is called oral-history Interview. It decides how the data is stored.
 If you need to change an entry or the ressource-template pleas visit [Omeka Backend](http://omeka.unibe.ch/admin)
-```   
-      User: Mailadresse
-      Passwort: 12345678
-```
 * The data can be accessed via API using [_root_/api](https://www.corona-memory.ch/api/)
 For example the following GET query provides the required Metadata on the items to build the posts. The endpoint api/items 
 is queried with the parameters per_page and item_set_id. 
