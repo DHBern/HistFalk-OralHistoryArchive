@@ -187,7 +187,7 @@ in buttonStyle.scss:
 
 If you need to add a new color for a new theme, please run `$ node doc/documentationScript.js` in command line. 
 This will save the correct ids for the [styling sheet](../OH-Archive/_sass/main.scss) in [themes.txt](themes.txt).
-Then add your new color like this in buttonStyle.scss:
+Then add your new color like this in [buttonStyle.scss](../OH-Archive/_sass/buttonStyles.scss):
 
 ```
 /* Button styling and link styling */
@@ -235,10 +235,24 @@ Then add your new color like this in buttonStyle.scss:
 }
 ```
 You can copy the code above and simply change the id and color to the desired values. 
+In [dropdownMenu.scss](../OH-Archive/_sass/dropdownMenu.scss) add the following lines of code with your chosen id:
+```
+/* Styling sheet for the dropdown Menu*/
+#your-new-theme-id_div{
+  a.dropdown-item:active {
+    color: white !important;
+    background: #B8145E !important;
+  }
+  h6{
+    color:  #B8145E
+  }
+}
 
-Finally you need to ad two `<div>` elements to the publication.html. You only need to add the `<div>` elements to the 
+```
+This will add the title in the correct color to the dropdown menu.
+Finally you need to add two `<div>` elements to the publication.html. You only need to add the `<div>` elements to the 
 publication.html, because the other components build the new themes dynamically. You may also add the desired links 
- and information to publication.html in the your-new-theme-id-links `<div>`. Please use the syntax as seen below for the links or the
+ and information to publication.html in the your-new-theme-id-links `<div>`. Please use the syntax seen below for the links or the
 color theme will not work:
 
 ```
@@ -258,19 +272,21 @@ color theme will not work:
 ## Feedback from DH-Team
 Please reference [this google spreadsheet](https://docs.google.com/spreadsheets/d/1NX8sl2FoIbBQm0FLG06Y3eQGUhusYogwno6ZgM2ZcVQ/edit#gid=0) for the feedback.
 ## TO DOs
--[ ] map showing origins of the different archive entries
--[x] external links open a new tab (about_blank)
--[x] link FF in site description, link dh in impressum
--[X] stick impressum to the bottom of the page
--[ ] Change sound default in media player to 75%
--[X] Interviews can not be opened in a new tab
--[X] Navigation -> must be decided with FF
--[ ] Have a look at OMEKA data with missingEntryTable.csv
--[x] Change post layout (info not central)
--[x] Sort categories differently (chronological)
--[x] Dropdown content in index.js, styling to dropdown styling sheet
--[ ] Add Favicon and Logo
--[X] Mobile view post layout -> Videos does not work in mobile view!!!
+- [ ] map showing origins of the different archive entries
+- [x] external links open a new tab (about_blank)
+- [x] link FF in site description, link dh in impressum
+- [X] stick impressum to the bottom of the page
+- [ ] Change sound default in media player to 75%
+- [X] Interviews can not be opened in a new tab
+- [X] Navigation -> must be decided with FF
+- [ ] Have a look at OMEKA data with missingEntryTable.csv
+- [x] Change post layout (info not central)
+- [x] Sort categories differently (chronological)
+- [x] Dropdown content in index.js, styling to dropdown styling sheet
+- [ ] Add Favicon and Logo
+- [X] Mobile view post layout -> Videos does not work in mobile view!!!
+- [ ] Add link for book
+- [ ] Saisonièr color not added in navigation
 
 
 
