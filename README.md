@@ -111,7 +111,6 @@ We recommend using Mozilla Firefox for the best experience of this website. Othe
         markdown)
 ...
 ```
-
 ## Docker
 
 To run the HistFalk-Oral history archive in a Docker container, build the Docker image (in a Unix system) as follows:  

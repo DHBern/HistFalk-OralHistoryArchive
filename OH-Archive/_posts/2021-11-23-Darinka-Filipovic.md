@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Oral History Interview mit Darinka Filipovic
+title: Interview mit Darinka Filipovic
 collection: Saisonnières und Saisonniers und zeitgenössische Pendelmigration
 protagonist: Darinka Filipovic
 creator: Sandra Sager, Meret Aebi, Tobias Küng
