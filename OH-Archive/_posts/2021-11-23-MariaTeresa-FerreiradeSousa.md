@@ -1,0 +1,15 @@
+---
+layout: post
+title: Interview mit Maria Teresa Ferreira de Sousa
+collection: Saisonnières und Saisonniers und zeitgenössische Pendelmigration
+protagonist: Maria Teresa Ferreira de Sousa
+creator: Janine Balli, Gabriela Lüthi
+birthday: 24.11.1965
+location: Biel
+born: Viseu (Portugal)
+language: Französisch
+interviewDate: 22.10.2021
+permalink: Interview_5409
+published: true
+---
+Oral History Interview mit Maria Teresa Ferreira de Sousa für das Seminar "Oral History Interviews mit ehemaligen Saisonniers und Saisonnières"
