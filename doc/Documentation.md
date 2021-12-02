@@ -286,7 +286,9 @@ Please reference [this google spreadsheet](https://docs.google.com/spreadsheets/
 - [ ] Add Favicon and Logo
 - [X] Mobile view post layout -> Videos does not work in mobile view!!!
 - [ ] Add link for book
-- [ ] Saisonièr color not added in navigation
+- [X] Saisonièr color not added in navigation
+- [ ] Add color for new Category
+- [ ] Workaround for id beginning with number
 
 
 

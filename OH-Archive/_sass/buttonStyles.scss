@@ -19,9 +19,48 @@
 }
 
 /* Button styling and link styling */
+#id-1983-bis-1985---die-ersten-geflüchteten-Tamil\:innen-im-Kanton-Bern{
+  /* Filled buttons for the archive entries*/
+  .btn-primary,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:visited,
+  .btn-primary:focus {
+    /* Change to your desired color here */
+    background-color: #117CA6 !important;
+    border-color: #117CA6 !important;
+    box-shadow: none !important;
+  }
+  /* Outlined buttons for publication button*/
+  .btn-outline-primary:hover {
+    /* Change to your desired color here */
+    color: white !important;
+    border-color: #117CA6 !important;
+    background-color: #117CA6 !important; ;
+  }
+  .btn-outline-primary,
+  .btn-outline-primary:active,
+  .btn-outline-primary:visited,
+  .btn-outline-primary:focus {
+    /* Change to your desired color here */
+    border-color: #117CA6 !important;
+    color:  #117CA6 !important;
+    box-shadow: none !important;
+  }
+  /* Link styling for publication page*/
+  #id-1983-bis-1985---die-ersten-geflüchteten-Tamilinnen-im-Kanton-Bern-links{
+    .link-primary,
+    .link-primary:hover,
+    .link-primary:active,
+    .link-primary:visited {
+      /* Change to your desired color here */
+      color: #117CA6 !important;
+    }
+  }
 
+}
 
-#\"Schwarzenbach-Abstimmung\" {
+#id-\"Schwarzenbach-Abstimmung\" {
   /* Filled buttons for the archive entries*/
   .btn-primary,
   .btn-primary:hover,
@@ -47,7 +86,7 @@
     box-shadow: none !important;
   }
   /* Link styling for publication page*/
-  #\"Schwarzenbach-Abstimmung\"-links {
+  #id-\"Schwarzenbach-Abstimmung\"-links {
     .link-primary,
     .link-primary:hover,
     .link-primary:active,
@@ -57,7 +96,7 @@
 
 }
 
-#Saisonnières-und-Saisonniers-und-zeitgenössische-Pendelmigration {
+#id-Saisonnières-und-Saisonniers{
   .btn-primary,
   .btn-primary:hover,
   .btn-primary:active,
@@ -80,7 +119,7 @@
     color:  #5C4176 !important;
     box-shadow: none !important;
   }
-  #Saisonnières-und-Saisonniers-und-zeitgenössische-Pendelmigrationlinks{
+  #id-Saisonnières-und-Saisonniers-links{
     .link-primary,
     .link-primary:hover,
     .link-primary:active,
@@ -89,7 +128,7 @@
     }}
 }
 
-#Parlamentarierinnen-mit-doppelter-Staatsbürgerschaft {
+#id-Parlamentarierinnen-mit-doppelter-Staatsbürgerschaft {
   .btn-primary,
   .btn-primary.active,
   .btn-primary:focus,
@@ -116,7 +155,7 @@
     box-shadow: none !important;
   }
 
-  #Parlamentarierinnen-mit-doppelter-Staatsbürgerschaft-links{
+  #id-Parlamentarierinnen-mit-doppelter-Staatsbürgerschaft-links{
     .link-primary,
     .link-primary:hover,
     .link-primary:active,
@@ -125,7 +164,7 @@
     }}
 }
 
-#tbd-wird-ergänzt {
+#id-tbd-wird-ergänzt {
   .btn-primary,
   .btn-primary.active,
   .btn-primary:focus,
@@ -151,7 +190,7 @@
     color:  #B8145E !important;
     box-shadow: none !important;
   }
-  #tbd-wird-ergänzt-links{
+  #id-tbd-wird-ergänzt-links{
     .link-primary,
     .link-primary:hover,
     .link-primary:active,

@@ -85,7 +85,7 @@ request.onload = function () {
                     if (collections[i] === general.isSubjof) {
                         if(general.isSubjof !=="Podcastbeitrag"){
                         //gets correct container by id
-                        const flexContainerById = document.getElementById(general.isSubjof.replaceAll(" ", "-"));
+                        const flexContainerById = document.getElementById("id-"+general.isSubjof.replaceAll(" ", "-"));
 
                         finalAppend();
                         flexContainerById.appendChild(flexItem);
@@ -105,7 +105,7 @@ request.onload = function () {
 
                 //creates DOM elemts
                 const flexContainer = document.createElement("ul");
-                setAttributes(flexContainer,{"class":"flex-container wrap","id": general.isSubjof.replaceAll(" ", "-")  })
+                setAttributes(flexContainer,{"class":"flex-container wrap","id": "id-"+general.isSubjof.replaceAll(" ", "-")  })
 
                 const h4Container = document.createElement("div");
                 setAttributes(h4Container, {"class":"container", "style": "padding-right: 0px; padding-left: 0px;padding-top: 15px;"})
@@ -125,7 +125,7 @@ request.onload = function () {
                 const h4Text = document.createTextNode(general.isSubjof);
 
                 publicationBtn.addEventListener("click",function () {
-                    location = "/Publikationen#"+general.isSubjof.replaceAll(" ", "-")+"-links"
+                    location = "/Publikationen#"+"id-"+general.isSubjof.replaceAll(" ", "-")+"-links"
                 });
 
 

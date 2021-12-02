@@ -60,7 +60,7 @@ request.onload = function () {
                     if (collections[i] === general.isSubjof) {
                         if(general.isSubjof !=="Podcastbeitrag"){
                         //gets correct container by id
-                        const divById = document.getElementById(general.isSubjof.replaceAll(" ", "-")+"_div");
+                        const divById = document.getElementById("id-"+general.isSubjof.replaceAll(" ", "-")+"_div");
 
 
 
@@ -80,13 +80,13 @@ request.onload = function () {
                 collections.push(general.isSubjof);
 
                 const dropDownDiv = document.createElement("div");
-                dropDownDiv.setAttribute("id", general.isSubjof.replaceAll(" ", "-")+"_div");
+                dropDownDiv.setAttribute("id", "id-"+general.isSubjof.replaceAll(" ", "-")+"_div");
                 const li_1 = document.createElement("li");
 
 
                 const dropDownHeader = document.createElement("h6");
                 dropDownHeader.setAttribute("class", "dropdown-header");
-                dropDownHeader.setAttribute("id", general.isSubjof.replaceAll(" ", "-")+"_header");
+                dropDownHeader.setAttribute("id", "id-"+general.isSubjof.replaceAll(" ", "-")+"_header");
                 const h6Text = document.createTextNode(general.isSubjof);
 
                 dropDownItem.appendChild(LinkText);

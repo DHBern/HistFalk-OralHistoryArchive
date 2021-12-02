@@ -50,6 +50,7 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                 Object.values(obj_values[21][0])[4],
                 Object.values(obj_values[22][0])[4],
             );
+            general.isSubjof = "id-"+general.isSubjof
 
             //tests if an element is in Array
             function containsObject(obj, list) {
@@ -96,7 +97,7 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
                 var fileName = "missingEntryTable.csv";
                 var fileContents = (keys.toString().replace(/,/g, "")+"\n"+values.toString().replace(/,/g, "")
                 );
-                var outputPath = fileName;
+                var outputPath = "doc/"+fileName;
 
                 fs.writeFile(outputPath, fileContents, function (err) {
                     if (err) {
@@ -110,7 +111,7 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
             function generateIsSubList(){
                 var fileName = "themes.txt";
                 var fileContents = ("List of current Themes with entries: \n"+collections.toString().replace(/,/g, "\n").replace(/ /g,"-"));
-                var outputPath = fileName;
+                var outputPath = "doc/"+fileName;
 
                 fs.writeFile(outputPath, fileContents, function (err) {
                     if (err) {

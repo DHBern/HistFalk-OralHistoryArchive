@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Intervie mit Eset Jasari
-collection: Saisonnières und Saisonniers und zeitgenössische Pendelmigration
+collection: Saisonnières und Saisonniers
 protagonist: Eset Jasari
 creator: Chiara Gisler, Silje Staubli
 birthday: 21.06.1964

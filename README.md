@@ -136,13 +136,12 @@ You can check this with `docker images`.
 1. Run ``$ sudo git pull`` in HistFalk-OralHistoryArchive directory.
 2. Then run ``$ sudo docker ps -a`` and stop and remove the container which occupies the oh-archive IMAGE using 
 
-    ```
+```shell
     $ sudo docker stop $containerID$
     $ sudo docker rm $containerID$
+```
 
-    ```
-
-3. Build the Docker image as described above. Currently options ``d and --rm`` are used.
+3. __Build__ the Docker image as described above. Currently options ``d and --rm`` are used.
 ``$ sudo docker run -p 4000:4000 -d --rm --name oh-archive oh-archive``
 
 Note: If something in the project structure changed, maybe you have to adjust the Dockerfile too.
