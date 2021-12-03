@@ -260,6 +260,8 @@ color theme will not work:
 <div id="your-new-theme-id-links">
 <a href="your-new-link.com" class="link-primary">new link</a><br></div>
 ``` 
+_FYI the theme "Podcastbeitrag" is only suposed to be used on the `publication.html`site of this project. Therefore we do not
+assign a specific colortheme to it._
 ## Issues 
  * When accessing http://omeka.unibe.ch/api/items?per_page=999999&item_set_id=3527 you will get an CORS header 
  ['Access-Control-Allow-Origin' missing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin) 
@@ -285,10 +287,11 @@ Please reference [this google spreadsheet](https://docs.google.com/spreadsheets/
 - [x] Dropdown content in index.js, styling to dropdown styling sheet
 - [ ] Add Favicon and Logo
 - [X] Mobile view post layout -> Videos does not work in mobile view!!!
-- [ ] Add link for book
+- [X] Add link for book
 - [X] Saisonièr color not added in navigation
-- [ ] Add color for new Category
-- [ ] Workaround for id beginning with number
+- [X] Add color for new Category
+- [X] Workaround for id beginning with number
+- [X] Add "Kontext" instead of Beiträge
 
 
 

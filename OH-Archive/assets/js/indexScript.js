@@ -64,7 +64,7 @@ request.onload = function () {
             const publicationBtn = document.createElement("button");
             setAttributes(publicationBtn,{"class": "btn btn-outline-primary","style":"float: right"});
 
-            const publication = document.createTextNode("Beiträge");
+            const publication = document.createTextNode("Kontext");
             publicationBtn.appendChild(publication);
 
             function finalAppend(){
@@ -131,7 +131,7 @@ request.onload = function () {
 
                 //appends all elements
                 h4.appendChild(h4Text);
-                if(general.isSubjof === '"Schwarzenbach-Abstimmung"'){
+                if(general.isSubjof === '"Schwarzenbach-Abstimmung"' || general.isSubjof === "Saisonnières und Saisonniers" ){
                     col3.appendChild(publicationBtn);
                 }
 

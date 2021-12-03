@@ -27,24 +27,24 @@
   .btn-primary:visited,
   .btn-primary:focus {
     /* Change to your desired color here */
-    background-color: #117CA6 !important;
-    border-color: #117CA6 !important;
+    background-color: #edc51b !important;
+    border-color: #edc51b !important;
     box-shadow: none !important;
   }
   /* Outlined buttons for publication button*/
   .btn-outline-primary:hover {
     /* Change to your desired color here */
     color: white !important;
-    border-color: #117CA6 !important;
-    background-color: #117CA6 !important; ;
+    border-color: #edc51b !important;
+    background-color: #edc51b !important; ;
   }
   .btn-outline-primary,
   .btn-outline-primary:active,
   .btn-outline-primary:visited,
   .btn-outline-primary:focus {
     /* Change to your desired color here */
-    border-color: #117CA6 !important;
-    color:  #117CA6 !important;
+    border-color: #edc51b !important;
+    color:  #edc51b !important;
     box-shadow: none !important;
   }
   /* Link styling for publication page*/
@@ -54,13 +54,16 @@
     .link-primary:active,
     .link-primary:visited {
       /* Change to your desired color here */
-      color: #117CA6 !important;
+      color: #edc51b !important;
     }
   }
 
 }
 
-#id-\"Schwarzenbach-Abstimmung\" {
+#id-\"Schwarzenbach-Abstimmung\"{
+  h3{
+    color: #117CA6
+  }
   /* Filled buttons for the archive entries*/
   .btn-primary,
   .btn-primary:hover,
@@ -97,6 +100,9 @@
 }
 
 #id-Saisonnières-und-Saisonniers{
+  h3{
+    color:  #5C4176
+  }
   .btn-primary,
   .btn-primary:hover,
   .btn-primary:active,
@@ -127,7 +133,7 @@
       color: #5C4176 !important; ;
     }}
 }
-
+/* No entries at this point
 #id-Parlamentarierinnen-mit-doppelter-Staatsbürgerschaft {
   .btn-primary,
   .btn-primary.active,
@@ -163,6 +169,7 @@
       color: #edc51b !important;
     }}
 }
+*/
 
 #id-tbd-wird-ergänzt {
   .btn-primary,
