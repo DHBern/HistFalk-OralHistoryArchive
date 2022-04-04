@@ -48,14 +48,14 @@ This syntax will be explained further down. Finally for each JSON object a Marku
 ## Frontend
 The frontend uses both static and dynamic content. Due to Jekyll being a static Site-Generator the dynamic content is 
 displayed with the HTML DOM. For example index.html uses the indexScrip.js to build dynamic conditional buttons
-form the data received from OMEKA API. The buttons are displayed in the "root" `<div> using the HTML DOM.
+form the data received from OMEKA API. The buttons are displayed in the `"root" <div>` using the HTML DOM.
 
 For the static content the YAML front matter syntax is used. Any file that contains a YAML  front matter block will 
 be processed by Jekyll as a special file. The front matter must be the first thing in the file 
 and must take the form of valid YAML set between triple-dashed lines. Here is an example from a post found in the _post 
 folder:
 
-```
+```markdown
 
 ---
 layout: post
@@ -143,12 +143,12 @@ The color are assined to the themes in the [button styling sheet](../OH-Archive/
 If there is no special color assigned the buttons will be displayed with its default color.
 To understand how a color is assigned to a button. Please look at the example below  for Schwarzenbach-Abstimmung id 
 in buttonStyle.scss:
-```
+```css
 
 /* Button styling and link styling */
 
 
-#Schwarzenbach-Abstimmung {
+#Schwarzenbach-Abstimmung{
   /* Filled buttons for the archive entries*/
   .btn-primary,
   .btn-primary:hover,
@@ -174,7 +174,7 @@ in buttonStyle.scss:
     box-shadow: none !important;
   }
   /* Link styling for publication page*/
-  #Schwarzenbach-Abstimmung-links {
+  #Schwarzenbach-Abstimmung-links{
     .link-primary,
     .link-primary:hover,
     .link-primary:active,
@@ -189,7 +189,7 @@ If you need to add a new color for a new theme, please run `$ node doc/documenta
 This will save the correct ids for the [styling sheet](../OH-Archive/_sass/main.scss) in [themes.txt](themes.txt).
 Then add your new color like this in [buttonStyle.scss](../OH-Archive/_sass/buttonStyles.scss):
 
-```
+```css
 /* Button styling and link styling */
 
   
@@ -236,7 +236,7 @@ Then add your new color like this in [buttonStyle.scss](../OH-Archive/_sass/butt
 ```
 You can copy the code above and simply change the id and color to the desired values. 
 In [dropdownMenu.scss](../OH-Archive/_sass/dropdownMenu.scss) add the following lines of code with your chosen id:
-```
+```css
 /* Styling sheet for the dropdown Menu*/
 #your-new-theme-id_div{
   a.dropdown-item:active {
@@ -250,17 +250,17 @@ In [dropdownMenu.scss](../OH-Archive/_sass/dropdownMenu.scss) add the following 
 
 ```
 This will add the title in the correct color to the dropdown menu.
-Finally you need to add two `<div>` elements to the publication.html. You only need to add the `<div>` elements to the 
+Finally, you need to add two `<div>` elements to the publication.html. You only need to add the `<div>` elements to the 
 publication.html, because the other components build the new themes dynamically. You may also add the desired links 
  and information to publication.html in the your-new-theme-id-links `<div>`. Please use the syntax seen below for the links or the
 color theme will not work:
 
-```
+```html
 <div id="your-new-theme-id">Publication for your new theme</div>
 <div id="your-new-theme-id-links">
 <a href="your-new-link.com" class="link-primary">new link</a><br></div>
 ``` 
-_FYI the theme "Podcastbeitrag" is only suposed to be used on the `publication.html`site of this project. Therefore we do not
+_FYI the theme "Podcastbeitrag" is only suposed to be used on the `publication.html`site of this project. Therefore, we do not
 assign a specific colortheme to it._
 ## Issues 
  * When accessing http://omeka.unibe.ch/api/items?per_page=999999&item_set_id=3527 you will get an CORS header 

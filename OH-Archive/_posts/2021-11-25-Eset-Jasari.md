@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Intervie mit Eset Jasari
+title: Interview mit Eset Jasari
 collection: Saisonnières und Saisonniers
 protagonist: Eset Jasari
 creator: Chiara Gisler, Silje Staubli

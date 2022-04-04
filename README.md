@@ -41,12 +41,11 @@ $ brew install chruby ruby-install
 $ ruby-install ruby-2.7.2
 ```
 
-For Intel Macs
-
+For Apple Silicon Macs
 ```shell
-$ echo "source /usr/local/share/chruby/chruby.sh" >> ~/.zshrc
-$ echo "source /usr/local/share/chruby/auto.sh" >> ~/.zshrc
-$ echo "chruby ruby-2.7.2" >> ~/.zshrc
+echo "source /opt/homebrew/opt/chruby/share/chruby/chruby.sh" >> ~/.zshrc
+echo "source /opt/homebrew/opt/chruby/share/chruby/auto.sh" >> ~/.zshrc
+echo "chruby ruby-3.1.1" >> ~/.zshrc
 ```
 
 For futher information concerning this problem  please consult [this Guide](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/?utm_source=stackoverflow).
