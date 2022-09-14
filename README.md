@@ -140,7 +140,7 @@ You can check this with `docker images`.
     $ sudo docker rm $containerID$
 ```
 
-3. __Build__ the Docker image as described above. Currently options ``d and --rm`` are used.
+3. __Build__ the Docker image as described above. Currently options ``d and --rm`` are used. Then run it using:
 ``$ sudo docker run -p 4000:4000 -d --rm --name oh-archive oh-archive``
 
 Note: If something in the project structure changed, maybe you have to adjust the Dockerfile too.
