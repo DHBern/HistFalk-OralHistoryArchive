@@ -66,7 +66,7 @@ request('https://www.corona-memory.ch/api/items?per_page=999999&item_set_id=3527
 
                 //front matter syntax
                 var fileContents = ("---\nlayout: post\ntitle: " + general.title
-                    + "\ncollection: " + general.isSubjof
+                    + "\ncollection: " + "'"+general.isSubjof+ "'"
                     + "\nprotagonist: " + person.firstName + " " + person.lastName
                     + "\ncreator: " + general.creator
                     + "\nbirthday: " + person.birthday.toString().replace(/-/g, ".")

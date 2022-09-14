@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interview mit Paola Monti
-collection: "Schwarzenbach-Abstimmung"
+collection: '"Schwarzenbach-Abstimmung"'
 protagonist: Paola Monti
 creator: Desirée Besomi
 birthday: 24.02.1963

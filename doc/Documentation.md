@@ -139,48 +139,51 @@ Saisonnières-und-Saisonniers, tbd-wird-ergänzt. You can use [themes.txt](theme
 with entries in OMEKA. This file is produced when you run `$ node doc/documentationScript.js`.
 The color are assined to the themes in the [button styling sheet](../OH-Archive/_sass/buttonStyles.scss) using the id.
 
-#### How to ad a new color for a new theme 
+#### How to add a new color for a new theme 
 If there is no special color assigned the buttons will be displayed with its default color.
-To understand how a color is assigned to a button. Please look at the example below  for Schwarzenbach-Abstimmung id 
+To understand how a color is assigned to a button. Please look at the example below  for id-"Schwarzenbach-Abstimmung"  
 in buttonStyle.scss:
 ```css
 
 /* Button styling and link styling */
 
 
-#Schwarzenbach-Abstimmung{
-  /* Filled buttons for the archive entries*/
-  .btn-primary,
-  .btn-primary:hover,
-  .btn-primary:active,
-  .btn-primary:visited,
-  .btn-primary:focus {
+#id-\"Schwarzenbach-Abstimmung\"{
+h3{
+    color: #117CA6
+}
+/* Filled buttons for the archive entries*/
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
     background-color: #117CA6 !important;
     border-color: #117CA6 !important;
     box-shadow: none !important;
-  }
-  /* Outlined buttons for publication button*/
-  .btn-outline-primary:hover {
+}
+/* Outlined buttons for publication button*/
+.btn-outline-primary:hover {
     color: white !important;
     border-color: #117CA6 !important;
-    background-color: #117CA6 !important; ;
-  }
-  .btn-outline-primary,
-  .btn-outline-primary:active,
-  .btn-outline-primary:visited,
-  .btn-outline-primary:focus {
+    background-color: #117CA6 !important;
+}
+.btn-outline-primary,
+.btn-outline-primary:active,
+.btn-outline-primary:visited,
+.btn-outline-primary:focus {
     border-color: #117CA6 !important;
     color:  #117CA6 !important;
     box-shadow: none !important;
-  }
-  /* Link styling for publication page*/
-  #Schwarzenbach-Abstimmung-links{
-    .link-primary,
-    .link-primary:hover,
-    .link-primary:active,
-    .link-primary:visited {
-      color: #117CA6 !important;
-    }}
+}
+/* Link styling for publication page*/
+#id-\"Schwarzenbach-Abstimmung\"-links {
+.link-primary,
+.link-primary:hover,
+.link-primary:active,
+.link-primary:visited {
+    color: #117CA6 !important;
+}}
 
 }
 ```
@@ -193,58 +196,56 @@ Then add your new color like this in [buttonStyle.scss](../OH-Archive/_sass/butt
 /* Button styling and link styling */
 
   
-    #your-new-theme-id {
-       /* Filled buttons for the archive entries*/
-        .btn-primary,
-        .btn-primary:hover,
-        .btn-primary:active,
-        .btn-primary:visited,
-        .btn-primary:focus {
-            /* Change to your desired color here */
-            background-color: #117CA6 !important;
-            border-color: #117CA6 !important;
-            box-shadow: none !important;
-        }
-      /* Outlined buttons for publication button*/
-       .btn-outline-primary:hover {
-            /* Change to your desired color here */
-            color: white !important;
-            border-color: #117CA6 !important;
-            background-color: #117CA6 !important; ;
-        }
-        .btn-outline-primary,
-        .btn-outline-primary:active,
-        .btn-outline-primary:visited,
-        .btn-outline-primary:focus {
-            /* Change to your desired color here */
-            border-color: #117CA6 !important;
-            color:  #117CA6 !important;
-             box-shadow: none !important;
-            }
-       /* Link styling for publication page*/
-        #your-new-theme-id-links{
-            .link-primary,
-            .link-primary:hover,
-            .link-primary:active,
-            .link-primary:visited {
-                /* Change to your desired color here */
-                color: #117CA6 !important;
-            }
+#id-your-new-theme{
+h3{
+    color: #117CA6
 }
-            
+/* Filled buttons for the archive entries*/
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #117CA6 !important;
+    border-color: #117CA6 !important;
+    box-shadow: none !important;
+}
+/* Outlined buttons for publication button*/
+.btn-outline-primary:hover {
+    color: white !important;
+    border-color: #117CA6 !important;
+    background-color: #117CA6 !important;
+}
+.btn-outline-primary,
+.btn-outline-primary:active,
+.btn-outline-primary:visited,
+.btn-outline-primary:focus {
+    border-color: #117CA6 !important;
+    color:  #117CA6 !important;
+    box-shadow: none !important;
+}
+/* Link styling for publication page*/
+#id-your-new-theme-links {
+.link-primary,
+.link-primary:hover,
+.link-primary:active,
+.link-primary:visited {
+    color: #117CA6 !important;
+}}
+
 }
 ```
 You can copy the code above and simply change the id and color to the desired values. 
 In [dropdownMenu.scss](../OH-Archive/_sass/dropdownMenu.scss) add the following lines of code with your chosen id:
 ```css
 /* Styling sheet for the dropdown Menu*/
-#your-new-theme-id_div{
+#id-your-new-theme_div{
   a.dropdown-item:active {
     color: white !important;
-    background: #B8145E !important;
+    background:  #369653 !important;
   }
   h6{
-    color:  #B8145E
+    color:   #369653
   }
 }
 
@@ -256,12 +257,15 @@ publication.html, because the other components build the new themes dynamically.
 color theme will not work:
 
 ```html
-<div id="your-new-theme-id">Publication for your new theme</div>
-<div id="your-new-theme-id-links">
-<a href="your-new-link.com" class="link-primary">new link</a><br></div>
+<div id="id-your-new-theme" class="container" style="padding-top: 15px; text-align: left">
+    <h3 style="text-align: left;"> Title of publication for you new theme</h3>
+    <div style="font-size: 20px;">Further description</div>
+    <div id="id-your-new-theme-links">
+        <a href="your-new-link.com" class="link-primary" style="font-size: 20px;">Link description</a><br></div>
+</div>
 ``` 
-_FYI the theme "Podcastbeitrag" is only suposed to be used on the `publication.html`site of this project. Therefore, we do not
-assign a specific colortheme to it._
+_FYI the theme "Podcastbeitrag" is only supposed to be used on the `publication.html`site of this project. Therefore, we do not
+assign a specific ColorScheme to it._
 ## Issues 
  * When accessing http://omeka.unibe.ch/api/items?per_page=999999&item_set_id=3527 you will get an CORS header 
  ['Access-Control-Allow-Origin' missing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin) 
@@ -281,7 +285,6 @@ Please reference [this google spreadsheet](https://docs.google.com/spreadsheets/
 - [ ] Change sound default in media player to 75%
 - [X] Interviews can not be opened in a new tab
 - [X] Navigation -> must be decided with FF
-- [ ] Have a look at OMEKA data with missingEntryTable.csv
 - [x] Change post layout (info not central)
 - [x] Sort categories differently (chronological)
 - [x] Dropdown content in index.js, styling to dropdown styling sheet

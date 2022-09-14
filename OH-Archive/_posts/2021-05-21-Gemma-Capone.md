@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interview mit Gemma Capone
-collection: "Schwarzenbach-Abstimmung"
+collection: '"Schwarzenbach-Abstimmung"'
 protagonist: Gemma Capone
 creator: Noëmi Schöb
 birthday: 30.06.1945

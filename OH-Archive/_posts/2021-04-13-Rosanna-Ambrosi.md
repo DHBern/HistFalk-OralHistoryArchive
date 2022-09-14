@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interview mit Rosanna Ambrosi
-collection: "Schwarzenbach-Abstimmung"
+collection: '"Schwarzenbach-Abstimmung"'
 protagonist: Rosanna Ambrosi
 creator: Anna Schnek
 birthday: 16.09.1944

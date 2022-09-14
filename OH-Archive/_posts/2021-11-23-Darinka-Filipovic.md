@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interview mit Darinka Filipovic
-collection: Saisonnières und Saisonniers
+collection: 'Saisonnières und Saisonniers'
 protagonist: Darinka Filipovic
 creator: Sandra Sager, Meret Aebi, Tobias Küng
 birthday: 29.05.1964

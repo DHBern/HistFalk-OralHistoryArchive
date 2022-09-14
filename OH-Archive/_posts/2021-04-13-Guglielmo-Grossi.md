@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interview mit Guglielmo Grossi
-collection: "Schwarzenbach-Abstimmung"
+collection: '"Schwarzenbach-Abstimmung"'
 protagonist: Guglielmo Grossi
 creator: Seraina Campell
 birthday: 27.02.1946

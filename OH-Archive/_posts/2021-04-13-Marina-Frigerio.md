@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interview mit Marina Frigerio
-collection: "Schwarzenbach-Abstimmung"
+collection: '"Schwarzenbach-Abstimmung"'
 protagonist: Marina Frigerio
 creator: Tim Sollberger
 birthday: 1.10.1959

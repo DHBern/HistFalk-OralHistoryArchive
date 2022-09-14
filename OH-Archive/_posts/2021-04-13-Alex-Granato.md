@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interview mit Alex Granato
-collection: "Schwarzenbach-Abstimmung"
+collection: '"Schwarzenbach-Abstimmung"'
 protagonist: Alex Granato
 creator: Livia Meyer
 birthday: 4.2.1961
