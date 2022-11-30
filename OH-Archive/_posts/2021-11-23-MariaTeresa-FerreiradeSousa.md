@@ -5,7 +5,7 @@ collection: 'Saisonnières und Saisonniers'
 protagonist: Maria Teresa Ferreira de Sousa
 creator: Janine Balli, Gabriela Lüthi
 birthday: 24.11.1965
-location: Biel
+location: Biel BE (Schweiz)
 born: Viseu (Portugal)
 language: Französisch
 interviewDate: 22.10.2021

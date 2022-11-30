@@ -22,7 +22,6 @@ request.onload = function () {
     var data = JSON.parse(this.response);
     if (request.status >= 200 && request.status < 400) {
         data.forEach((object) => {
-            console.log(Object.values(object))
             const obj_values = Object.values(object);
             const media = new MediaEntry(obj_values[3], Object.values(obj_values[15])[1],
                 obj_values[4], obj_values[9], obj_values[17].toString().split('/')[0], obj_values[23]);
@@ -33,9 +32,9 @@ request.onload = function () {
             * Checks if it is video or audio.
             * creates media DOM element.
              */
-
-            nextNeighbourLink.push(media.entryId);
-
+            if(nextNeighbourLink.indexOf(media.entryId) === -1) {
+                nextNeighbourLink.push(media.entryId);
+            }
 
             if (BigInt(pageId) === BigInt(media.entryId)) {
                 if(media.mediaType === "video" && mediaTypeEnd[3] === "mp4"){
@@ -57,7 +56,6 @@ request.onload = function () {
             }
 
         });
-
         //Add before and next (chevron button)
         for(var i = 0;i< nextNeighbourLink.length;i++){
             if(BigInt(nextNeighbourLink[i])===BigInt(pageId)){

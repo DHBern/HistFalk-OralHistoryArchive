@@ -5,8 +5,8 @@ collection: 'Saisonnières und Saisonniers'
 protagonist: Nunzio Lira
 creator: Beat Habtemariam und Sina Thöny
 birthday: 08.09.1954
-location: Biel
-born: Sicilia, Pr. Catania
+location: Biel BE (Schweiz)
+born: Catania (Italien)
 language: Italienisch/Französisch
 interviewDate: 14.10.2021
 permalink: Interview_5406
