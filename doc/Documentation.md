@@ -17,6 +17,7 @@ The recordings and the Metadata for "Oral History Archiv" are located on OMEKA.
 This table is produced when you run `$ node doc/documentationScript.js`.
 * The resource template is called oral-history Interview. It decides how the data is stored.
 If you need to change an entry or the ressource-template pleas visit [Omeka Backend](http://omeka.unibe.ch/admin)
+* To add a new theme edit the custom vocab: “Themen Oral-History Website" on Omeka-S
 * The data can be accessed via API using [_root_/api](https://www.corona-memory.ch/api/)
 For example the following GET query provides the required Metadata on the items to build the posts. The endpoint api/items 
 is queried with the parameters per_page and item_set_id. 
@@ -264,6 +265,17 @@ color theme will not work:
         <a href="your-new-link.com" class="link-primary" style="font-size: 20px;">Link description</a><br></div>
 </div>
 ``` 
+To add the "Kontext" button you need to add the new theme to the following if clause in index.js:
+
+```
+if(general.isSubjof === '"Schwarzenbach-Abstimmung"' || general.isSubjof === "Saisonnières und Saisonniers" 
+                    || general.isSubjof === "Wenn Migration die Arbeitsteilung in der Familie prägt" || general.isSubjof === "id Einbürgerungen à la Schweizermacher"){
+                    col3.appendChild(publicationBtn);
+                }
+
+```
+Note that here the theme needs to be added without the dashes.
+
 _FYI the theme "Podcastbeitrag" is only supposed to be used on the `publication.html`site of this project. Therefore, we do not
 assign a specific ColorScheme to it._
 ## Issues 

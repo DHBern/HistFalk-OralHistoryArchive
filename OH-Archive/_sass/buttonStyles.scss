@@ -170,6 +170,9 @@
 
 /* No entries at this point
 #id-Parlamentarierinnen-mit-doppelter-Staatsbürgerschaft {
+h3{
+color: #B8145E !important;
+}
   .btn-primary,
   .btn-primary.active,
   .btn-primary:focus,
@@ -207,6 +210,9 @@
 */
 
 #id-tbd-wird-ergänzt {
+  h3{
+    color: #B8145E !important;
+  }
   .btn-primary,
   .btn-primary.active,
   .btn-primary:focus,
@@ -233,6 +239,44 @@
     box-shadow: none !important;
   }
   #id-tbd-wird-ergänzt-links{
+    .link-primary,
+    .link-primary:hover,
+    .link-primary:active,
+    .link-primary:visited {
+      color: #B8145E !important;
+    }
+  }
+}
+#id-Einbürgerungen-à-la-Schweizermacher {
+  h3{
+    color: #B8145E !important;
+  }
+  .btn-primary,
+  .btn-primary.active,
+  .btn-primary:focus,
+  .btn-primary:checked,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:visited,
+  .btn-primary:focus {
+    background-color: #B8145E !important;
+    border-color: #B8145E !important;
+    box-shadow: none !important;
+  }
+  .btn-outline-primary:hover {
+    color: white !important;
+    border-color: #B8145E !important;
+    background-color: #B8145E !important; ;
+  }
+  .btn-outline-primary,
+  .btn-outline-primary:active,
+  .btn-outline-primary:visited,
+  .btn-outline-primary:focus {
+    border-color: #B8145E !important;
+    color:  #B8145E !important;
+    box-shadow: none !important;
+  }
+  #id-Einbürgerungen-à-la-Schweizermacher-links{
     .link-primary,
     .link-primary:hover,
     .link-primary:active,
