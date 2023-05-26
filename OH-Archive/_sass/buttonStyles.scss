@@ -1,25 +1,23 @@
 /* Styling sheet for all the buttons*/
 
-.btn-outline-dark{
-  font-family: 'Roboto', sans-serif !important;
+.btn-outline-dark {
+  font-family: "Roboto", sans-serif !important;
   font-size: 18px !important;
 }
 
-
 .btn-primary {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   font-size: 20px !important;
   font-weight: bold !important;
-
 }
-.btn-outline-primary{
-  font-family: 'Roboto', sans-serif !important;
+.btn-outline-primary {
+  font-family: "Roboto", sans-serif !important;
   font-size: 20px !important;
   font-weight: bold !important;
 }
 
 /* Button styling and link styling */
-#id-1983-bis-1985---die-ersten-geflüchteten-Tamil\:innen-im-Kanton-Bern{
+#id-1983-bis-1985---die-ersten-geflüchteten-Tamil\:innen-im-Kanton-Bern {
   /* Filled buttons for the archive entries*/
   .btn-primary,
   .btn-primary:hover,
@@ -36,7 +34,7 @@
     /* Change to your desired color here */
     color: white !important;
     border-color: #edc51b !important;
-    background-color: #edc51b !important; ;
+    background-color: #edc51b !important;
   }
   .btn-outline-primary,
   .btn-outline-primary:active,
@@ -44,11 +42,11 @@
   .btn-outline-primary:focus {
     /* Change to your desired color here */
     border-color: #edc51b !important;
-    color:  #edc51b !important;
+    color: #edc51b !important;
     box-shadow: none !important;
   }
   /* Link styling for publication page*/
-  #id-1983-bis-1985---die-ersten-geflüchteten-Tamilinnen-im-Kanton-Bern-links{
+  #id-1983-bis-1985---die-ersten-geflüchteten-Tamilinnen-im-Kanton-Bern-links {
     .link-primary,
     .link-primary:hover,
     .link-primary:active,
@@ -57,12 +55,11 @@
       color: #edc51b !important;
     }
   }
-
 }
 
-#id-\"Schwarzenbach-Abstimmung\"{
-  h3{
-    color: #117CA6
+#id-\"Schwarzenbach-Abstimmung\" {
+  h3 {
+    color: #117ca6;
   }
   /* Filled buttons for the archive entries*/
   .btn-primary,
@@ -70,22 +67,22 @@
   .btn-primary:active,
   .btn-primary:visited,
   .btn-primary:focus {
-    background-color: #117CA6 !important;
-    border-color: #117CA6 !important;
+    background-color: #117ca6 !important;
+    border-color: #117ca6 !important;
     box-shadow: none !important;
   }
   /* Outlined buttons for publication button*/
   .btn-outline-primary:hover {
     color: white !important;
-    border-color: #117CA6 !important;
-    background-color: #117CA6 !important;
+    border-color: #117ca6 !important;
+    background-color: #117ca6 !important;
   }
   .btn-outline-primary,
   .btn-outline-primary:active,
   .btn-outline-primary:visited,
   .btn-outline-primary:focus {
-    border-color: #117CA6 !important;
-    color:  #117CA6 !important;
+    border-color: #117ca6 !important;
+    color: #117ca6 !important;
     box-shadow: none !important;
   }
   /* Link styling for publication page*/
@@ -94,48 +91,49 @@
     .link-primary:hover,
     .link-primary:active,
     .link-primary:visited {
-      color: #117CA6 !important;
-    }}
-
+      color: #117ca6 !important;
+    }
+  }
 }
 
-#id-Saisonnières-und-Saisonniers{
-  h3{
-    color:  #5C4176
+#id-Saisonnières-und-Saisonniers {
+  h3 {
+    color: #5c4176;
   }
   .btn-primary,
   .btn-primary:hover,
   .btn-primary:active,
   .btn-primary:visited,
   .btn-primary:focus {
-    background-color: #5C4176 !important;
-    border-color: #5C4176 !important;
+    background-color: #5c4176 !important;
+    border-color: #5c4176 !important;
     box-shadow: none !important;
   }
   .btn-outline-primary:hover {
     color: white !important;
-    border-color: #5C4176 !important;
-    background-color: #5C4176 !important; ;
+    border-color: #5c4176 !important;
+    background-color: #5c4176 !important;
   }
   .btn-outline-primary,
   .btn-outline-primary:active,
   .btn-outline-primary:visited,
   .btn-outline-primary:focus {
-    border-color: #5C4176 !important;
-    color:  #5C4176 !important;
+    border-color: #5c4176 !important;
+    color: #5c4176 !important;
     box-shadow: none !important;
   }
-  #id-Saisonnières-und-Saisonniers-links{
+  #id-Saisonnières-und-Saisonniers-links {
     .link-primary,
     .link-primary:hover,
     .link-primary:active,
     .link-primary:visited {
-      color: #5C4176 !important; ;
-    }}
+      color: #5c4176 !important;
+    }
+  }
 }
-#id-Wenn-Migration-die-Arbeitsteilung-in-der-Familie-prägt{
-  h3{
-    color:  #369653
+#id-Wenn-Migration-die-Arbeitsteilung-in-der-Familie-prägt {
+  h3 {
+    color: #369653;
   }
   .btn-primary,
   .btn-primary:hover,
@@ -149,23 +147,24 @@
   .btn-outline-primary:hover {
     color: white !important;
     border-color: #369653 !important;
-    background-color: #369653 !important; ;
+    background-color: #369653 !important;
   }
   .btn-outline-primary,
   .btn-outline-primary:active,
   .btn-outline-primary:visited,
   .btn-outline-primary:focus {
     border-color: #369653 !important;
-    color:  #369653 !important;
+    color: #369653 !important;
     box-shadow: none !important;
   }
-  #id-Wenn-Migration-die-Arbeitsteilung-in-der-Familie-prägt-links{
+  #id-Wenn-Migration-die-Arbeitsteilung-in-der-Familie-prägt-links {
     .link-primary,
     .link-primary:hover,
     .link-primary:active,
     .link-primary:visited {
-      color: #369653 !important; ;
-    }}
+      color: #369653 !important;
+    }
+  }
 }
 
 /* No entries at this point
@@ -210,8 +209,8 @@ color: #B8145E !important;
 */
 
 #id-tbd-wird-ergänzt {
-  h3{
-    color: #B8145E !important;
+  h3 {
+    color: #b8145e !important;
   }
   .btn-primary,
   .btn-primary.active,
@@ -221,35 +220,35 @@ color: #B8145E !important;
   .btn-primary:active,
   .btn-primary:visited,
   .btn-primary:focus {
-    background-color: #B8145E !important;
-    border-color: #B8145E !important;
+    background-color: #b8145e !important;
+    border-color: #b8145e !important;
     box-shadow: none !important;
   }
   .btn-outline-primary:hover {
     color: white !important;
-    border-color: #B8145E !important;
-    background-color: #B8145E !important; ;
+    border-color: #b8145e !important;
+    background-color: #b8145e !important;
   }
   .btn-outline-primary,
   .btn-outline-primary:active,
   .btn-outline-primary:visited,
   .btn-outline-primary:focus {
-    border-color: #B8145E !important;
-    color:  #B8145E !important;
+    border-color: #b8145e !important;
+    color: #b8145e !important;
     box-shadow: none !important;
   }
-  #id-tbd-wird-ergänzt-links{
+  #id-tbd-wird-ergänzt-links {
     .link-primary,
     .link-primary:hover,
     .link-primary:active,
     .link-primary:visited {
-      color: #B8145E !important;
+      color: #b8145e !important;
     }
   }
 }
-#id-Einbürgerungen-à-la-Schweizermacher {
-  h3{
-    color: #B8145E !important;
+#id-Einbürgerungen-à-la-«Schweizermacher»\? {
+  h3 {
+    color: #b8145e !important;
   }
   .btn-primary,
   .btn-primary.active,
@@ -259,56 +258,45 @@ color: #B8145E !important;
   .btn-primary:active,
   .btn-primary:visited,
   .btn-primary:focus {
-    background-color: #B8145E !important;
-    border-color: #B8145E !important;
+    background-color: #b8145e !important;
+    border-color: #b8145e !important;
     box-shadow: none !important;
   }
   .btn-outline-primary:hover {
     color: white !important;
-    border-color: #B8145E !important;
-    background-color: #B8145E !important; ;
+    border-color: #b8145e !important;
+    background-color: #b8145e !important;
   }
   .btn-outline-primary,
   .btn-outline-primary:active,
   .btn-outline-primary:visited,
   .btn-outline-primary:focus {
-    border-color: #B8145E !important;
-    color:  #B8145E !important;
+    border-color: #b8145e !important;
+    color: #b8145e !important;
     box-shadow: none !important;
   }
-  #id-Einbürgerungen-à-la-Schweizermacher-links{
+  #id-Einbürgerungen-à-la-«Schweizermacher»\?-links {
     .link-primary,
     .link-primary:hover,
     .link-primary:active,
     .link-primary:visited {
-      color: #B8145E !important;
+      color: #b8145e !important;
     }
   }
 }
 
 @media (max-width: 62em) {
   .btn-primary {
-    font-family: 'Roboto', sans-serif !important;
-    font-size: 15px !important;
-    font-weight: bold !important;
-
-  }
-  .btn-outline-primary{
-    font-family: 'Roboto', sans-serif !important;
+    font-family: "Roboto", sans-serif !important;
     font-size: 15px !important;
     font-weight: bold !important;
   }
-
+  .btn-outline-primary {
+    font-family: "Roboto", sans-serif !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+  }
 }
-
-
-
-
-
-
-
-
-
 
 /* Containers */
 .flex-container {
@@ -343,7 +331,6 @@ color: #B8145E !important;
 }
 
 .wrap-reverse li {
-
 }
 
 .flex-item {

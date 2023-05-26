@@ -1,5 +1,5 @@
-List of current Themes with entries: 
+List of current Themes with entries:
 id-"Schwarzenbach-Abstimmung"
 id-Saisonnières-und-Saisonniers
 id-Wenn-Migration-die-Arbeitsteilung-in-der-Familie-prägt
-id-Einbürgerungen-à-la-Schweizermacher
+id-Einbürgerungen-à-la-«Schweizermacher»?
