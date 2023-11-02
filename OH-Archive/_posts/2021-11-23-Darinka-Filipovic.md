@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Interview mit Darinka Filipovic
-collection: 'Saisonnières und Saisonniers'
-protagonist: Darinka Filipovic
 creator: Sandra Sager, Meret Aebi, Tobias Küng
-birthday: 29.05.1964
-location: Emmenbrücke LU (Schweiz)
 born: Banja Luka (Bosnien)
 language: Deutsch
 interviewDate: 18.10.2021

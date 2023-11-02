@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Interview mit Claudia Opitz-Belakhal
-collection: 'Wenn Migration die Arbeitsteilung in der Familie prägt'
-protagonist: Claudia Opitz-Belakhal
 creator: Laura Di Meo, Lara Rufibach
-birthday: 02.12.1955
-location: Freiburg im Breisgau (Deutschland)
 born: Friedrichshafen (Deutschland)
 language: Deutsch
 interviewDate: 11.10.2022

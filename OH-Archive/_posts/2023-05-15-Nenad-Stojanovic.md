@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Interview mit Nenad Stojanovic
-collection: 'Einbürgerungen à la «Schweizermacher»?'
-protagonist: Nenad Stojanovic
 creator: Louise Bellini
-birthday: 25.02.1976
-location: Bern BE (Schweiz)
 born: Sarajevo (Bosnien)
 language: Französisch
 interviewDate: 23.03.2023

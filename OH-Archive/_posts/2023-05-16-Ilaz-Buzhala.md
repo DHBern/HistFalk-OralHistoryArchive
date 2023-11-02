@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Interview mit Ilaz Buzhala
-collection: 'Einbürgerungen à la «Schweizermacher»?'
-protagonist: Ilaz Buzhala
 creator: Konradin Franzini
-birthday: 19.09.1995
-location: Kleindöttingen AG (Schweiz)
 born: Laufenburg AG (Schweiz)
 language: Deutsch
 interviewDate: 23.03.2023

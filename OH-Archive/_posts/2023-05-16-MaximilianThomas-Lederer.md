@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Interview mit Maximilian Thomas Lederer
-collection: 'Einbürgerungen à la «Schweizermacher»?'
-protagonist: Maximilian Thomas Lederer
 creator: Nathalie Gut
-birthday: 14.08.1994
-location: Bern BE (Schweiz)
 born: Schwarzenbruck (Deutschland)
 language: Deutsch
 interviewDate: 06.04.2023

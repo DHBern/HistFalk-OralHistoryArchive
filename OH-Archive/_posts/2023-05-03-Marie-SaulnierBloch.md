@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Interview mit Marie Saulnier Bloch
-collection: 'Einbürgerungen à la «Schweizermacher»?'
-protagonist: Marie Saulnier Bloch
 creator: Amanda Unger
-birthday: 26.05.1974
-location: Bern BE (Schweiz)
 born: Besançon (Frankreich)
 language: Französisch
 interviewDate: 23.3.2023
