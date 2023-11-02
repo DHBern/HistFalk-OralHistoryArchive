@@ -131,7 +131,7 @@ request.onload = function () {
 
                 //appends all elements
                 h4.appendChild(h4Text);
-                if(general.isSubjof === '"Schwarzenbach-Abstimmung"' || general.isSubjof === "Saisonnières und Saisonniers"
+                if(general.isSubjof === '«Schwarzenbach-Abstimmung»' || general.isSubjof === "Saisonnières und Saisonniers"
                     || general.isSubjof === "Wenn Migration die Arbeitsteilung in der Familie prägt" || general.isSubjof === "Einbürgerungen à la Schweizermacher"){
                     col3.appendChild(publicationBtn);
                 }
