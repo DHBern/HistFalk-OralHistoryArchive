@@ -122,7 +122,7 @@ request.onload = function () {
                 const h4 = document.createElement("h4");
                 h4.setAttribute("style","text-align: left;");
 
-                const h4Text = document.createTextNode(general.isSubjof);
+                const h4Text = document.createTextNode(general.isSubjof.replace(/(")([^"]*)(")/g, '«$2»'));
 
                 publicationBtn.addEventListener("click",function () {
                     location = "/Publikationen#"+"id-"+general.isSubjof.replaceAll(" ", "-")+"-links"
