@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Marina Frigerio
+collection: '«Schwarzenbach-Abstimmung»'
+protagonist: Marina Frigerio
 creator: Tim Sollberger
 born: Lugano-Viganello TI (Schweiz)
 language: Deutsch

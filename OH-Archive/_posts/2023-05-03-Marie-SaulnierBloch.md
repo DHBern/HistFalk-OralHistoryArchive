@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Marie Saulnier Bloch
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: Marie Saulnier Bloch
 creator: Amanda Unger
 born: Besançon (Frankreich)
 language: Französisch

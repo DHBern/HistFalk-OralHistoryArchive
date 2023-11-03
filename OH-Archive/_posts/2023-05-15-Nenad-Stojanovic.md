@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Nenad Stojanovic
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: Nenad Stojanovic
 creator: Louise Bellini
 born: Sarajevo (Bosnien)
 language: Französisch

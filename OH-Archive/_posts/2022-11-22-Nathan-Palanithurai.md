@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Nathan Palanithurai
+collection: 'Wenn Migration die Arbeitsteilung in der Familie prägt'
+protagonist: Nathan Palanithurai
 creator: Julia Stucki, Nadia Meyer
 born: Atchuvely (Sri Lanka)
 language: Schweizerdeutsch, Tamilisch

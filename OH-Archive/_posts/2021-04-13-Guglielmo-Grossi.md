@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Guglielmo Grossi
+collection: '«Schwarzenbach-Abstimmung»'
+protagonist: Guglielmo Grossi
 creator: Seraina Campell
 born: Montefiore Conca (Italien)
 language: Deutsch

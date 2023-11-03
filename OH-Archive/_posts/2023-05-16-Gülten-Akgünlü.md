@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Gülten Akgünlü
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: Gülten Akgünlü
 creator: Simone Daniela Keller
 born: Arbon TG (Schweiz)
 language: Deutsch

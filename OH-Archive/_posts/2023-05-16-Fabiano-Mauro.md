@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Fabiano Mauro
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: Fabiano Mauro
 creator: Lina Hudritsch
 born: Herzogenbuchsee BE (Schweiz)
 language: Deutsch

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Xian Chu Kong
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: Xian Chu Kong
 creator: Linda Bühler
 born: China
 language: Deutsch

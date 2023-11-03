@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Darinka Filipovic
+collection: 'Saisonnières und Saisonniers'
+protagonist: Darinka Filipovic
 creator: Sandra Sager, Meret Aebi, Tobias Küng
 born: Banja Luka (Bosnien)
 language: Deutsch

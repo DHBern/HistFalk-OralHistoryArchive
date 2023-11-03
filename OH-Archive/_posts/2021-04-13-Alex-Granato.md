@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Alex Granato
+collection: '«Schwarzenbach-Abstimmung»'
+protagonist: Alex Granato
 creator: Livia Meyer
 born: Sant'Agata di Puglia (Italien)
 language: Schweizerdeutsch

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Maria Teresa Ferreira de Sousa
+collection: 'Saisonnières und Saisonniers'
+protagonist: Maria Teresa Ferreira de Sousa
 creator: Janine Balli, Gabriela Lüthi
 born: Viseu (Portugal)
 language: Französisch

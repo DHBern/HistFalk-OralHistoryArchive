@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Daniela Pompizii
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: Daniela Pompizii
 creator: Maximilian Thomas Ledere
 born: Bern BE (Schweiz)
 language: Deutsch
