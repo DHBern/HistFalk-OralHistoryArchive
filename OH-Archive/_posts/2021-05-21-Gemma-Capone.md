@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Gemma Capone
+collection: '«Schwarzenbach-Abstimmung»'
+protagonist: Gemma Capone
 creator: Noëmi Schöb
 born: Italien
 language: Deutsch

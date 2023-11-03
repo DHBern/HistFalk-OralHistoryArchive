@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Joel Paul Zschoge
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: Joel Paul Zschoge
 creator: Chiara Merhi
 born: Freital (Deutschland)
 language: Deutsch

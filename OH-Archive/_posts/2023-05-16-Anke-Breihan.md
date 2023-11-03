@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Anke Breihan
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: Anke Breihan
 creator: Simon Rauber
 born: Flörsheim am Main (Deutschland)
 language: Deutsch

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Migmar Dhakyel
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: Migmar Dhakyel
 creator: Sina Margrith Thöny
 born: Wädenswil ZH (Schweiz)
 language: Deutsch

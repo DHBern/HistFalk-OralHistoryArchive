@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Rosanna Ambrosi
+collection: '«Schwarzenbach-Abstimmung»'
+protagonist: Rosanna Ambrosi
 creator: Anna Schnek
 born: Zevio (Italien)
 language: Deutsch

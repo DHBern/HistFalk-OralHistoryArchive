@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Giuseppe Reo
+collection: '«Schwarzenbach-Abstimmung»'
+protagonist: Giuseppe Reo
 creator: Laura Schleiss
 born: ubk
 language: Schweizerdeutsch

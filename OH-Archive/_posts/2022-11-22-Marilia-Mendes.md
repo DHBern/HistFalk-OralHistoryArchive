@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Marilia Mendes
+collection: 'Wenn Migration die Arbeitsteilung in der Familie prägt'
+protagonist: Marilia Mendes
 creator: Kasimir Krebs, Medea Vögeli
 born: Portugal
 language: Hochdeutsch

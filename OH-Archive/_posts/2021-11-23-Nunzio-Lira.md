@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Nunzio Lira
+collection: 'Saisonnières und Saisonniers'
+protagonist: Nunzio Lira
 creator: Beat Habtemariam und Sina Thöny
 born: Catania (Italien)
 language: Italienisch/Französisch

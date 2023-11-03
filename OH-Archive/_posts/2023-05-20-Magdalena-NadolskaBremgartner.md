@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Magdalena Nadolska Bremgartner
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: Magdalena Nadolska Bremgartner
 creator: Till Jonas Glauser
 born: Gdynia (Polen)
 language: Deutsch

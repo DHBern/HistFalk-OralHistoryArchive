@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Nithursa Vinayahalingam
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: Nithursa Vinayahalingam
 creator: Silje Marlene Staubli
 born: Stans NW (Schweiz)
 language: Deutsch

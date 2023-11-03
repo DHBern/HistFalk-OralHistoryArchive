@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Claudia Opitz-Belakhal
+collection: 'Wenn Migration die Arbeitsteilung in der Familie prägt'
+protagonist: Claudia Opitz-Belakhal
 creator: Laura Di Meo, Lara Rufibach
 born: Friedrichshafen (Deutschland)
 language: Deutsch

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Federica Di Maggio
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: Federica Di Maggio
 creator: Anja Grob
 born: Solothurn SO (Schweiz)
 language: Deutsch

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Ilaz Buzhala
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: Ilaz Buzhala
 creator: Konradin Franzini
 born: Laufenburg AG (Schweiz)
 language: Deutsch

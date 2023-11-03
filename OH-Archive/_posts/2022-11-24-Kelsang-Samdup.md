@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Kelsang Samdup
+collection: 'Wenn Migration die Arbeitsteilung in der Familie prägt'
+protagonist: Kelsang Samdup
 creator: Patricia Salvisberg, Julia Bünger
 born: Nepal
 language: Schweizerdeutsch, Hochdeutsch

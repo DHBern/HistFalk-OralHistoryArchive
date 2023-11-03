@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit Nivalda Still
+collection: 'Wenn Migration die Arbeitsteilung in der Familie prägt'
+protagonist: Nivalda Still
 creator: Silje Staubli, Luca Burgaretta
 born: Mosambik
 language: Deutsch

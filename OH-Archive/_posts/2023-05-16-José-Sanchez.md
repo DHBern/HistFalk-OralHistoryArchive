@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview mit José Sanchez
+collection: 'Einbürgerungen à la «Schweizermacher»?'
+protagonist: José Sanchez
 creator: Flavia Perrez
 born: Sevilla (Spanien)
 language: Deutsch
