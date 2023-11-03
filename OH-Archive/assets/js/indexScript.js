@@ -190,8 +190,6 @@ class Entry {
     language,
     firstName,
     lastName,
-    birthday,
-    hasGeoLoc,
     locIn,
     isSubjOf,
     interviewCreated,
@@ -205,8 +203,6 @@ class Entry {
     this.language = language;
     this.firstName = firstName;
     this.lastName = lastName;
-    this.birthday = birthday;
-    this.hasGeoloc = hasGeoLoc;
     this.locIn = locIn;
     this.isSubjof = isSubjOf;
     this.interviewCreated = interviewCreated;
@@ -234,8 +230,6 @@ class Entry {
       null,
       null,
       null,
-      null,
-      null,
       isSubjOf,
       interviewCreated,
       creator
@@ -252,8 +246,6 @@ class Entry {
       null,
       firstName,
       lastName,
-      birthday,
-      null,
       null,
       null,
       null,
