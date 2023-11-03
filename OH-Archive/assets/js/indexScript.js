@@ -154,7 +154,7 @@ request.onload = function () {
             general.isSubjof === "Saisonnières und Saisonniers" ||
             general.isSubjof ===
               "Wenn Migration die Arbeitsteilung in der Familie prägt" ||
-            general.isSubjof === "Einbürgerungen à la Schweizermacher"
+            general.isSubjof === "Einbürgerungen à la «Schweizermacher»?"
           ) {
             col3.appendChild(publicationBtn);
           }
