@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Interview mit Philomina Bloch-Chakkalakkal
-collection: 'Wenn Migration die Arbeitsteilung in der Familie prägt'
-protagonist: Philomina Bloch-Chakkalakkal
 creator: Konradin Franzini, Fabio Kunz
-birthday: 30.06.1992
-location: Breitenbach SO (Schweiz)
 born: Breitenbach SO (Schweiz)
 language: Deutsch
 interviewDate: 21.10.2022

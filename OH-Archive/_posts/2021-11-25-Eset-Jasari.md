@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Interview mit Eset Jasari
-collection: 'Saisonnières und Saisonniers'
-protagonist: Eset Jasari
 creator: Chiara Gisler, Silje Staubli
-birthday: 21.06.1964
-location: Biel BE (Schweiz)
 born: Kumanovo (Nordmazedonien)
 language: Schweizerdeutsch
 interviewDate: 17.10.2021

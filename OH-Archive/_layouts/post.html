@@ -40,10 +40,9 @@ background-attachment: fixed;  background-size: cover; background-repeat: no-rep
 <div style="padding: 50px;">
         <div class="container newTopbar">
             <div class="d-flex justify-content-start flex-wrap" style="float: right">
-            <button class="btn btn-outline-dark" onclick="window.open('https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html', '_blank');"
-                    type="button" style="margin-right: 5px">
-                Kontakt
-            </button>
+                <a class="btn btn-outline-dark" style="margin-right: 5px" href="https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html" target="_blank" style="color: black; text-decoration: none;">
+                    Kontakt
+                </a>
             <div class="dropdown">
                 <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     Archiv
@@ -112,24 +111,12 @@ background-attachment: fixed;  background-size: cover; background-repeat: no-rep
                 <div class="row" style="padding: 15px">
                     <h1> Weitere Informationen zum Interview</h1>
                     <div class="col">
-                        {% if page.birthday != "ubk" %}
-                        <h2 style="text-align: right;padding-left: 15px">Geburtsdatum: </h2>
-                        {% endif %}
-                        {% if page.location != "ubk" %}
-                        <h2 style="text-align: right;padding-left: 15px">Wohnort: </h2>
-                        {% endif %}
                         {% if page.born != "ubk" %}
                         <h2  style="text-align: right;padding-left: 15px">Geburtsort/Geburtsland: </h2>
                         {% endif %}
                         <h2  style="text-align: right;padding-left: 15px">Sprache: </h2>
                 </div>
                     <div class="col">
-                        {% if page.birthday != "ubk" %}
-                        <h2 style="text-align: left;">{{page.birthday}}</h2>
-                        {% endif %}
-                        {% if page.location != "ubk" %}
-                        <h2 style="text-align: left;">{{page.location}}</h2>
-                        {% endif %}
                         {% if page.born != "ubk" %}
                         <h2  style="text-align: left;">{{page.born}}</h2>
                         {% endif %}
