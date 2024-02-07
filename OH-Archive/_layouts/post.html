@@ -1,168 +1,248 @@
 <!--This is the post layout-->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>{{ page.title }}</title>
     <!-- site stylesheets -->
-    <link href="../assets/css/styles.css" rel="stylesheet">
-
+    <link href="../assets/css/styles.css" rel="stylesheet" />
 
     <!-- important Scripts-->
     <script src="../assets/js/dropDownMenuScript.js" type="module"></script>
     <script src="../assets/js/impressumScript.js" type="module"></script>
     <!-- Bootstrap v 5.0.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
     <!-- font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-
-
-
-</head>
-<!--
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+  </head>
+  <!--
 The image  source: https://www.pexels.com/de-de/foto/weiss-gestrichene-wand-1939485/
 Licence:
 ✓ Free use
 ✓ No naming required
 -->
-<body style="
-/*background-image: url('../assets/images/PostBackground.jpg');
-background-attachment: fixed;  background-size: cover; background-repeat: no-repeat;*/" >
-<!-- inline Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+  <body
+    style="
+      /*background-image: url('../assets/images/PostBackground.jpg');
+background-attachment: fixed;  background-size: cover; background-repeat: no-repeat;*/
+    "
+  >
+    <!-- inline Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+      crossorigin="anonymous"
+    ></script>
 
-
-<!-- Toolbar -->
-<div style="padding: 50px;">
-        <div class="container newTopbar">
-            <div class="d-flex justify-content-start flex-wrap" style="float: right">
-                <a class="btn btn-outline-dark" style="margin-right: 5px" href="https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html" target="_blank" style="color: black; text-decoration: none;">
-                    Kontakt
-                </a>
-            <div class="dropdown">
-                <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Archiv
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="dropdown-menu">
-                </ul>
-            </div>
+    <!-- Toolbar -->
+    <div style="padding: 50px">
+      <div class="container newTopbar">
+        <div
+          class="d-flex justify-content-start flex-wrap"
+          style="float: right"
+        >
+          <a
+            class="btn btn-outline-dark"
+            style="margin-right: 5px"
+            href="https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html"
+            target="_blank"
+            style="color: black; text-decoration: none"
+          >
+            Kontakt
+          </a>
+          <div class="dropdown">
+            <button
+              class="btn btn-outline-dark dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Archiv
+            </button>
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="dropdownMenuButton1"
+              id="dropdown-menu"
+            ></ul>
+          </div>
         </div>
         <div class="d-flex justify-content-start flex-wrap" style="float: left">
-            <a class="link-dark" href='/'><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-            </svg></a>
+          <a class="link-dark" href="/"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              class="bi bi-house"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+              /></svg
+          ></a>
         </div>
-        </div>
+      </div>
     </div>
-<div style="padding-right: 25px;padding-left: 25px">
-    <div class="container newTopbar">
-    <div class="container">
-        <div id="post-title" style="text-align: center;">
-            <h1 >{{ page.title }}</h1>
-        </div>
-        <div>
-        <h2 style="text-align: center">{{content}}
-        </h2>
-        </div>
-        <div class="row" style="padding-bottom: 10px; padding-top: 10px">
-            <div class="col-6">
-                <a id="chevron_left" class="link-dark">
-                    <svg class="bi bi-chevron-left" fill="black" height="75" viewBox="0 0 16 16 "
-                         width="75" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-                              fill-rule="evenodd"/>
-                    </svg>
-                </a>
+    <div style="padding-right: 25px; padding-left: 25px">
+      <div class="container newTopbar">
+        <div class="container">
+          <div id="post-title" style="text-align: center">
+            <h1>{{ page.title }}</h1>
+          </div>
+          <div>
+            <h2 style="text-align: center">{{content}}</h2>
+          </div>
+          <div class="row" style="padding-bottom: 10px; padding-top: 10px">
+            <div class="col-4">
+              <a id="chevron_left" class="link-dark">
+                <svg
+                  class="bi bi-chevron-left"
+                  fill="black"
+                  height="75"
+                  viewBox="0 0 16 16 "
+                  width="75"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
             </div>
-            <div class="col-6">
-                <a id="chevron_right" class="link-dark">
-                    <svg class="bi bi-chevron-right" fill="black" height="75" viewBox="0 0 16 16"
-                         width="75" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                              fill-rule="evenodd"/>
-                    </svg>
-                </a>
+            <div class="col-4" style="align-self: center">
+              <i>
+                «Für Zugriff auf die Audiodateien melden Sie sich bitte bei
+                <a href="mailto:digitalhumanities@unibe.ch"
+                  >digitalhumanities@unibe.ch</a
+                >»
+              </i>
             </div>
+            <div class="col-4">
+              <a id="chevron_right" class="link-dark">
+                <svg
+                  class="bi bi-chevron-right"
+                  fill="black"
+                  height="75"
+                  viewBox="0 0 16 16"
+                  width="75"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
-    </div>
         <!-- Logo and header styling -->
 
         <main aria-label="Content" class="post-header">
+          <!-- Content from postScript.js -->
 
-            <!-- Content from postScript.js -->
+          <div class="row">
+            <!-- Mp3/Mp4 player -->
+            <div id="mediaPlayer" class="col-12"></div>
+          </div>
 
+          <script src="../assets/js/postScript.js" type="module"></script>
 
-            <div class="row">
-                <!-- Mp3/Mp4 player -->
-                <div id="mediaPlayer" class="col-12"></div>
-            </div>
-
-            <script src="../assets/js/postScript.js" type="module"></script>
-
-
-            <!-- Start of Markup Content-->
-            <div class="card" id="infoCard" style="background-image: url('../assets/images/PostBackground.jpg');">
-                <div class="container">
-                <div class="row" style="padding: 15px">
-                    <h1> Weitere Informationen zum Interview</h1>
-                    <div class="col">
-                        {% if page.born != "ubk" %}
-                        <h2  style="text-align: right;padding-left: 15px">Geburtsort/Geburtsland: </h2>
-                        {% endif %}
-                        <h2  style="text-align: right;padding-left: 15px">Sprache: </h2>
+          <!-- Start of Markup Content-->
+          <div
+            class="card"
+            id="infoCard"
+            style="background-image: url('../assets/images/PostBackground.jpg')"
+          >
+            <div class="container">
+              <div class="row" style="padding: 15px">
+                <h1>Weitere Informationen zum Interview</h1>
+                <div class="col">
+                  {% if page.born != "ubk" %}
+                  <h2 style="text-align: right; padding-left: 15px">
+                    Geburtsort/Geburtsland:
+                  </h2>
+                  {% endif %}
+                  <h2 style="text-align: right; padding-left: 15px">
+                    Sprache:
+                  </h2>
                 </div>
-                    <div class="col">
-                        {% if page.born != "ubk" %}
-                        <h2  style="text-align: left;">{{page.born}}</h2>
-                        {% endif %}
-                        <h2  style="text-align: left;">{{page.language}}</h2>
-                    </div>
-                    <h2>Aufgenommen am {{page.interviewDate}} von {{page.creator}}</h2>
-
+                <div class="col">
+                  {% if page.born != "ubk" %}
+                  <h2 style="text-align: left">{{page.born}}</h2>
+                  {% endif %}
+                  <h2 style="text-align: left">{{page.language}}</h2>
                 </div>
+                <h2>
+                  Aufgenommen am {{page.interviewDate}} von {{page.creator}}
+                </h2>
+              </div>
             </div>
-            </div>
-
-
-
-
+          </div>
         </main>
-
+      </div>
     </div>
-
-
-
-</div>
-<!-- Impressum -->
-<footer>
-    <div id="impressumDiv">
-        <button class="btn btn-outline-dark" id="impressumBtn"  onclick="$('#hiddenText').show();$('#impressumDiv').hide(); return false;"
-                type="button">Impressum
+    <!-- Impressum -->
+    <footer>
+      <div id="impressumDiv">
+        <button
+          class="btn btn-outline-dark"
+          id="impressumBtn"
+          onclick="$('#hiddenText').show();$('#impressumDiv').hide(); return false;"
+          type="button"
+        >
+          Impressum
         </button>
-    </div>
-    <div id="hiddenText">
-        <button type="button" class="btn-close" aria-label="Close" id="closeBtn" onclick="$('#hiddenText').hide();$('#impressumDiv').show(); return false;">
-        </button>
+      </div>
+      <div id="hiddenText">
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          id="closeBtn"
+          onclick="$('#hiddenText').hide();$('#impressumDiv').show(); return false;"
+        ></button>
 
         <div id="impressumTxt">
-            <h5 >Herausgeberin:</h5>
-            <p>Verantwortlich für den Inhalt der Portalseite ist<a href="https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html"  target="_blank" class="link-dark"> Francesca Falk</a>.<br>
-                Für Anfragen beachten Sie bitte unsere Kontaktseite. Für die hier veröffentlichten Interviews liegen Einverständniserklärungen vor.
-            </p>
-            <h5>Technik:</h5>
-            <p>Verantwortlich für den technischen Betrieb dieser Seite sind die <a href="https://www.dh.unibe.ch/"  target="_blank" class="link-dark">Digital Humanities</a> der Universität Bern.
-            </p>
+          <h5>Herausgeberin:</h5>
+          <p>
+            Verantwortlich für den Inhalt der Portalseite ist<a
+              href="https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html"
+              target="_blank"
+              class="link-dark"
+            >
+              Francesca Falk</a
+            >.<br />
+            Für Anfragen beachten Sie bitte unsere Kontaktseite. Für die hier
+            veröffentlichten Interviews liegen Einverständniserklärungen vor.
+          </p>
+          <h5>Technik:</h5>
+          <p>
+            Verantwortlich für den technischen Betrieb dieser Seite sind die
+            <a href="https://www.dh.unibe.ch/" target="_blank" class="link-dark"
+              >Digital Humanities</a
+            >
+            der Universität Bern.
+          </p>
         </div>
-    </div>
-
-</footer>
-
-
-</body>
-
+      </div>
+    </footer>
+  </body>
 </html>
