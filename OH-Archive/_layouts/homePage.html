@@ -1,109 +1,141 @@
 <!-- default Layout is used for index.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     <!-- Begin Jekyll SEO tag v2.7.1 -->
     <title>{{ site.title }}</title>
     <!-- site stylesheets -->
-    <link href="../assets/css/styles.css" rel="stylesheet">
-    <link href="/" rel="canonical"/>
+    <link href="../assets/css/styles.css" rel="stylesheet" />
+    <link href="/" rel="canonical" />
 
-    <meta content="Jekyll v4.2.0" name="generator"/>
-    <meta content="en_US" property="og:locale"/>
-    <meta content="/" property="og:url"/>
+    <meta content="Jekyll v4.2.0" name="generator" />
+    <meta content="en_US" property="og:locale" />
+    <meta content="/" property="og:url" />
 
     <script type="application/ld+json">
-        {
-            "@type": "WebSite",
-            "headline": "OH-Archive",
-            "name": "OH-Archive",
-            "url": "/",
-            "@context": "https://schema.org"
-        }</script>
+      {
+        "@type": "WebSite",
+        "headline": "OH-Archive",
+        "name": "OH-Archive",
+        "url": "/",
+        "@context": "https://schema.org"
+      }
+    </script>
     <!-- End Jekyll SEO tag -->
 
-
     <!-- Bootstrap v 5.0.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
     <!-- font -->
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto" />
 
     <!-- important Scripts-->
     <script src="../assets/js/dropDownMenuScript.js" type="module"></script>
     <script src="../assets/js/impressumScript.js" type="module"></script>
-</head>
+  </head>
 
+  <body>
+    <!-- inline Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+      crossorigin="anonymous"
+    ></script>
 
-<body>
-<!-- inline Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <!-- Toolbar -->
+    <div style="padding: 25px">
+      <div class="container newTopbar">
+        <div
+          class="d-flex justify-content-start flex-wrap"
+          style="float: right"
+        >
+          <a
+            class="btn btn-outline-dark"
+            style="margin-right: 5px"
+            href="https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html"
+            target="_blank"
+            style="color: black; text-decoration: none"
+          >
+            Kontakt
+          </a>
 
-
-
-
-
-
-<!-- Toolbar -->
-<div style="padding: 25px">
-    <div class="container newTopbar">
-        <div class="d-flex justify-content-start flex-wrap" style="float: right">
-                <a class="btn btn-outline-dark" style="margin-right: 5px" href="https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html" target="_blank" style="color: black; text-decoration: none;">
-                    Kontakt
-                </a>
-               
-            <div class="dropdown">
-                <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Archiv
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="dropdown-menu">
-                </ul>
-            </div>
+          <div class="dropdown">
+            <button
+              class="btn btn-outline-dark dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Archiv
+            </button>
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="dropdownMenuButton1"
+              id="dropdown-menu"
+            ></ul>
+          </div>
         </div>
 
         <!-- Logo and header styling -->
         <div class="site-header" style="padding-top: 50px">
-            <h1>{{ site.title}}</h1>
+          <h1>{{ site.title}}</h1>
         </div>
 
-            <div class="content">
-                <p id="description">
-                    Dieses sich im Aufbau befindende Archiv umfasst biografisch-thematische Oral History Interviews, die in
-                    Lehrveranstaltungen von <a href="https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html"  target="_blank" class="link-dark">Francesca Falk</a> entstehen. Ein besonderer Fokus liegt dabei auf Migrationserfahrungen.
-                </p>
-                <!-- start content from index.html-->
-                <div style="padding-top: 25px;">
-                    {{content}}
-                </div>
-            </div>
+        <div class="content">
+          <p id="description">
+            Dieses sich im Aufbau befindende Archiv umfasst
+            biografisch-thematische Oral History Interviews, die in
+            Lehrveranstaltungen von
+            <a
+              href="https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html"
+              target="_blank"
+              class="link-dark"
+              >Francesca Falk</a
+            >
+            entstehen. Ein besonderer Fokus liegt dabei auf
+            Migrationserfahrungen.
+          </p>
+          <!-- start content from index.html-->
+          <div style="padding-top: 25px">{{content}}</div>
+        </div>
+      </div>
     </div>
-
-
-</div>
-<!-- Impressum -->
-<footer>
-    <hr style="border-color: black;">
-    <div id="impressumDiv">
-        <a class="link-dark" id="impressumBtn">Impressum
-        </a>
-    </div>
-    <div id="hiddenText">
+    <!-- Impressum -->
+    <footer>
+      <hr style="border-color: black" />
+      <div id="impressumDiv">
+        <a class="link-dark" id="impressumBtn">Impressum </a>
+      </div>
+      <div id="hiddenText">
         <div id="impressumTxt">
-            <p><b>Herausgeberin:</b>Verantwortlich für den Inhalt der Portalseite ist<a href="https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html"  target="_blank" class="link-dark"> Francesca Falk</a>.
-                Für Anfragen beachten Sie bitte unsere Kontaktseite. Für die hier veröffentlichten Interviews liegen Einverständniserklärungen vor.<br>
-                <b>Technik:</b>Verantwortlich für den technischen Betrieb dieser Seite sind die <a href="https://www.dh.unibe.ch/"  target="_blank" class="link-dark">Digital Humanities</a> der Universität Bern.
-            </p>
-
+          <p>
+            <b>Herausgeberin:</b>Verantwortlich für den Inhalt der Portalseite
+            ist<a
+              href="https://www.hist.unibe.ch/ueber_uns/personen/falk_francesca/index_ger.html"
+              target="_blank"
+              class="link-dark"
+            >
+              Francesca Falk</a
+            >.<br />
+            <b>Technik:</b>Verantwortlich für den technischen Betrieb dieser
+            Seite sind die
+            <a href="https://www.dh.unibe.ch/" target="_blank" class="link-dark"
+              >Digital Humanities</a
+            >
+            der Universität Bern.
+          </p>
         </div>
-    </div>
-
-</footer>
-
-</body>
-
+      </div>
+    </footer>
+  </body>
 </html>
